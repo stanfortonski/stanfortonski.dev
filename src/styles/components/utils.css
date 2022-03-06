@@ -1,0 +1,39 @@
+.neon-green {
+  filter: drop-shadow(0 0 .35rem green) saturate(1.5);
+}
+
+.neon-purple {
+  filter: drop-shadow(0 0 .8rem purple) saturate(1.5);
+}
+
+.no-box-shadow {
+  box-shadow: none !important;
+}
+
+.box-shadow-sm {
+  box-shadow: .07em .07em 0 0 #000;
+}
+
+.box-shadow {
+  box-shadow: .15em .15em 0 0 #000;
+}
+
+.box-shadow-lg {
+  box-shadow: .3em .3em 0 0 #000;
+}
+
+.no-text-shadow {
+  text-shadow: none !important;
+}
+
+.text-shadow-sm {
+  text-shadow: .07em .09em 0 #000;
+}
+
+.text-shadow {
+  text-shadow: .11em .14em 0 #000;
+}
+
+.text-shadow-lg {
+  text-shadow: .14em .17em 0 #000;
+}

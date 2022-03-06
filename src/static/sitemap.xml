@@ -1,0 +1,49 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://stanfortonski.dev/</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+
+    <url>
+        <loc>https://stanfortonski.dev/en/</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://stanfortonski.dev/en/contact</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://stanfortonski.dev/en/projects</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://stanfortonski.dev/en/about</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://stanfortonski.dev/pl/</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://stanfortonski.dev/pl/contact</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://stanfortonski.dev/pl/projects</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+        <url>
+        <loc>https://stanfortonski.dev/pl/about</loc>
+        <lastmod>2020-09-04T13:45:12+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+</urlset>

@@ -1,0 +1,42 @@
+.btn {
+  @apply font-vt323 cursor-pointer box-shadow;
+  display: inline-block;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.2em 0.4em;
+  transition: 0.17s transform linear, 0.17s box-shadow linear;
+  user-select: none;
+}
+
+.btn::before,
+.btn::after {
+  display: inline;
+  position: relative;
+  top: 0;
+}
+
+.btn::before {
+  content: "< ";
+}
+.btn::after {
+  content: " >";
+}
+
+.btn:hover,
+.btn:focus {
+  @apply box-shadow-sm;
+  transform: scale(1.05);
+}
+
+.btn:hover::before {
+  left: 0.1em;
+}
+.btn:hover::after {
+  right: 0.1em;
+}
+.btn:active::before {
+  left: 0.22em;
+}
+.btn:active::after {
+  right: 0.22em;
+}

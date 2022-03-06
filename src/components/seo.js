@@ -1,16 +1,12 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useIntl } from "react-intl";
 
 function Seo({ description, lang, meta, title }) {
+  const intl = useIntl();
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -22,10 +18,9 @@ function Seo({ description, lang, meta, title }) {
           }
         }
       }
-    `
-  )
+  `)
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = intl.formatMessage({ id: description || site.siteMetadata.description });
   const defaultTitle = site.siteMetadata?.title
 
   return (
@@ -33,7 +28,7 @@ function Seo({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={ intl.formatMessage({id: title}) }
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
@@ -69,21 +64,22 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+    </Helmet>
   )
 }
 
 Seo.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
-  description: ``,
+  description: ''
 }
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default Seo
