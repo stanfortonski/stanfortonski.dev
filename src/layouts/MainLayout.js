@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -7,8 +7,15 @@ import { useStaticQuery, graphql } from "gatsby"
 import { IntlProvider } from 'react-intl'
 import messages from '../lang/messages'
 import "../styles/global.css"
+import Cookies from "../components/Cookies"
 
 const MainLayout = ({ children, locale, showHeader }) => {
+  useEffect(() => {
+    return () => {
+      document.body.style.overflowY = 'visible';
+    }
+  }, []);
+  
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -27,6 +34,8 @@ const MainLayout = ({ children, locale, showHeader }) => {
         {children}
       </main>
       <Footer />
+
+      <Cookies />
     </IntlProvider>
   )
 }

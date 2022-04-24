@@ -5,8 +5,6 @@
   "version": "3.0.0",
   "author": "Stan Fortoński <stan.fortonski@gmail.com>",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.8.0",
-    "axios": "^0.26.0",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.7.2",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
@@ -17,17 +15,19 @@
     "gatsby-plugin-react-helmet": "^5.7.0",
     "gatsby-plugin-sharp": "^4.7.0",
     "gatsby-source-filesystem": "^4.7.0",
+    "gatsby-source-github-api": "^1.0.0",
     "gatsby-transformer-sharp": "^4.7.0",
     "prop-types": "^15.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^9.0.0",
     "react-intl": "^5.24.6",
-    "react-redux": "^7.2.6",
-    "redux": "^4.1.2"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "env-cmd": "^10.1.0",
     "gatsby-plugin-postcss": "^5.7.0",
     "postcss": "^8.4.6",
     "postcss-import": "^14.0.2",
@@ -39,12 +39,12 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "env-cmd gatsby build",
+    "develop": "env-cmd gatsby develop --port 8080",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "start": "env-cmd gatsby develop",
+    "serve": "env-cmd gatsby serve",
+    "clean": "env-cmd gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

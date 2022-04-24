@@ -23,8 +23,8 @@ const Navigation = ({ className }) => {
 
   return (
     <div className={`slider-navigation ${className}`}>
-        <button className={`prev ${current === 0 ? 'disabled' : ''}`} onClick={setPrev}>&lt;</button>
-        <button className={`next ${current === slides.length - 1 ? 'disabled' : ''}`} onClick={setNext}>&gt;</button>
+      <button className={`prev ${current === 0 ? 'disabled' : ''}`} onClick={setPrev}>&lt;</button>
+      <button className={`next ${current === slides.length - 1 ? 'disabled' : ''}`} onClick={setNext}>&gt;</button>
     </div>
   )
 }

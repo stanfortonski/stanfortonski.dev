@@ -29,9 +29,9 @@ const Content = ({ className, children, variants }) => {
 
   return (
     <motion.div className={`slider-content ${className}`} variants={variants(current)} initial="initial" animate="animate">
-        {slides.map((slide, index) => (
-          <div class={`slide ${current === index ? 'current' : ''}`} key={index} onClick={() => setCurrent(index)}>{slide}</div>
-        ))}
+      {slides.map((slide, index) => (
+        <div key={index} className={`slide ${current === index ? 'current' : ''}`} onClick={() => setCurrent(index)}>{slide}</div>
+      ))}
     </motion.div>
   )
 }

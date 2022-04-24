@@ -1,6 +1,5 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
 @import "./components/modal";
 @import "./components/utils";
 @import "./components/layout";
@@ -11,5 +10,8 @@
 @import "./components/form";
 @import "./components/slider";
 @import "./components/present";
+@import "./components/table";
 @import "./components/loading";
+@import "./components/other";
+@import "tailwindcss/utilities";
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap&subset=latin-ext");

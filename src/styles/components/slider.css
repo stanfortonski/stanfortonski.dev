@@ -19,22 +19,32 @@
   }
 }
 
+.slider:not(.slider-modal) {
+  .slider-navigation {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
 .slider-navigation {
-  @apply absolute flex w-full justify-between text-center;
-
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
   .prev,
   .next {
-    padding: 0 .5em;
+    position: absolute;
     background-color: transparent;
     z-index: 1;
     color: #fff;
     font-size: 2.5em;
     text-shadow: 0.04em 0.05em 0 #000;
-    transition: transform 0.25s linear;
+    transition: transform .25s linear;
+  }
+
+  .prev {
+    left: 1em;
+  }
+
+  .next {
+    right: 1em;
   }
 
   .prev:hover {
@@ -80,6 +90,11 @@
     opacity: 1;
     transform: scale(1);
     transition: all .25s;
+  }
+
+  .prev,
+  .next {
+    top: 40%;
   }
 }
 

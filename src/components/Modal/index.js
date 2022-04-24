@@ -3,10 +3,11 @@ import PropTypes from "prop-types"
 import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
+import Title from './Title';
 
-const Modal = ({ className, children, id }) => {
+const Modal = ({ className, children }) => {
   return (
-    <div className={`modal ${className}`} id={id}>
+    <div className={`modal ${className}`}>
       {children}
     </div>
   )
@@ -22,6 +23,7 @@ Modal.propTypes = {
 }
 
 Modal.Header = Header;
+Modal.Title = Title;
 Modal.Body = Body;
 Modal.Footer = Footer;
 

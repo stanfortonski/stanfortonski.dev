@@ -1,0 +1,6 @@
+.notification {
+    @apply fixed bottom-0 left-0 w-full;
+    zoom: .7;
+    z-index: 9998;
+    background: #964a4a;
+}

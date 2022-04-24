@@ -1,0 +1,11 @@
+.table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+  
+.table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: .2em;
+}  

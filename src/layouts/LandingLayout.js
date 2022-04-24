@@ -8,11 +8,13 @@ import Footer from "../components/Footer"
 import Nav from "../components/Nav"
 import Header from "../components/Header"
 import "../styles/global.css"
+import Cookies from "../components/Cookies"
+import ProgressBar from "../components/ProgressBar"
 
 const monitorBlurVariants = {
   initial: { filter: 'blur(0px)' },
   animate: {
-    filter: 'blur(1px)', 
+    filter: 'blur(1px)',
     transition: { delay: 2 }
   }
 }
@@ -20,27 +22,19 @@ const monitorBlurVariants = {
 const hideProgressVariants = {
   initial: { opacity: 1 },
   animate: {
-    opacity: 0, 
-    transition: { duration: 0.25, delay: 1 }
-  }
-}
-
-const loadingBarVariants = {
-  initial: { width: 0 },
-  animate: { 
-    width: '100%',
-    transition: { duration: 1 }
+    opacity: 0,
+    transition: { duration: .25, delay: 1 }
   }
 }
 
 const showPageVariants = {
-  initial: { 
-    opacity: 0, 
-    filter: 'blur(3px)' 
+  initial: {
+    opacity: 0,
+    filter: 'blur(3px)'
   },
   animate: {
-    opacity: 1, 
-    filter: 'blur(0px)',
+    opacity: 1,
+    filter: 'none',
     transition: { duration: .45, delay: .9 }
   }
 }
@@ -77,33 +71,30 @@ const LandingLayout = ({ children, locale }) => {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <AnimatePresence>
-      {showLoadingScreen && (
-        <div className="loading-screen">
-          <motion.div className={`monitor ${loaded ? 'scale' : ''}`} variants={monitorBlurVariants} initial="initial" animate="animate">
-            <div className="monitor-screen">
-              <motion.div className="progress-place" variants={hideProgressVariants}>
-                <div className="progress-bar">
-                  <div className="text"><FormattedMessage id="layout.loading" /></div>
-                  <motion.div className="progress"variants={loadingBarVariants}></motion.div>
-                </div>
-              </motion.div>
+        {showLoadingScreen && (
+          <div className="loading-screen">
+            <motion.div className={`monitor ${loaded ? 'scale' : ''}`} variants={monitorBlurVariants} initial="initial" animate="animate">
+              <div className="monitor-screen">
+                <motion.div className="progress-place" variants={hideProgressVariants}>
+                  <ProgressBar label={<FormattedMessage id="layout.loading" />} />
+                </motion.div>
 
-              <div className="website">
-                <Header siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`} animate={false} />
-                <Nav />
-                <main className="layout-content">
-                  {children}
-                </main>
-                <Footer />
+                <div className="website">
+                  <Header siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`} animate={false} />
+                  <Nav />
+                  <main className="layout-content">
+                    {children}
+                  </main>
+                  <Footer />
+                </div>
               </div>
-            </div>
-            <div className="monitor-footer"></div>
-            <div className="monitor-holder"></div>
-            <div className="monitor-btn"></div>
-          </motion.div>
-          <div className="desk"></div>
-        </div>
-      )}
+              <div className="monitor-footer"></div>
+              <div className="monitor-holder"></div>
+              <div className="monitor-btn"></div>
+            </motion.div>
+            <div className="desk"></div>
+          </div>
+        )}
       </AnimatePresence>
 
       {loaded && (<>
@@ -114,8 +105,10 @@ const LandingLayout = ({ children, locale }) => {
             {children}
           </main>
           <Footer />
+          
+          <Cookies />
         </motion.div>
-        </>)}
+      </>)}
     </IntlProvider>
   )
 }

@@ -26,15 +26,65 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        url: 'https://api.github.com/graphql',
+        token: process.env.token,
+        graphQLQuery: `{
+          viewer {
+            avatarUrl
+
+            bestRepositories: repositories(orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, first: 9) {
+              edges {
+                node {
+                  id
+                  stargazerCount,
+                  forkCount
+                  name
+                  descriptionHTML
+                  createdAt
+                  url
+                  readme: object(expression: "master:README.md") {
+                    ... on Blob {
+                      text
+                    }
+                  }
+                }
+              }
+            }
+
+            repositories(orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, last: 100) {
+              edges {
+                node {
+                  id
+                  stargazerCount,
+                  forkCount
+                  name
+                  descriptionHTML
+                  createdAt
+                  url
+                  readme: object(expression: "master:README.md") {
+                    ... on Blob {
+                      text
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }`,
+      }
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Stan Fortoński',
+        short_name: 'stanfortonski.dev',
         start_url: '/',
-        background_color: '#663399',
-        // theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/favicon.png',
+        background_color: '#203748',
+        theme_color: '#37bba5',
+        display: 'standalone',
+        icon: 'src/images/favicon.png'
       },
     },
     // 'gatsby-plugin-offline',

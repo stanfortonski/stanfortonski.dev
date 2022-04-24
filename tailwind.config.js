@@ -11,11 +11,12 @@ module.exports = {
           'light': '#48c7b2',
           'proper': '#37bba5',
           'dark': '#2fad98',
-          'darker': '#159182'
+          'darker': '#159182',
         },
         blue: {
           max: 'blue'
-        }
+        },
+        red: '#ff0000'
       },
 
       fontFamily: {

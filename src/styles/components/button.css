@@ -1,42 +1,47 @@
 .btn {
-  @apply font-vt323 cursor-pointer box-shadow;
+  @apply font-vt323 cursor-pointer;
   display: inline-block;
   color: #fff;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 0.2em 0.4em;
-  transition: 0.17s transform linear, 0.17s box-shadow linear;
+  padding: .2em 0.4em;
   user-select: none;
+  background: rgba(0, 0, 0, .3);
 }
 
-.btn::before,
-.btn::after {
+.btn-chars::before,
+.btn-chars::after {
   display: inline;
   position: relative;
   top: 0;
 }
-
-.btn::before {
+.btn-chars::before {
   content: "< ";
 }
-.btn::after {
+.btn-chars::after {
   content: " >";
 }
+.btn-chars:hover::before {
+  left: 0.1em;
+}
+.btn-chars:hover::after {
+  right: 0.1em;
+}
+.btn-chars:active::before {
+  left: 0.22em;
+}
+.btn-chars:active::after {
+  right: 0.22em;
+}
 
-.btn:hover,
-.btn:focus {
+.btn-shadows {
+  @apply box-shadow;
+  transition: 0.17s transform linear, 0.17s box-shadow linear;
+}
+.btn-shadows:hover,
+.btn-shadows:focus {
   @apply box-shadow-sm;
   transform: scale(1.05);
 }
 
-.btn:hover::before {
-  left: 0.1em;
-}
-.btn:hover::after {
-  right: 0.1em;
-}
-.btn:active::before {
-  left: 0.22em;
-}
-.btn:active::after {
-  right: 0.22em;
+.btn-primary {
+  background: #55a89d;
 }
