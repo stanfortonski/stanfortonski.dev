@@ -12,7 +12,10 @@ const Site = {
     'My GitHub': 'My GitHub',
     'My Blog': 'My Blog',
     'Run': 'Run',
-    'Download': 'Download'
+    'Download': 'Download',
+    '404.title': '404 Not Found',
+    '404.description': 'Page not found.',
+    '404.button': 'Back to start page'
 };
 
 export default Site;

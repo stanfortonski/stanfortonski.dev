@@ -67,3 +67,10 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Custom
+
+static/google77b5b5340f22bffe.html
+static/sitemap.xml
+static/.htaccess
+static/sendmail.php

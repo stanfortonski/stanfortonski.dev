@@ -2,7 +2,7 @@ const Index = {
     'index.title': 'Start',
     "index.button-establish": "Establish cooperation",
     "index.about.title": 'About me',
-    "index.about.content": "First of all I am passionate about programming. Every day I deal with the Webdev mostly using Laravel and Vue. In my free time I run my blog CodeIter.com and I create open source projects on GitHub. I also sometimes create graphics applications and games. One of my goals is to constantly learn about new technologies...",
+    "index.about.content": "First of all I am passionate about programming. Every day I deal with the Webdev mostly using Laravel, React and Vue. In my free time I run my blog CodeIter.com and I create open source projects on GitHub. I also sometimes create graphics applications and games. One of my goals is to constantly learn about new technologies...",
     "index.projects.h1": 'Projects',
     "index.projects.h2": "My GitHub projects samples.",
     "index.projects.button": "More projects here",

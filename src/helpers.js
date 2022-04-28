@@ -10,3 +10,5 @@ export function getImage(url){
         img.src = url;
     })
 }
+
+export const isBrowser = () => typeof window !== "undefined";

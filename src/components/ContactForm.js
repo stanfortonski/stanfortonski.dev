@@ -1,9 +1,20 @@
 import React, { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
+import Helmet from 'react-helmet'
+import { graphql, useStaticQuery } from 'gatsby';
 
 const ContactForm = () => {
   const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState({});
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          recaptcha_public
+        }
+      }
+    }
+  `);
 
   const validate = ({ mail, name, title, description }) => {
     const newErrors = {};
@@ -38,32 +49,35 @@ const ContactForm = () => {
       description: e.target.elements.description.value
     }
 
-    console.log(data);
-    console.log(e.target.action);
+    grecaptcha.ready(function(){
+      grecaptcha.execute(site.siteMetadata.recaptcha_public, { action: "submit" }).then(function (token){
+        data.recaptcha_response = token;
+        if (validate(data)){
+          setSending(true);
 
-    if (validate(data)) {
-      setSending(true);
-
-      fetch(e.target.action, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-        .then(res => res.json())
-        .then(res => {
-          setSending(false);
-          console.log(res);
-        }).catch(err => {
-          setSending(false);
-          console.error(err);
-        });
-    }
+          fetch(e.target.action, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          })
+          .then(res => res.json())
+          .then(res => {
+            setSending(false);
+            console.log(res);
+          }).catch(err => {
+            setSending(false);
+            console.error(err);
+          });
+        }
+      });
+    });
   }
 
   return (
-    <form method="post" action="send" onSubmit={sendMail}>
+    <>
+    <form method="post" action="sendmail.php" onSubmit={sendMail}>
       <fieldset className="present p-10">
         <legend className="present-label"><FormattedMessage id="contact.form.label" /></legend>
         <table className="table">
@@ -118,6 +132,11 @@ const ContactForm = () => {
         </table>
       </fieldset>
     </form>
+
+    <Helmet>
+      <script src={`https://www.google.com/recaptcha/api.js?render=${site.siteMetadata.recaptcha_public}`} />
+    </Helmet>
+  </>
   )
 }
 

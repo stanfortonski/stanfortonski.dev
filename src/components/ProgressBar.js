@@ -20,7 +20,7 @@ const ProgressBar = ({ label, initialProcent, procent, duration, delay }) => {
 }
 
 ProgressBar.propTypes = {
-    label: PropTypes.string,
+    label: PropTypes.any,
     initialProcent: PropTypes.number.isRequired,
     procent: PropTypes.number.isRequired,
     duration: PropTypes.number.isRequired,

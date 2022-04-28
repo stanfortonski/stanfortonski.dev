@@ -6,8 +6,9 @@ import Nav from "../components/Nav"
 import { useStaticQuery, graphql } from "gatsby"
 import { IntlProvider } from 'react-intl'
 import messages from '../lang/messages'
-import "../styles/global.css"
 import Cookies from "../components/Cookies"
+import { isBrowser } from "../helpers"
+import "../styles/global.css"
 
 const MainLayout = ({ children, locale, showHeader }) => {
   useEffect(() => {
@@ -35,7 +36,7 @@ const MainLayout = ({ children, locale, showHeader }) => {
       </main>
       <Footer />
 
-      <Cookies />
+      {isBrowser() && <Cookies />}
     </IntlProvider>
   )
 }

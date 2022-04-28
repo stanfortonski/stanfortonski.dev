@@ -7,8 +7,6 @@ const ProjectItem = ({ locale, node }) => {
   const { name, url, descriptionHTML } = node;
   const [image, setImage] = useState(null);
 
-  console.log(node);
-
   useEffect(() => {
     getImage(`/images/projects/${name}.jpg`).then(img => {
       img.className = "modal-bg modal-full";

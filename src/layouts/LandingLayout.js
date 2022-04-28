@@ -7,9 +7,10 @@ import messages from '../lang/messages'
 import Footer from "../components/Footer"
 import Nav from "../components/Nav"
 import Header from "../components/Header"
-import "../styles/global.css"
 import Cookies from "../components/Cookies"
 import ProgressBar from "../components/ProgressBar"
+import { isBrowser } from "../helpers"
+import "../styles/global.css"
 
 const monitorBlurVariants = {
   initial: { filter: 'blur(0px)' },
@@ -106,7 +107,7 @@ const LandingLayout = ({ children, locale }) => {
           </main>
           <Footer />
           
-          <Cookies />
+          {isBrowser() && <Cookies />}
         </motion.div>
       </>)}
     </IntlProvider>

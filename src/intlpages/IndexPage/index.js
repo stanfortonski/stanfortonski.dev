@@ -13,7 +13,7 @@ import Section from './Section'
 const IndexPage = ({ locale }) => {
   return (
     <Layout locale={locale}>
-      <Seo title="index.title" />
+      <Seo lang={locale} title="index.title" />
 
       <div className="container-fluid text-center">
         <Section>

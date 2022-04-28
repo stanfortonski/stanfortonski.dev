@@ -57,11 +57,11 @@ const Nav = () => {
                 </Modal.Header>
                 <Modal.Body>
                   <ul>
-                    <li><Link className="btn btn-chars btn-shadows w-full mb-3" to={`/${intl.locale}`}><FormattedMessage id="index.title" /></Link></li>
-                    <li><Link className="btn btn-chars btn-shadows w-full mb-3" to={`/${intl.locale}/projects`}><FormattedMessage id="projects.title" /></Link></li>
-                    <li><Link className="btn btn-chars btn-shadows w-full mb-3" to={`/${intl.locale}/contact`}><FormattedMessage id="contact.title" /></Link></li>
-                    <li><a className="btn btn-chars btn-shadows w-full mb-3" href="https://github.com/stanfortonski"><FormattedMessage id="My GitHub" /></a></li>
-                    <li><a className="btn btn-chars btn-shadows w-full mb-3" href="https://codeiter.com" rel="nofollow noreferrer noopener"><FormattedMessage id="My Blog" /></a></li>
+                    <li><Link className="btn btn-chars btn-shadows w-full mb-5" to={`/${intl.locale}`}><FormattedMessage id="index.title" /></Link></li>
+                    <li><Link className="btn btn-chars btn-shadows w-full mb-5" to={`/${intl.locale}/projects`}><FormattedMessage id="projects.title" /></Link></li>
+                    <li><Link className="btn btn-chars btn-shadows w-full mb-5" to={`/${intl.locale}/contact`}><FormattedMessage id="contact.title" /></Link></li>
+                    <li><a className="btn btn-chars btn-shadows w-full mb-5" href="https://github.com/stanfortonski"><FormattedMessage id="My GitHub" /></a></li>
+                    <li><a className="btn btn-chars btn-shadows w-full mb-5" href="https://codeiter.com" rel="nofollow noreferrer noopener"><FormattedMessage id="My Blog" /></a></li>
                   </ul>
                 </Modal.Body>
               </Modal>

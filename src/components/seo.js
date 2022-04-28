@@ -1,10 +1,11 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "react-intl";
+import { isBrowser } from "../helpers";
 
-function Seo({ description, lang, meta, title }) {
+function Seo({ description, lang, meta, title, keywords }) {
   const intl = useIntl();
 
   const { site } = useStaticQuery(
@@ -20,6 +21,11 @@ function Seo({ description, lang, meta, title }) {
       }
   `)
 
+  useEffect(() => {
+    if (isBrowser())
+      window.localStorage.setItem('lang', lang);
+  }, [lang]);
+  
   const metaDescription = intl.formatMessage({ id: description || site.siteMetadata.description });
   const defaultTitle = site.siteMetadata?.title
 
@@ -63,6 +69,10 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: 'keywords',
+          content: keywords
+        },
       ].concat(meta)}
     >
     </Helmet>
@@ -72,14 +82,16 @@ function Seo({ description, lang, meta, title }) {
 Seo.defaultProps = {
   lang: 'en',
   meta: [],
-  description: ''
+  description: '',
+  keywords: 'Programowanie, oprogramowanie, webmaster, web desing, projektowanie stron www, usługi programistyczne, informatyka, strony WWW, strony internetowe, aplikacje desktopowe, aplikacje mobilne, Windows, Android, iOS, Linux, PHP, JS, Javascript, MySQL, MariaDB, SQL, SQL lite, C++, Cpp, Canvas, directX, OpenGL, Vulcan, aplikacje okienkowe, pasja, websocket, wxWidgets, Java, Java Swing, Programming, software, webmaster, web desing, projecting webpage, IT, websites, desktop apps, mobile apps, Linux, passion, websocket, wxWidgets, android, android studio, android sdk',
 }
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  keywords: PropTypes.string
 }
 
 export default Seo

@@ -4,3 +4,7 @@
     z-index: 9998;
     background: #964a4a;
 }
+
+.grecaptcha-badge{
+    display: none !important;
+}
