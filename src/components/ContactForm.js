@@ -63,14 +63,17 @@ const ContactForm = () => {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify(data)
           })
             .then(res => res.json())
             .then(res => {
               setSending(false);
-              console.log(res);
               e.target.reset();
-              toast.success(intl.formatMessage({ id: 'send.success' }));
+              console.log(res);
+
+              if (res.success)
+                toast.success(intl.formatMessage({ id: 'send.success' }));
+              else toast.error(intl.formatMessage({ id: 'send.error' }));
             }).catch(err => {
               setSending(false);
               console.error(err);
