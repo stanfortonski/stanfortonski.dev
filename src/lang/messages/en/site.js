@@ -1,5 +1,5 @@
 const Site = {
-    'site.description': 'Description',
+    'site.description': 'Stan Fortoński Website - programmer, web developer, frontend developer, backend developer, full stack developer, game developer IT enthusiasts.',
     'cookies.description': 'This site uses cookies. By using this site you accept this fact. If not, leave this page.',
     'cookies.link.url': 'https://www.aboutcookies.org.uk/cookies',
     'Read more': 'Read more',

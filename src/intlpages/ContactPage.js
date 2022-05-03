@@ -8,7 +8,7 @@ import Layout from "../layouts/MainLayout"
 const ContactPage = ({ locale }) => {
   return (
     <Layout locale={locale}>
-      <Seo lang={locale} title="contact.title" />
+      <Seo lang={locale} title="contact.title" description="contact.description" />
       
       <div className="container mx-auto">
         <div className="section">

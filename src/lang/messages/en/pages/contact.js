@@ -1,5 +1,6 @@
 const Contact = {
     'contact.title': 'Contact',
+    'contact.description': 'Contact with Stan Fortoński by contact form or e-mail: contact@stanfortonski.dev',
     'contact.me': 'Contact me',
     'contact.form': 'Contact Form',
     'contact.form.label': 'Your message',

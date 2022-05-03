@@ -1,5 +1,5 @@
 const Site = {
-    'site.description': 'Opis',
+    'site.description': 'Strona Stanisława Fortońskiego - programisty, web developera, frontend developera, backend developera, full stack developera, game developera, pasjonaty IT.',
     'cookies.description': 'Ta strona korzysta z plików cookies. Korzystając z tej strony akceptujesz ten fakt.',
     'cookies.link.url': 'https://wszystkoociasteczkach.pl/',
     'Read more': 'Dowiedz się więcej',

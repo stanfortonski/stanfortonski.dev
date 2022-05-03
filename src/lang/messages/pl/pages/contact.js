@@ -1,5 +1,6 @@
 const Contact = {
     'contact.title': 'Kontakt',
+    'contact.description': 'Skontaktuj się ze Stanisław Fortoński przez formularz kontaktowy lub e-mail: contact@stanfortonski.dev',
     'contact.me': 'Kontakt',
     'contact.form': 'Formularz kontaktowy',
     'contact.form.label': 'Twoja wiadomość',

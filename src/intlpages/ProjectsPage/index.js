@@ -35,7 +35,7 @@ const ProjectsPage = ({ locale }) => {
 
   return (
     <Layout locale={locale}>
-      <Seo lang={locale} title="projects.title" />
+      <Seo lang={locale} title="projects.title" description="projects.description" />
       
       <div className="container-fluid text-center">
         <div className="section">
