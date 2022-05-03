@@ -6,6 +6,7 @@ const Site = {
     'Experience': 'Doświadczenie:',
     'Fluent': 'Biegły:',
     'Intermediate': 'Średniozaawansowany:',
+    'Medium': 'Średni:',
     'Basic': 'Podstawy:',
     'Episodic': 'Epizodycznie:',
     'Tools': 'Narzędzia:',

@@ -55,7 +55,7 @@ const Skills = ({ locale }) => {
                         <li><a rel="nofollow noreferrer noopener" href="https://laravel.com/docs/master/sanctum" className="anr" target="_blank">Laravel Sanctum</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://laravel.com/docs/master/fortify" className="anr" target="_blank">Laravel Fortify</a></li>
 
-                        <li className="text-h6 mt-3"><FormattedMessage id="Intermediate" /></li>
+                        <li className="text-h6 mt-3"><FormattedMessage id="Medium" /></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://symfony.com" className="anr" target="_blank">Symfony 5</a></li>
 
                         <li className="text-h6 mt-3"><FormattedMessage id="Basic" /></li>
@@ -114,9 +114,6 @@ const Skills = ({ locale }) => {
                         <li><a rel="nofollow noreferrer noopener" href="https://pypi.org/project/PyOpenGL" className="anr" target="_blank">PyOpenGL</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://pypi.org/project/PyGLM" className="anr" target="_blank">PyGLM</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://docs.python.org/3/library/sqlite3.html" className="anr" target="_blank">SQLite3</a></li>
-
-                        <li className="text-h6 mt-3"><FormattedMessage id="Episodic" /></li>
-                        <li><a rel="nofollow noreferrer noopener" href="https://www.djangoproject.com/" className="anr" target="_blank">Django</a></li>
                     </ul>
                 </Frame>
 
@@ -161,7 +158,7 @@ const Skills = ({ locale }) => {
                         <li><a rel="nofollow noreferrer noopener" href="https://getbootstrap.com" className="anr" target="_blank">Bootstrap 4/5</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://coreui.io" className="anr" target="_blank">CoreUI</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://tailwindcss.com" className="anr" target="_blank">Tailwind CSS</a></li>
-                        <li><a rel="nofollow noreferrer noopener" href="https://sass-lang.com" className="anr" target="_blank">Sass</a><b>&</b><a rel="nofollow noreferrer noopener" href="http://lesscss.org" className="anr" target="_blank">Less</a></li>
+                        <li><a rel="nofollow noreferrer noopener" href="https://sass-lang.com" className="anr" target="_blank">Sass</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://pl.wikipedia.org/wiki/SQL" className="anr" target="_blank">SQL</a></li>
 
                         <li className="text-h6 mt-3"><FormattedMessage id="Tools" /></li>
