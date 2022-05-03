@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
-import { FormattedMessage } from 'react-intl'
-import Helmet from 'react-helmet'
+import React, { useState } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
+import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
+import { toast } from 'react-toastify';
 
 const ContactForm = () => {
+  const intl = useIntl();
   const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState({});
   const { site } = useStaticQuery(graphql`
@@ -50,7 +52,7 @@ const ContactForm = () => {
       description: e.target.elements.description.value
     }
 
-    grecaptcha.ready(function () {
+    grecaptcha.ready(() => {
       grecaptcha.execute(site.siteMetadata.recaptcha_public, { action: "submit" }).then(function (token) {
         data.recaptcha_response = token;
         if (validate(data)) {
@@ -67,9 +69,12 @@ const ContactForm = () => {
             .then(res => {
               setSending(false);
               console.log(res);
+              e.target.reset();
+              toast.success(intl.formatMessage({ id: 'send.success' }));
             }).catch(err => {
               setSending(false);
               console.error(err);
+              toast.error(intl.formatMessage({ id: 'send.error' }));
             });
         }
       });

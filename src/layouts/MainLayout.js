@@ -9,6 +9,7 @@ import messages from '../lang/messages'
 import Cookies from "../components/Cookies"
 import { isBrowser } from "../helpers"
 import "../styles/global.css"
+import { ToastContainer } from "react-toastify"
 
 const MainLayout = ({ children, locale, showHeader }) => {
   useEffect(() => {
@@ -37,6 +38,7 @@ const MainLayout = ({ children, locale, showHeader }) => {
       <Footer />
 
       {isBrowser() && <Cookies />}
+      <ToastContainer />
     </IntlProvider>
   )
 }

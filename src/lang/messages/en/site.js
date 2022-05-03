@@ -16,7 +16,9 @@ const Site = {
     'Download': 'Download',
     '404.title': '404 Not Found',
     '404.description': 'Page not found.',
-    '404.button': 'Back to start page'
+    '404.button': 'Back to start page',
+    'send.success': 'The message was sent.',
+    'send.error': 'The message was not sent.',
 };
 
 export default Site;

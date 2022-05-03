@@ -13,5 +13,7 @@
 @import "./components/table";
 @import "./components/loading";
 @import "./components/other";
+@import "react-toastify/dist/ReactToastify.css";
+@import "./components/toast";
 @import "tailwindcss/utilities";
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap&subset=latin-ext");

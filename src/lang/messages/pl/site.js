@@ -16,7 +16,9 @@ const Site = {
     'Download': 'Pobierz',
     '404.title': '404 Nie znaleziono',
     '404.description': 'Strona nie została znaleziona.',
-    '404.button': 'Powrót do strony głównej'
+    '404.button': 'Powrót do strony głównej',
+    'send.success': 'Wiadomość została wysłana.',
+    'send.error': 'Wiadomość nie została wysłana.',
 };
 
 export default Site;
