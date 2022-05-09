@@ -54,6 +54,7 @@ const Skills = ({ locale }) => {
                         <li><a rel="nofollow noreferrer noopener" href="https://laravel.com" className="anr" target="_blank">Laravel 7/8</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://laravel.com/docs/master/sanctum" className="anr" target="_blank">Laravel Sanctum</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://laravel.com/docs/master/fortify" className="anr" target="_blank">Laravel Fortify</a></li>
+                        <li><a rel="nofollow noreferrer noopener" href="https://laravel.com/docs/master/homestead" className="anr" target="_blank">Laravel Homestead</a></li>
 
                         <li className="text-h6 mt-3"><FormattedMessage id="Medium" /></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://symfony.com" className="anr" target="_blank">Symfony 5</a></li>
@@ -162,6 +163,8 @@ const Skills = ({ locale }) => {
                         <li><a rel="nofollow noreferrer noopener" href="https://pl.wikipedia.org/wiki/SQL" className="anr" target="_blank">SQL</a></li>
 
                         <li className="text-h6 mt-3"><FormattedMessage id="Tools" /></li>
+                        <li><a rel="nofollow noreferrer noopener" href="https://www.docker.com" className="anr" target="_blank">Docker</a></li>
+                        <li><a rel="nofollow noreferrer noopener" href="https://www.vagrantup.com" className="anr" target="_blank">Vagrant</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://www.mysql.com" className="anr" target="_blank">MySQL</a><b>&</b><a rel="nofollow noreferrer noopener" href="https://mariadb.org" className="anr" target="_blank">MariaDB</a><b>&</b><a rel="nofollow noreferrer noopener" href="https://www.sqlite.org/" className="anr" target="_blank">SQLite</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://analytics.google.com" className="anr" target="_blank">Google Analytics</a></li>
                         <li><a rel="nofollow noreferrer noopener" href="https://schema.org" className="anr" target="_blank">Microdata</a><b>&</b><a rel="nofollow noreferrer noopener" href="http://microformats.org" className="anr" target="_blank">Microformats</a></li>
