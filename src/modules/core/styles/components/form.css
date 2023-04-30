@@ -1,0 +1,107 @@
+@tailwind base;
+
+@layer base {
+    textarea {
+        resize: none;
+        min-height: 5em;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    label span {
+        display: block;
+        line-height: 1em;
+        font-size: 0.75em;
+    }
+
+    label span:first-of-type {
+        font-size: 1em;
+    }
+
+    input,
+    textarea,
+    select {
+        background: rgba(0, 0, 0, 0.1);
+        font-family: 'VT323', monospace;
+        font-size: 0.9em;
+        color: #fff;
+        padding: 0.1em;
+        width: 100%;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='number'],
+    textarea,
+    .checkbox,
+    .radio {
+        background: rgba(0, 0, 0, 0.1);
+        border: rgba(0, 0, 0, 0.6) solid 0.15em;
+        border-right-color: rgba(0, 0, 0, 0.05);
+        border-bottom-color: rgba(0, 0, 0, 0.05);
+    }
+
+    select {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    input[type='checkbox'],
+    input[type='radio'] {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+    }
+
+    .checkbox,
+    .radio {
+        display: inline-block;
+        height: 1.2em;
+        width: 1.2em;
+        font-size: 0.85em;
+        color: #fff;
+    }
+
+    .radio {
+        border-radius: 100%;
+    }
+
+    .checkbox > .checker,
+    .radio > .checker {
+        visibility: hidden;
+        font-size: 1.4em;
+        position: relative;
+        top: -0.325em;
+    }
+
+    input[type='checkbox']:checked + .checkbox,
+    input[type='radio']:checked + .radio {
+        background: red;
+    }
+
+    input[type='checkbox']:checked + .checkbox > .checker,
+    input[type='radio']:checked + .radio > .checker {
+        visibility: visible;
+    }
+
+    select,
+    .radio,
+    .checkbox {
+        cursor: pointer;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    .btn:focus,
+    .btn-lg:focus,
+    .anr:focus,
+    input[type='checkbox']:focus + .checkbox,
+    input[type='radio']:focus + .radio {
+        outline: 0.2rem dashed red !important;
+    }
+}

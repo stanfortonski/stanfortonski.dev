@@ -1,0 +1,106 @@
+@import '../../styles/components/utils';
+
+.nav {
+    @apply mb-5 text-center;
+}
+
+.nav-toggler {
+    @apply relative 
+          inline-block
+          h-full 
+          
+          cursor-pointer 
+          bg-primary-proper
+          hover:bg-primary-dark;
+
+    width: 30%;
+    min-width: 6em;
+    height: 1.75em;
+    font-size: 1.7em;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-toggler::before,
+.nav-toggler::after {
+    @apply border-t-primary-proper inline-block absolute top-0;
+
+    content: '';
+    width: 0;
+    height: 0;
+    border-top-width: 1.75em;
+}
+
+.nav-toggler::before {
+    left: -53px;
+    border-left: 54px solid transparent;
+}
+
+.nav-toggler::after {
+    right: -53px;
+    border-right: 54px solid transparent;
+}
+
+.nav-toggler:hover::before,
+.nav-toggler:hover::after {
+    @apply border-t-primary-dark;
+}
+
+.nav-toggler .label {
+    @apply neon-green;
+    user-select: none;
+}
+
+.nav-toggler:hover .label,
+.nav-toggler:hover .label {
+    @apply neon-purple;
+}
+
+.nav-menu-overlay {
+    @apply text-center top-0 left-0 w-full h-full fixed;
+    background: rgba(0, 0, 255, 0.5);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.nav-menu {
+    @apply w-screen h-screen;
+}
+
+.nav-menu .modal {
+    background: blue !important;
+    border: double #fff 0.4em;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    max-width: 10em;
+    max-height: 15em;
+    width: 80%;
+    height: 80%;
+    margin-top: -2em;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-menu .modal {
+        margin-top: 0em;
+    }
+
+    .nav-toggler::before {
+        left: -39px;
+        border-left: 40px solid transparent;
+    }
+
+    .nav-toggler::after {
+        right: -39px;
+        border-right: 40px solid transparent;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-menu .modal {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+}

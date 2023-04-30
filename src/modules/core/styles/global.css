@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './components/form';
+@import './components/utils';
+@import './components/toast';
+@import './components/button';
+@import './components/anchor';
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap&subset=latin-ext');
+
+html {
+    height: 100%;
+}
+
+body {
+    @apply font-vt323;
+    font-size: 32px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body,
+.website {
+    @apply bg-dark;
+}
+
+body,
+.body-sizing {
+    @apply relative;
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+main.layout-content {
+    @apply pb-5 flex-grow;
+    padding-bottom: 150px;
+
+    @media screen and (max-width: 764px) {
+        padding-bottom: 80px;
+    }
+}
+
+.grecaptcha-badge {
+    display: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 24px;
+    }
+
+    .nav-menu .modal {
+        margin-top: 0em;
+    }
+}

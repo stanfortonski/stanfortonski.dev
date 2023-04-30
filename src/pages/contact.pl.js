@@ -1,8 +1,7 @@
-import * as React from "react"
-import ContactPage from "../intlpages/ContactPage"
+import * as React from 'react';
 
-const Contact = () => (
-  <ContactPage locale="pl" />
-)
+import { ContactPage } from '../modules/contact/pages/ContactPage';
 
-export default Contact
+const Contact = () => <ContactPage locale="pl" />;
+
+export default Contact;

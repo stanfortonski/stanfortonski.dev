@@ -1,8 +1,7 @@
-import * as React from "react"
-import ProjectsPage from "../intlpages/ProjectsPage"
+import * as React from 'react';
 
-const Projects = () => (
-  <ProjectsPage locale="en" />
-)
+import { ProjectsPage } from '../modules/projects/pages/ProjectsPage';
 
-export default Projects
+const Projects = () => <ProjectsPage locale="en" />;
+
+export default Projects;

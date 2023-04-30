@@ -1,6 +1,7 @@
 const Contact = {
     'contact.title': 'Kontakt',
-    'contact.description': 'Skontaktuj się ze Stanisław Fortoński przez formularz kontaktowy lub e-mail: contact@stanfortonski.dev',
+    'contact.description':
+        'Skontaktuj się ze Stanisław Fortoński przez formularz kontaktowy lub e-mail: contact@stanfortonski.dev',
     'contact.me': 'Kontakt',
     'contact.form': 'Formularz kontaktowy',
     'contact.form.label': 'Twoja wiadomość',
@@ -19,4 +20,4 @@ const Contact = {
     'contact.errors.description': 'Treść wiadomości musi mieć minimum 50 znaków.',
 };
 
-export default Contact
+export default Contact;

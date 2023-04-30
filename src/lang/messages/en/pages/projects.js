@@ -3,4 +3,4 @@ const Projects = {
     'projects.description': 'Stan Fortoński GitHub Portfolio Page. See my projects.',
 };
 
-export default Projects
+export default Projects;

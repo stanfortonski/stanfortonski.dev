@@ -1,0 +1,7 @@
+.section {
+    @apply py-10 px-4 md:py-20 md:px-12;
+}
+
+.section:nth-of-type(2n) {
+    background: rgba(0, 0, 0, 0.35);
+}

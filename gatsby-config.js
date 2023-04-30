@@ -1,30 +1,41 @@
+const path = require('path');
+
 module.exports = {
-  siteMetadata: {
-    title: 'Stan Fortoński',
-    description: 'site.description',
-    author: 'Stanisław Fortoński',
-    siteUrl: 'https://stanfortonski.dev',
-    recaptcha_public: process.env.recaptcha_public
-  },
-  plugins: [
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {        
-        langKeyDefault: 'en',
-        useLangKeyLayout: true
-      }
+    siteMetadata: {
+        title: 'Stan Fortoński',
+        description: 'site.description',
+        author: 'Stanisław Fortoński',
+        siteUrl: 'https://stanfortonski.dev',
+        recaptcha_public: process.env.recaptcha_public,
     },
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-image',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: `gatsby-source-github-api`,
-      options: {
-        url: 'https://api.github.com/graphql',
-        token: process.env.github_token,
-        graphQLQuery: `{
+    plugins: [
+        {
+            resolve: `gatsby-plugin-alias-imports`,
+            options: {
+                alias: {
+                    '@': path.resolve(__dirname, 'src'),
+                },
+                extensions: ['js', 'css'],
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-i18n',
+            options: {
+                langKeyDefault: 'en',
+                useLangKeyLayout: true,
+            },
+        },
+        'gatsby-plugin-postcss',
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-image',
+        'gatsby-transformer-sharp',
+        'gatsby-plugin-sharp',
+        {
+            resolve: `gatsby-source-github-api`,
+            options: {
+                url: 'https://api.github.com/graphql',
+                token: process.env.github_token,
+                graphQLQuery: `{
           viewer {
             avatarUrl
 
@@ -48,20 +59,20 @@ module.exports = {
             }
           }
         }`,
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Stan Fortoński',
-        short_name: 'stanfortonski.dev',
-        start_url: '/',
-        background_color: '#203748',
-        theme_color: '#37bba5',
-        display: 'standalone',
-        icon: 'src/images/favicon.png'
-      },
-    },
-    // 'gatsby-plugin-offline',
-  ],
-}
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                name: 'Stan Fortoński',
+                short_name: 'stanfortonski.dev',
+                start_url: '/',
+                background_color: '#203748',
+                theme_color: '#37bba5',
+                display: 'standalone',
+                icon: 'src/images/favicon.png',
+            },
+        },
+        // 'gatsby-plugin-offline',
+    ],
+};
