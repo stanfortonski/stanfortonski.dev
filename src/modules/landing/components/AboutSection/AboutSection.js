@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FormattedMessage } from 'react-intl';
 
-export const About = () => {
+export const AboutSection = () => {
     const data = useStaticQuery(graphql`
         query {
             allGithubData {
@@ -22,19 +22,17 @@ export const About = () => {
     const avatarUrl = data.allGithubData.edges[0].node.data.viewer.avatarUrl;
 
     return (
-        <div className="grid xl:px-48 lg:px-24 px-12">
+        <div className="flex flex-col md:flex-row gap-10 items-center xl:px-48 lg:px-24 px-12">
+            <img
+                src={avatarUrl}
+                alt="Stanisław Fortoński"
+                className="box-shadow"
+                width={250}
+                height={250}
+            />
+
             <div className="text-white text-left text-shadow">
-                <img
-                    src={avatarUrl}
-                    alt="Stanisław Fortoński"
-                    className="box-shadow float-left mx-8"
-                    width={250}
-                    height={250}
-                />
-                <p>
-                    <FormattedMessage id="index.about.content" />
-                </p>
-                <div className="clear-both"></div>
+                <FormattedMessage id="index.about.content" />
             </div>
         </div>
     );

@@ -1,3 +1,5 @@
+@import '../../styles/components/utils';
+
 .present {
     @apply box-shadow;
     border: 0.075em solid #000;
@@ -13,14 +15,12 @@
     }
 }
 
-.table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-}
+.contact-grid {
+    @apply grid gap-5;
+    grid-template-columns: auto 1fr;
 
-.table td {
-    text-align: center;
-    vertical-align: middle;
-    padding: 0.2em;
+    @media screen and (max-width: 576px) {
+        display: block;
+        text-align: left;
+    }
 }

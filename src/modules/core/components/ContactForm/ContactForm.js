@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { toast } from 'react-toastify';
 
+import './styles.css';
+
 export const ContactForm = () => {
     const intl = useIntl();
     const [sending, setSending] = useState(false);
@@ -98,118 +100,80 @@ export const ContactForm = () => {
                     <legend className="present-label">
                         <FormattedMessage id="contact.form.label" />
                     </legend>
-                    <table className="table">
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
 
-                            <tr>
-                                <td colSpan="2">
-                                    <label htmlFor="mail">
-                                        <FormattedMessage id="contact.form.email" />
-                                    </label>
-                                </td>
-                                <td colSpan="3">
-                                    <input type="email" id="mail" name="mail" />
-                                </td>
-                            </tr>
+                    <div className="contact-grid">
+                        <div>
+                            <label htmlFor="mail">
+                                <FormattedMessage id="contact.form.email" />
+                            </label>
+                        </div>
+                        <div>
+                            <input type="email" id="mail" name="mail" />
                             {errors.mail && (
-                                <tr class="text-red">
-                                    <td colSpan="5" style={{ padding: 0, paddingBottom: '0.5em' }}>
-                                        <small>
-                                            <FormattedMessage id={errors.mail} />
-                                        </small>
-                                    </td>
-                                </tr>
+                                <small className="text-red">
+                                    <FormattedMessage id={errors.mail} />
+                                </small>
                             )}
+                        </div>
 
-                            <tr>
-                                <td colSpan="2">
-                                    <label htmlFor="name">
-                                        <FormattedMessage id="contact.form.name" />
-                                    </label>
-                                </td>
-                                <td colSpan="3" className="pb-3">
-                                    <input type="text" id="name" name="name" />
-                                </td>
-                            </tr>
+                        <div>
+                            <label htmlFor="name">
+                                <FormattedMessage id="contact.form.name" />
+                            </label>
+                        </div>
+                        <div>
+                            <input type="text" id="name" name="name" />
                             {errors.name && (
-                                <tr class="text-red">
-                                    <td colSpan="5" style={{ padding: 0, paddingBottom: '0.5em' }}>
-                                        <small>
-                                            <FormattedMessage id={errors.name} />
-                                        </small>
-                                    </td>
-                                </tr>
+                                <small className="text-red">
+                                    <FormattedMessage id={errors.name} />
+                                </small>
                             )}
+                        </div>
 
-                            <tr>
-                                <td colSpan="2">
-                                    <label htmlFor="title">
-                                        <FormattedMessage id="contact.form.subject" />
-                                    </label>
-                                </td>
-                                <td colSpan="3" className="pb-3">
-                                    <input type="text" id="title" name="title" />
-                                </td>
-                            </tr>
+                        <div>
+                            <label htmlFor="title">
+                                <FormattedMessage id="contact.form.subject" />
+                            </label>
+                        </div>
+                        <div>
+                            <input type="text" id="title" name="title" />
+
                             {errors.title && (
-                                <tr class="text-red">
-                                    <td colSpan="5" style={{ padding: 0, paddingBottom: '0.5em' }}>
-                                        <small>
-                                            <FormattedMessage id={errors.title} />
-                                        </small>
-                                    </td>
-                                </tr>
+                                <small className="text-red">
+                                    <FormattedMessage id={errors.title} />
+                                </small>
                             )}
+                        </div>
 
-                            <tr>
-                                <td colSpan="5">
-                                    <label htmlFor="description">
-                                        <FormattedMessage id="contact.form.contents" />
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan="5">
-                                    <textarea id="description" name="description"></textarea>
-                                </td>
-                            </tr>
+                        <div className="col-span-2">
+                            <label htmlFor="description">
+                                <FormattedMessage id="contact.form.contents" />
+                            </label>
+                            <textarea id="description" name="description"></textarea>
                             {errors.description && (
-                                <tr class="text-red">
-                                    <td colSpan="5" style={{ padding: 0, paddingBottom: '0.5em' }}>
-                                        <small>
-                                            <FormattedMessage id={errors.description} />
-                                        </small>
-                                    </td>
-                                </tr>
+                                <small className="text-red">
+                                    <FormattedMessage id={errors.description} />
+                                </small>
                             )}
+                        </div>
 
-                            <tr>
-                                <td colSpan="5">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-shadows btn-chars"
-                                        disabled={sending}
-                                    >
-                                        {sending ? (
-                                            <span className="blink">
-                                                <FormattedMessage id="contact.form.sending" />
-                                                ...
-                                            </span>
-                                        ) : (
-                                            <FormattedMessage id="contact.form.send" />
-                                        )}
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <div className="col-span-2">
+                            <button
+                                type="submit"
+                                className="btn btn-shadows btn-chars"
+                                disabled={sending}
+                            >
+                                {sending ? (
+                                    <span className="blink">
+                                        <FormattedMessage id="contact.form.sending" />
+                                        ...
+                                    </span>
+                                ) : (
+                                    <FormattedMessage id="contact.form.send" />
+                                )}
+                            </button>
+                        </div>
+                    </div>
                 </fieldset>
             </form>
 

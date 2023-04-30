@@ -96,15 +96,6 @@ export const Nav = () => {
                                                 <FormattedMessage id="My GitHub" />
                                             </a>
                                         </li>
-                                        <li>
-                                            <a
-                                                className="btn btn-chars btn-shadows w-full mb-5"
-                                                href="https://codeiter.com"
-                                                rel="nofollow noreferrer noopener"
-                                            >
-                                                <FormattedMessage id="My Blog" />
-                                            </a>
-                                        </li>
                                     </ul>
                                 </ModalBody>
                             </Modal>

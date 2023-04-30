@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import PropTypes from 'prop-types';
 
 import './styles.css';
 
@@ -9,7 +10,7 @@ const SectionVariants = {
     hidden: { opacity: 0 },
 };
 
-export const Section = ({ children }) => {
+export const Section = ({ children, className }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
@@ -25,9 +26,18 @@ export const Section = ({ children }) => {
             animate={controls}
             initial="hidden"
             variants={SectionVariants}
-            className="section"
+            className={`section ${className}`}
         >
             {children}
         </motion.section>
     );
+};
+
+Section.defaultProps = {
+    className: '',
+};
+
+Section.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.node,
 };

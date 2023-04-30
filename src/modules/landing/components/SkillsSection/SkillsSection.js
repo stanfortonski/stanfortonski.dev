@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { ProgressBar } from '../ProgressBar';
 import { Frame } from '../../../core/components/Frame';
 
-export const Skills = ({ locale }) => {
+export const SkillsSection = () => {
     return (
         <>
             <h2 className="text-h1">
@@ -40,6 +40,16 @@ export const Skills = ({ locale }) => {
                         <li>
                             <a
                                 rel="nofollow noreferrer noopener"
+                                href="https://chakra-ui.com"
+                                className="anr"
+                                target="_blank"
+                            >
+                                Chakra UI
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                rel="nofollow noreferrer noopener"
                                 href="https://redux.js.org"
                                 className="anr"
                                 target="_blank"
@@ -70,16 +80,6 @@ export const Skills = ({ locale }) => {
                         <li>
                             <a
                                 rel="nofollow noreferrer noopener"
-                                href="https://vuetifyjs.com/"
-                                className="anr"
-                                target="_blank"
-                            >
-                                Vuetify
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                rel="nofollow noreferrer noopener"
                                 href="https://jquery.com"
                                 className="anr"
                                 target="_blank"
@@ -99,6 +99,16 @@ export const Skills = ({ locale }) => {
 
                         <li className="text-h6 mt-3">
                             <FormattedMessage id="Basic" />
+                        </li>
+                        <li>
+                            <a
+                                rel="nofollow noreferrer noopener"
+                                href="https://vuetifyjs.com/"
+                                className="anr"
+                                target="_blank"
+                            >
+                                Vuetify
+                            </a>
                         </li>
                         <li>
                             <a

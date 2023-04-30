@@ -52,7 +52,7 @@ export const ProjectsPage = ({ locale }) => {
                 </div>
 
                 <a
-                    className="btn btn-chars btn-shadows btn-primary my-10"
+                    className="btn btn-chars btn-shadows btn-primary mb-10"
                     href="https://github.com/stanfortonski?tab=repositories"
                 >
                     All My GitHub Projects

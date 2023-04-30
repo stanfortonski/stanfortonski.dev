@@ -2,6 +2,12 @@
     @apply absolute bottom-0 text-center flex items-end;
     left: 5%;
     width: 90%;
+
+    @media screen and (max-width: 764px) {
+        display: block;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .footer__center {
@@ -10,7 +16,7 @@
           flex 
           items-center 
           justify-center 
-          mx-auto;
+          mx-0 md:mx-auto;
 
     flex-grow: 1;
     height: 70px;
@@ -21,7 +27,7 @@
 
 .footer__center::before,
 .footer__center::after {
-    @apply border-b-primary-proper inline-block absolute top-0;
+    @apply border-b-primary-proper md:inline-block absolute top-0 hidden;
 
     content: '';
     width: 0;

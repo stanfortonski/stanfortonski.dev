@@ -8,7 +8,7 @@
     @apply relative 
           inline-block
           h-full 
-          px-1
+          
           cursor-pointer 
           bg-primary-proper
           hover:bg-primary-dark;
@@ -31,13 +31,13 @@
 }
 
 .nav-toggler::before {
-    left: -1em;
-    border-left: 1em solid transparent;
+    left: -53px;
+    border-left: 54px solid transparent;
 }
 
 .nav-toggler::after {
-    right: -1em;
-    border-right: 1em solid transparent;
+    right: -53px;
+    border-right: 54px solid transparent;
 }
 
 .nav-toggler:hover::before,
@@ -73,7 +73,7 @@
     left: 50%;
     top: 50%;
     max-width: 10em;
-    max-height: 16.5em;
+    max-height: 15em;
     width: 80%;
     height: 80%;
     margin-top: -2em;
@@ -83,6 +83,16 @@
 @media screen and (max-width: 1024px) {
     .nav-menu .modal {
         margin-top: 0em;
+    }
+
+    .nav-toggler::before {
+        left: -39px;
+        border-left: 40px solid transparent;
+    }
+
+    .nav-toggler::after {
+        right: -39px;
+        border-right: 40px solid transparent;
     }
 }
 

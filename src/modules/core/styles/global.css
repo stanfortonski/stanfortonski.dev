@@ -34,6 +34,10 @@ body,
 main.layout-content {
     @apply pb-5 flex-grow;
     padding-bottom: 150px;
+
+    @media screen and (max-width: 764px) {
+        padding-bottom: 80px;
+    }
 }
 
 .grecaptcha-badge {
@@ -47,17 +51,5 @@ main.layout-content {
 
     .nav-menu .modal {
         margin-top: 0em;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    body {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    body {
-        font-size: 18px;
     }
 }

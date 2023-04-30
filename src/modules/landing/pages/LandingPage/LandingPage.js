@@ -2,14 +2,15 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
+import { Seo } from '@/modules/core/components/Seo';
+import { Frame } from '@/modules/core/components/Frame';
+
 import { LandingLayout } from '../../components/LandingLayout';
 import { Section } from '../../components/Section';
-import { Seo } from '../../../core/components/Seo/Seo';
-import { Projects } from '../../components/Projects';
-import { Skills } from '../../components/Skills';
-import { Frame } from '../../../core/components/Frame/Frame';
 import { ContactForm } from '../../../core/components/ContactForm/ContactForm';
-import { About } from '../../components/About';
+import { ProjectsSection } from '../../components/ProjectsSection';
+import { SkillsSection } from '../../components/SkillsSection';
+import { AboutSection } from '../../components/AboutSection';
 
 export const LandingPage = ({ locale }) => {
     return (
@@ -19,7 +20,10 @@ export const LandingPage = ({ locale }) => {
             <div className="container-fluid text-center">
                 <Section>
                     <h2 className="text-h1">Full Stack Developer</h2>
-                    <h3 className="text-h2">Web developer | Game developer</h3>
+                    <h3 className="text-h2">
+                        Frontend Web Developer |{' '}
+                        <span className="text-h4 md:text-h3">React Vue Laravel</span>
+                    </h3>
 
                     <Link
                         className="btn btn-chars btn-shadows btn-primary mt-12"
@@ -29,12 +33,12 @@ export const LandingPage = ({ locale }) => {
                     </Link>
                 </Section>
 
-                <Section>
-                    <Projects locale={locale} />
+                <Section className="px-0">
+                    <ProjectsSection />
                 </Section>
 
                 <Section>
-                    <Skills locale={locale} />
+                    <SkillsSection />
                 </Section>
 
                 <Section>
@@ -44,7 +48,7 @@ export const LandingPage = ({ locale }) => {
 
                     <div className="px-5 mt-14">
                         <Frame title={<FormattedMessage id="contact.form" />}>
-                            <div className="px-24 py-10">
+                            <div className="md:px-24 md:py-10">
                                 <ContactForm />
                             </div>
                         </Frame>
@@ -52,7 +56,7 @@ export const LandingPage = ({ locale }) => {
                 </Section>
 
                 <Section>
-                    <About locale={locale} />
+                    <AboutSection />
                 </Section>
             </div>
         </LandingLayout>

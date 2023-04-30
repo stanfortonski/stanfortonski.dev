@@ -1,5 +1,7 @@
 .slider {
+    @apply pb-2;
     position: relative;
+    overflow: hidden;
 }
 
 .slider-content {
@@ -7,10 +9,8 @@
     white-space: nowrap;
 
     .slide {
-        @apply relative inline-block text-center w-full h-full cursor-pointer;
+        @apply relative inline-block w-full h-full text-center cursor-pointer;
 
-        transition: all 0.5s linear;
-        vertical-align: top;
         transition: all 0.25s;
     }
 
@@ -68,11 +68,6 @@
     padding-left: 25% !important;
     padding-right: 25% !important;
 
-    .slider-content {
-        height: 17em;
-        width: 100%;
-    }
-
     .slide {
         padding: 0 5%;
     }
@@ -104,20 +99,11 @@
         padding-right: 0 !important;
 
         .slider-navigation {
-            @apply relative w-full block;
-            padding-top: 0.5em;
+            @apply relative w-full flex justify-center items-center gap-20 mt-5;
 
             .prev,
             .next {
-                @apply absolute;
-            }
-
-            .prev {
-                left: 1em;
-            }
-
-            .next {
-                right: 1em;
+                @apply static;
             }
         }
     }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { PageLayout } from '../../core/components/PageLayout';
-import { Seo } from '../../core/components/Seo/Seo';
-import { Frame } from '../../core/components/Frame/Frame';
-import { ContactForm } from '../../core/components/ContactForm/ContactForm';
+import { PageLayout } from '@/modules/core/components/PageLayout';
+import { Seo } from '@/modules/core/components/Seo/Seo';
+import { Frame } from '@/modules/core/components/Frame';
+import { ContactForm } from '@/modules/core/components/ContactForm';
 
 export const ContactPage = ({ locale }) => {
     return (
@@ -19,14 +19,14 @@ export const ContactPage = ({ locale }) => {
 
                     <div className="grid gap-8 grid-cols-1">
                         <Frame title={<FormattedMessage id="contact.form" />}>
-                            <div className="px-24 py-10">
+                            <div className="md:px-24 md:py-10">
                                 <ContactForm />
                             </div>
                         </Frame>
 
                         <Frame title={<FormattedMessage id="contact.email" />}>
                             <div className="text-center">
-                                E-mail address:{' '}
+                                <FormattedMessage id="contact.email" />:
                                 <a href="mailto:contact@stanfortonski.dev" className="anr">
                                     contact@stanfortonski.dev
                                 </a>

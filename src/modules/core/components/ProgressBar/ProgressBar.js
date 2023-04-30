@@ -10,9 +10,9 @@ const progressBarVariants = (initialProcent, procent, duration, delay) => ({
     },
 });
 
-export const ProgressBar = ({ label, initialProcent, procent, duration, delay }) => {
+export const ProgressBar = ({ label, initialProcent, procent, duration, delay, className }) => {
     return (
-        <div className="progress-bar">
+        <div className={`progress-bar ${className}`}>
             {label && <div className="text">{label}</div>}
             <motion.div
                 className="progress"
@@ -30,6 +30,7 @@ ProgressBar.propTypes = {
     procent: PropTypes.number.isRequired,
     duration: PropTypes.number.isRequired,
     delay: PropTypes.number,
+    className: PropTypes.string,
 };
 
 ProgressBar.defaultProps = {
@@ -37,4 +38,5 @@ ProgressBar.defaultProps = {
     procent: 100,
     duration: 1,
     delay: 0,
+    className: '',
 };

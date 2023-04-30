@@ -21,7 +21,14 @@ export const ProgressBar = ({ procent }) => {
 
     return (
         <motion.span ref={ref} animate={controls} initial="hidden" variants={ProgressBarVariants}>
-            {inView && <BasicProgressBar procent={procent} duration={0.75} delay={0.25} />}
+            {inView && (
+                <BasicProgressBar
+                    className="progress-bar--landing"
+                    procent={procent}
+                    duration={0.75}
+                    delay={0.25}
+                />
+            )}
         </motion.span>
     );
 };

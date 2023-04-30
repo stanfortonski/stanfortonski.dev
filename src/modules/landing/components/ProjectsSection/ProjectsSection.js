@@ -7,11 +7,13 @@ import {
     SliderContent,
     SliderSlide,
     SliderNavigation,
-} from '../../../core/components/Slider';
-import { Frame } from '../../../core/components/Frame';
+} from '@/modules/core/components/Slider';
+import { Frame } from '@/modules/core/components/Frame';
+import { useAppContext } from '@/modules/core/components/App';
 
-export const Projects = ({ locale }) => {
+export const ProjectsSection = () => {
     const [runWebGLApp, setRunWebGLApp] = useState(false);
+    const { locale } = useAppContext();
 
     return (
         <>
@@ -129,7 +131,7 @@ export const Projects = ({ locale }) => {
             </Slider>
 
             <Link
-                className="btn btn-chars btn-shadows btn-primary mt-20"
+                className="btn btn-chars btn-shadows btn-primary md:mt-20 mt-10"
                 to={`/${locale}/projects`}
             >
                 <FormattedMessage id="index.projects.button" />

@@ -13,7 +13,6 @@ const Site = {
     Episodic: 'Epizodycznie:',
     Tools: 'Narzędzia:',
     'My GitHub': 'Mój GitHub',
-    'My Blog': 'Mój Blog',
     Run: 'Uruchom',
     Download: 'Pobierz',
     '404.title': '404 Nie znaleziono',

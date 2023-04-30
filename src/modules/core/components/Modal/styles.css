@@ -93,7 +93,7 @@
 
     .modal-bg {
         object-fit: cover;
-        filter: grayscale(40%) blur(1px);
+        filter: grayscale(20%) blur(1px);
     }
 
     .modal-btn-placement {

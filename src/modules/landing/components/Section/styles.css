@@ -1,5 +1,5 @@
 .section {
-    @apply py-20 px-12;
+    @apply py-10 px-4 md:py-20 md:px-12;
 }
 
 .section:nth-of-type(2n) {
