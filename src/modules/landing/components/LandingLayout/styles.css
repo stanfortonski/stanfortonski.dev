@@ -110,50 +110,6 @@
     z-index: 3;
 }
 
-.progress-bar--landing {
-    background: rgba(0, 0, 0, 0.4);
-    border: 0.12em solid rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    position: relative;
-    width: 7em;
-    height: 1em;
-    background: #0072ff3d;
-    vertical-align: middle;
-
-    .text {
-        position: absolute;
-        left: 0;
-        top: -1.5em;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 2.5em;
-        width: 100%;
-        text-align: center;
-        cursor: default;
-    }
-
-    .progress-bar__progress {
-        position: absolute;
-        height: 100%;
-        width: 0;
-        background: rgba(0, 0, 0, 0.5);
-    }
-}
-
-.progress-bar--landing {
-    position: absolute;
-    top: 75%;
-    left: 12.5%;
-    width: 75%;
-    height: 8%;
-
-    .progress-bar__text {
-        position: absolute;
-        top: -55px;
-        font-size: 40px;
-        @apply blink-fast;
-    }
-}
-
 @media screen and (max-width: 720px), screen and (max-height: 450px) {
     .monitor {
         height: 100%;
@@ -178,10 +134,5 @@
 
     .monitor.scale {
         transform: none;
-    }
-
-    .progress-bar--landing {
-        left: 5%;
-        width: 90%;
     }
 }

@@ -5,12 +5,14 @@ import { FormattedMessage } from 'react-intl';
 
 import { ProgressBar as BasicProgressBar } from '@/modules/core/components/ProgressBar';
 
+import './styles.css';
+
 const ProgressBarVariants = {
     visible: { opacity: 1, transition: { duration: 0.25 } },
     hidden: { opacity: 0 },
 };
 
-export const ProgressBar = ({ procent }) => {
+export const LoadingProgressBar = ({ procent }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
 

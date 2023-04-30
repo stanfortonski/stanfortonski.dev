@@ -1,8 +1,9 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { ProgressBar } from '../ProgressBar';
-import { Frame } from '../../../core/components/Frame';
+import { Frame } from '@/modules/core/components/Frame';
+
+import { SkillProgressBar as ProgressBar } from '../SkillProgressBar';
 
 export const SkillsSection = () => {
     return (

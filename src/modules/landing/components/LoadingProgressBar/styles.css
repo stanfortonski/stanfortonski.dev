@@ -1,0 +1,18 @@
+@import '../../../core/styles/components/utils';
+
+.progress-bar--landing {
+    position: absolute;
+    top: 75%;
+    left: 12.5%;
+    width: 75%;
+    height: 8%;
+
+    .progress-bar__text {
+        @apply blink-fast;
+    }
+
+    @media screen and (max-width: 720px), screen and (max-height: 450px) {
+        left: 5%;
+        width: 90%;
+    }
+}

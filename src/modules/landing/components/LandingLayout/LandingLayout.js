@@ -10,7 +10,7 @@ import { Header } from '@/modules/core/components/Header';
 import { Cookies } from '@/modules/core/components/Cookies';
 import { isBrowser } from '@/modules/core/utils/helpers';
 
-import { ProgressBar } from '../ProgressBar';
+import { LoadingProgressBar } from '../LoadingProgressBar';
 import './styles.css';
 
 const monitorBlurVariants = {
@@ -85,7 +85,7 @@ export const LandingLayout = ({ children, locale }) => {
                                     className="progress-place"
                                     variants={hideProgressVariants}
                                 >
-                                    <ProgressBar />
+                                    <LoadingProgressBar />
                                 </motion.div>
 
                                 <div className="website">
