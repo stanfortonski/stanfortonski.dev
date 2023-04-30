@@ -1,15 +1,15 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import Seo from '../components/Seo';
-import { isBrowser } from '../helpers';
-import Layout from '../layouts/MainLayout';
+import { isBrowser } from '../modules/core/utils/helpers';
+import { PageLayout } from '../modules/core/components/PageLayout';
+import { Seo } from '../modules/core/components/Seo/Seo';
 
 const NotFoundPage = () => {
     const [locale] = useState(isBrowser() ? window.localStorage.getItem('lang') ?? 'en' : false);
 
     return (
-        <Layout locale={locale}>
+        <PageLayout locale={locale}>
             <Seo lang={locale} title="404.title" description="404.description" />
             <div className="container mx-auto">
                 <div className="section text-center">
@@ -24,7 +24,7 @@ const NotFoundPage = () => {
                     </Link>
                 </div>
             </div>
-        </Layout>
+        </PageLayout>
     );
 };
 

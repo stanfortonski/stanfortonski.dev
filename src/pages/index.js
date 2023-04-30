@@ -1,6 +1,6 @@
 import * as React from 'react';
-import IndexPage from '../intlpages/IndexPage';
+import { LandingPage } from '../modules/landing/pages/LandingPage';
 
-const Index = () => <IndexPage locale="en" />;
+const Index = () => <LandingPage locale="en" />;
 
 export default Index;
