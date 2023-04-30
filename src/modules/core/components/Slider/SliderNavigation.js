@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+
 import { SliderContext } from './Slider';
 
 export const SliderNavigation = ({ className }) => {

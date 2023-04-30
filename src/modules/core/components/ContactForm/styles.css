@@ -12,3 +12,15 @@
         font-size: 1em;
     }
 }
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.2em;
+}

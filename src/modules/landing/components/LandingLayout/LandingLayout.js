@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FormattedMessage, IntlProvider } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { graphql, useStaticQuery } from 'gatsby';
-import messages from '../../../../lang/messages';
-import { Footer } from '../../../core/components/Footer';
-import { Nav } from '../../../core/components/Nav';
-import { Header } from '../../../core/components/Header';
-import { Cookies } from '../../../core/components/Cookies';
+
+import { App } from '@/modules/core/components/App';
+import { Footer } from '@/modules/core/components/Footer';
+import { Nav } from '@/modules/core/components/Nav';
+import { Header } from '@/modules/core/components/Header';
+import { Cookies } from '@/modules/core/components/Cookies';
+import { isBrowser } from '@/modules/core/utils/helpers';
+
 import { ProgressBar } from '../ProgressBar';
-import { isBrowser } from '../../../core/utils/helpers';
-import '../../../../styles/global.css';
+import './styles.css';
 
 const monitorBlurVariants = {
     initial: { filter: 'blur(0px)' },
@@ -69,7 +71,7 @@ export const LandingLayout = ({ children, locale }) => {
     }, []);
 
     return (
-        <IntlProvider locale={locale} messages={messages[locale]}>
+        <App locale={locale}>
             <AnimatePresence>
                 {showLoadingScreen && (
                     <div className="loading-screen">
@@ -128,7 +130,7 @@ export const LandingLayout = ({ children, locale }) => {
                     </motion.div>
                 </>
             )}
-        </IntlProvider>
+        </App>
     );
 };
 

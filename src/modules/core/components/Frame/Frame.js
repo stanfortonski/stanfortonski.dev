@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
+import { v4 as uuidv4 } from 'uuid';
+
 import { Modal, ModalBody, ModalHeader, ModalTitle, ModalFooter } from '../Modal';
 import { CloseButton } from './CloseButton';
 import { ExpandButton } from './ExpandButton';
 import { MinimizeButton } from './MinimizeButton';
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
-import { v4 as uuidv4 } from 'uuid';
 
 const DEFAULT_Z_INDEX = 1;
 const EXPANDED_Z_INDEX = 9999;

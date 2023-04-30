@@ -2,8 +2,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
+
 import { Modal, ModalBody, ModalHeader, ModalTitle } from '../Modal';
 import { CloseButton } from '../Frame/CloseButton';
+import './styles.css';
 
 const navMenuOverlayVariants = {
     initial: { opacity: 0 },

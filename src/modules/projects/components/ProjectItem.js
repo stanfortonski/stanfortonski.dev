@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+
 import { getImage } from '../../core/utils/helpers';
 import { Frame } from '../../core/components/Frame';
 

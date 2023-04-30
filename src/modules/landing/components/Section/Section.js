@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+import './styles.css';
+
 const SectionVariants = {
     visible: { opacity: 1, transition: { duration: 1 } },
     hidden: { opacity: 0 },

@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import messages from '../../../../lang/messages';
+import { useStaticQuery, graphql } from 'gatsby';
+
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Nav } from '../Nav';
-import { useStaticQuery, graphql } from 'gatsby';
-import { IntlProvider } from 'react-intl';
 import { Cookies } from '../Cookies';
 import { isBrowser } from '../../utils/helpers';
-import { ToastContainer } from 'react-toastify';
-import '../../../../styles/global.css';
+import { App } from '../App';
 
 export const PageLayout = ({ children, locale, showHeader }) => {
     useEffect(() => {
@@ -29,15 +27,14 @@ export const PageLayout = ({ children, locale, showHeader }) => {
     `);
 
     return (
-        <IntlProvider locale={locale} messages={messages[locale]}>
+        <App locale={locale}>
             {showHeader && <Header siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`} />}
             <Nav />
             <main className="layout-content">{children}</main>
             <Footer />
 
             {isBrowser() && <Cookies />}
-            <ToastContainer />
-        </IntlProvider>
+        </App>
     );
 };
 

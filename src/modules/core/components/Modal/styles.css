@@ -1,3 +1,5 @@
+@import '../../styles/components/utils';
+
 .modal {
     @apply overflow-hidden flex flex-col box-shadow-lg;
     background: #b2b2b2;

@@ -1,3 +1,5 @@
+@import 'react-toastify/dist/ReactToastify.css';
+
 .Toastify__toast {
     @apply font-vt323 box-shadow-lg;
     border-radius: 0;

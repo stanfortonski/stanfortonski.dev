@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
+
 import { CloseButton } from '../Frame/CloseButton';
 import { Modal, ModalHeader, ModalTitle, ModalBody } from '../Modal';
 
@@ -15,7 +16,7 @@ export const Cookies = () => {
     return (
         <>
             {show && (
-                <Modal className="notification text-center">
+                <Modal className="cookies">
                     <ModalHeader>
                         <ModalTitle>Cookies</ModalTitle>
                         <CloseButton onClick={onClose} />

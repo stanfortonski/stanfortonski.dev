@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+
 import { PageLayout } from '../../../core/components/PageLayout';
 import { ProjectItem } from '../../components/ProjectItem';
 import { Seo } from '../../../core/components/Seo/Seo';

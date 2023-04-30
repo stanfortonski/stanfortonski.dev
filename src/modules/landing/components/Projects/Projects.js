@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'gatsby';
+
 import {
     Slider,
     SliderContent,
     SliderSlide,
     SliderNavigation,
 } from '../../../core/components/Slider';
-import { Link } from 'gatsby';
 import { Frame } from '../../../core/components/Frame';
 
 export const Projects = ({ locale }) => {

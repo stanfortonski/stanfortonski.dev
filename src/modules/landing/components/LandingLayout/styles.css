@@ -1,3 +1,5 @@
+@import '../../../core/styles/components/utils';
+
 .loading-screen {
     overflow: hidden;
     perspective: 1.1em;

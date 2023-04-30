@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+
 import { isBrowser } from '../modules/core/utils/helpers';
 import { PageLayout } from '../modules/core/components/PageLayout';
 import { Seo } from '../modules/core/components/Seo/Seo';

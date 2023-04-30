@@ -1,6 +1,8 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.css';
+
 export const SliderContext = createContext();
 
 export const Slider = ({ className, children }) => {

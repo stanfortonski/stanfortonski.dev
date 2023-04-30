@@ -1,3 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './components/form';
+@import './components/utils';
+@import './components/toast';
+@import './components/button';
+@import './components/anchor';
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap&subset=latin-ext');
+
 html {
     height: 100%;
 }
@@ -21,33 +31,13 @@ body,
     min-height: 100vh;
 }
 
-.header {
-    @apply bg-primary-proper text-center h-52 flex items-center justify-center;
-
-    h1 {
-        @apply neon-green;
-        font-size: 3.4em;
-        text-shadow: none;
-        color: rgba(0, 0, 0, 0.4);
-    }
-
-    h1:hover,
-    h1:focus {
-        @apply neon-purple;
-    }
-}
-
 main.layout-content {
     @apply pb-5 flex-grow;
     padding-bottom: 150px;
 }
 
-.section {
-    @apply py-20 px-12;
-}
-
-.section:nth-of-type(2n) {
-    background: rgba(0, 0, 0, 0.35);
+.grecaptcha-badge {
+    display: none !important;
 }
 
 @media screen and (max-width: 1024px) {

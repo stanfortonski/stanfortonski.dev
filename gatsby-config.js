@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     siteMetadata: {
         title: 'Stan Fortoński',
@@ -7,6 +9,15 @@ module.exports = {
         recaptcha_public: process.env.recaptcha_public,
     },
     plugins: [
+        {
+            resolve: `gatsby-plugin-alias-imports`,
+            options: {
+                alias: {
+                    '@': path.resolve(__dirname, 'src'),
+                },
+                extensions: ['js', 'css'],
+            },
+        },
         {
             resolve: 'gatsby-plugin-i18n',
             options: {

@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+
 import { LandingLayout } from '../../components/LandingLayout';
 import { Section } from '../../components/Section';
 import { Seo } from '../../../core/components/Seo/Seo';

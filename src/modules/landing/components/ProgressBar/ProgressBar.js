@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ProgressBar as BasicProgressBar } from '../../components/ProgressBar';
+
+import { ProgressBar as BasicProgressBar } from '@/modules/core/components/ProgressBar';
 
 const ProgressBarVariants = {
     visible: { opacity: 1, transition: { duration: 0.25 } },

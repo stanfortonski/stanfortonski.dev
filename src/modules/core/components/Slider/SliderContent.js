@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+
 import { SliderContext } from './Slider';
 
 const defaultVariants = (current) => {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useIntl } from 'react-intl';
+
 import { isBrowser } from '../../utils/helpers';
 
 export function Seo({ description, lang, meta, title, keywords }) {

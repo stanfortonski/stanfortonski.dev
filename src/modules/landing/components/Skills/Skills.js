@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+
 import { ProgressBar } from '../ProgressBar';
 import { Frame } from '../../../core/components/Frame';
 

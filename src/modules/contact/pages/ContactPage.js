@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+
 import { PageLayout } from '../../core/components/PageLayout';
 import { Seo } from '../../core/components/Seo/Seo';
 import { Frame } from '../../core/components/Frame/Frame';
