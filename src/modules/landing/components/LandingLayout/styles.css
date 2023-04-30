@@ -73,7 +73,7 @@
         position: relative;
         width: 50vw;
         height: 65vh;
-        min-width: 500px;
+
         max-width: 100vh;
         border-width: 30px 30px 50px 30px;
     }
@@ -131,7 +131,7 @@
         cursor: default;
     }
 
-    .progress {
+    .progress-bar__progress {
         position: absolute;
         height: 100%;
         width: 0;
@@ -139,14 +139,17 @@
     }
 }
 
-.monitor .progress-bar--landing {
+.progress-bar--landing {
     position: absolute;
     top: 75%;
     left: 12.5%;
     width: 75%;
     height: 8%;
 
-    .text {
+    .progress-bar__text {
+        position: absolute;
+        top: -55px;
+        font-size: 40px;
         @apply blink-fast;
     }
 }
@@ -179,6 +182,6 @@
 
     .progress-bar--landing {
         left: 5%;
-        width: 62.5%;
+        width: 90%;
     }
 }

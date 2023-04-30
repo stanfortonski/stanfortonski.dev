@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { FormattedMessage } from 'react-intl';
 
 import { ProgressBar as BasicProgressBar } from '@/modules/core/components/ProgressBar';
 
@@ -23,6 +24,7 @@ export const ProgressBar = ({ procent }) => {
         <motion.span ref={ref} animate={controls} initial="hidden" variants={ProgressBarVariants}>
             {inView && (
                 <BasicProgressBar
+                    label={<FormattedMessage id="layout.loading" />}
                     className="progress-bar--landing"
                     procent={procent}
                     duration={0.75}

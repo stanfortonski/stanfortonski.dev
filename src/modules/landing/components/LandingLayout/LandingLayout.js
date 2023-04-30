@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FormattedMessage } from 'react-intl';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { App } from '@/modules/core/components/App';
@@ -86,7 +85,7 @@ export const LandingLayout = ({ children, locale }) => {
                                     className="progress-place"
                                     variants={hideProgressVariants}
                                 >
-                                    <ProgressBar label={<FormattedMessage id="layout.loading" />} />
+                                    <ProgressBar />
                                 </motion.div>
 
                                 <div className="website">

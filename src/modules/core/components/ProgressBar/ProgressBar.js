@@ -13,13 +13,13 @@ const progressBarVariants = (initialProcent, procent, duration, delay) => ({
 export const ProgressBar = ({ label, initialProcent, procent, duration, delay, className }) => {
     return (
         <div className={`progress-bar ${className}`}>
-            {label && <div className="text">{label}</div>}
+            {label && <div className="progress-bar__text">{label}</div>}
             <motion.div
-                className="progress"
+                className="progress-bar__progress"
                 variants={progressBarVariants(initialProcent, procent, duration, delay)}
                 initial="initial"
                 animate="animate"
-            ></motion.div>
+            />
         </div>
     );
 };

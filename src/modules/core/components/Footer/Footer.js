@@ -20,7 +20,7 @@ export const Footer = () => {
 
             <div className="footer__side footer__side--right">
                 <div className="footer__side-before"></div>
-                <div className="py-2 text-4xl">
+                <div className="py-2 text-4xl text-right">
                     <Link to="/" className="hover:text-primary-proper mx-2">
                         EN
                     </Link>
