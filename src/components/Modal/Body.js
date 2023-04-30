@@ -1,19 +1,17 @@
-import React from 'react'
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Body = ({ children, className }) => (
-    <div className={`modal-body ${className}`}> 
-        {children}
-    </div>
-)
+    <div className={`modal-body ${className}`}>{children}</div>
+);
 
 Body.defaultProps = {
-    className: ''
-}
-  
+    className: '',
+};
+
 Body.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.node
-}
+    children: PropTypes.node,
+};
 
-export default Body
+export default Body;

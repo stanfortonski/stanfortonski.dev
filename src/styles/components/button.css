@@ -1,47 +1,47 @@
 .btn {
-  @apply font-vt323 cursor-pointer;
-  display: inline-block;
-  color: #fff;
-  padding: .2em 0.4em;
-  user-select: none;
-  background: rgba(0, 0, 0, .3);
+    @apply font-vt323 cursor-pointer;
+    display: inline-block;
+    color: #fff;
+    padding: 0.2em 0.4em;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .btn-chars::before,
 .btn-chars::after {
-  display: inline;
-  position: relative;
-  top: 0;
+    display: inline;
+    position: relative;
+    top: 0;
 }
 .btn-chars::before {
-  content: "< ";
+    content: '< ';
 }
 .btn-chars::after {
-  content: " >";
+    content: ' >';
 }
 .btn-chars:hover::before {
-  left: 0.1em;
+    left: 0.1em;
 }
 .btn-chars:hover::after {
-  right: 0.1em;
+    right: 0.1em;
 }
 .btn-chars:active::before {
-  left: 0.22em;
+    left: 0.22em;
 }
 .btn-chars:active::after {
-  right: 0.22em;
+    right: 0.22em;
 }
 
 .btn-shadows {
-  @apply box-shadow;
-  transition: 0.17s transform linear, 0.17s box-shadow linear;
+    @apply box-shadow;
+    transition: 0.17s transform linear, 0.17s box-shadow linear;
 }
 .btn-shadows:hover,
 .btn-shadows:focus {
-  @apply box-shadow-sm;
-  transform: scale(1.05);
+    @apply box-shadow-sm;
+    transform: scale(1.05);
 }
 
 .btn-primary {
-  background: #55a89d;
+    background: #55a89d;
 }

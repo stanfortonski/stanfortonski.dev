@@ -1,8 +1,6 @@
-import * as React from "react"
-import IndexPage from "../intlpages/IndexPage"
+import * as React from 'react';
+import IndexPage from '../intlpages/IndexPage';
 
-const Index = () => (
-  <IndexPage locale="en" />
-)
+const Index = () => <IndexPage locale="en" />;
 
-export default Index
+export default Index;

@@ -1,4 +1,6 @@
-export default {
+const languages = {
     langs: ['en', 'pl'],
-    defaultLangKey: 'en'
+    defaultLangKey: 'en',
 };
+
+export default languages;

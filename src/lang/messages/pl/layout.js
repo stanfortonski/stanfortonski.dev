@@ -1,6 +1,6 @@
 const Layout = {
     'layout.loading': 'Ładowanie...',
-    'layout.choose-lang': 'Wybierz swój język'
+    'layout.choose-lang': 'Wybierz swój język',
 };
 
-export default Layout
+export default Layout;

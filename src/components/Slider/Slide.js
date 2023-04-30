@@ -1,14 +1,12 @@
-import React from 'react'
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Slide = ({ children }) => {
-  return (
-    <>{children}</>
-  )
-}
+    return <>{children}</>;
+};
 
 Slide.propTypes = {
-  children: PropTypes.node
-}
+    children: PropTypes.node,
+};
 
-export default Slide
+export default Slide;

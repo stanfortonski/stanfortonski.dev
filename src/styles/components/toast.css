@@ -1,18 +1,18 @@
-.Toastify__toast{
+.Toastify__toast {
     @apply font-vt323 box-shadow-lg;
     border-radius: 0;
     font-size: 1.4rem;
     line-height: 1.75rem;
 }
 
-.Toastify__toast-icon{
+.Toastify__toast-icon {
     @apply mr-4;
 }
 
-.Toastify__toast--error{
+.Toastify__toast--error {
     background: #fff;
 }
 
-.Toastify__toast--success{
+.Toastify__toast--success {
     background: #fff;
 }

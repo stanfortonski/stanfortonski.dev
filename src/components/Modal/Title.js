@@ -1,23 +1,17 @@
-import React from 'react'
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Title = ({ 
-    children,
-    className
-}) => {
-   
-    return (
-        <span className={`modal-title ${className}`}>{children}</span>
-    )
-}
+const Title = ({ children, className }) => {
+    return <span className={`modal-title ${className}`}>{children}</span>;
+};
 
 Title.defaultProps = {
-    className: ''
-}
-  
+    className: '',
+};
+
 Title.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.node
-}
+    children: PropTypes.node,
+};
 
-export default Title
+export default Title;

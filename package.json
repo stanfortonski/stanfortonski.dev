@@ -29,6 +29,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "env-cmd": "^10.1.0",
+    "eslint-config-react-app": "^7.0.1",
     "gatsby-plugin-postcss": "^5.7.0",
     "postcss": "^8.4.6",
     "postcss-import": "^14.0.2",
@@ -42,11 +43,12 @@
   "scripts": {
     "build": "env-cmd gatsby build",
     "develop": "env-cmd gatsby develop --port 8080",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "env-cmd gatsby develop",
     "serve": "env-cmd gatsby serve",
     "clean": "env-cmd gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
