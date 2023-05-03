@@ -3,9 +3,10 @@ import { FormattedMessage, useIntl } from 'react-intl';
 
 import { CloseButton } from '../Frame/CloseButton';
 import { Modal, ModalHeader, ModalTitle, ModalBody } from '../Modal';
+import './styles.css';
 
 export const Cookies = () => {
-    const [show, setShow] = useState(window.localStorage.getItem('cookies') ? false : true);
+    const [show, setShow] = useState(() => (window.localStorage.getItem('cookies') ? false : true));
 
     const { formatMessage } = useIntl();
     const onClose = () => {

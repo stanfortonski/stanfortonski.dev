@@ -73,7 +73,6 @@
         position: relative;
         width: 50vw;
         height: 65vh;
-
         max-width: 100vh;
         border-width: 30px 30px 50px 30px;
     }
@@ -113,6 +112,7 @@
 @media screen and (max-width: 720px), screen and (max-height: 450px) {
     .monitor {
         height: 100%;
+        max-width: 100vw !important;
         bottom: 0;
     }
 
