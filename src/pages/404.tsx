@@ -7,7 +7,7 @@ import { PageLayout } from '../modules/core/components/PageLayout';
 import { Seo } from '../modules/core/components/Seo/Seo';
 
 const NotFoundPage = () => {
-    const [locale] = useState(isBrowser() ? window.localStorage.getItem('lang') ?? 'en' : false);
+    const [locale] = useState(isBrowser() ? window.localStorage.getItem('lang') ?? 'en' : 'en');
 
     return (
         <PageLayout locale={locale}>
