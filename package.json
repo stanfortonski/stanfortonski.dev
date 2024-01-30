@@ -16,7 +16,8 @@
         "serve": "env-cmd gatsby serve",
         "clean": "env-cmd gatsby clean",
         "lint": "eslint ./src",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "tsc": "tsc"
     },
     "dependencies": {
         "framer-motion": "^6.5.1",
