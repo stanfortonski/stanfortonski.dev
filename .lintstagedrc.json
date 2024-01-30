@@ -1,0 +1,4 @@
+{
+    "**/*.{js,jsx,ts,tsx,json,md,css,html}": ["prettier --check --ignore-unknown --write"],
+    "**/*.{js,jsx,ts,tsx}": ["eslint --quiet --fix"]
+}

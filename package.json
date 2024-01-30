@@ -11,11 +11,12 @@
     "scripts": {
         "build": "env-cmd gatsby build",
         "develop": "env-cmd gatsby develop --port 8080",
-        "format": "prettier --check --ignore-unknown --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+        "format": "prettier --check --ignore-unknown --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
         "start": "env-cmd gatsby develop",
         "serve": "env-cmd gatsby serve",
         "clean": "env-cmd gatsby clean",
-        "lint": "eslint ./src"
+        "lint": "eslint ./src",
+        "prepare": "husky install"
     },
     "dependencies": {
         "framer-motion": "^6.5.1",
@@ -46,6 +47,8 @@
         "autoprefixer": "^10.4.17",
         "env-cmd": "^10.1.0",
         "eslint-config-react-app": "^7.0.1",
+        "husky": "^8.0.0",
+        "lint-staged": "^15.2.0",
         "postcss": "^8.4.33",
         "postcss-import": "^14.1.0",
         "prettier": "^2.8.8",
