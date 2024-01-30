@@ -2,7 +2,7 @@
     "name": "stanfortonski-dev",
     "private": true,
     "description": "stanfortonski.dev portfolio site",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "author": "Stan Fortoński <stan.fortonski@gmail.com>",
     "dependencies": {
         "framer-motion": "^6.2.8",
@@ -44,11 +44,10 @@
     "scripts": {
         "build": "env-cmd gatsby build",
         "develop": "env-cmd gatsby develop --port 8080",
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+        "format": "prettier --check --ignore-unknown --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
         "start": "env-cmd gatsby develop",
         "serve": "env-cmd gatsby serve",
         "clean": "env-cmd gatsby clean",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
         "lint": "eslint ./src"
     },
     "repository": {
