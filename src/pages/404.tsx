@@ -2,9 +2,9 @@ import { Link } from 'gatsby';
 import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { isBrowser } from '../modules/core/utils/helpers';
-import { PageLayout } from '../modules/core/components/PageLayout';
-import { Seo } from '../modules/core/components/Seo/Seo';
+import { isBrowser } from '@/modules/core/utils/helpers';
+import { PageLayout } from '@/modules/core/components/PageLayout';
+import { Seo } from '@/modules/core/components/Seo/Seo';
 
 const NotFoundPage = () => {
     const [locale] = useState<'pl' | 'en'>(() =>

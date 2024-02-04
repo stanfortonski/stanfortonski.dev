@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ProjectsPage } from '../modules/projects/pages/ProjectsPage';
+import { ProjectsPage } from '@/modules/projects/pages/ProjectsPage';
 
 const Projects = () => <ProjectsPage locale="en" />;
 
