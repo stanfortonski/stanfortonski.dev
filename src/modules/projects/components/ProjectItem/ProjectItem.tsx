@@ -1,20 +1,29 @@
 import { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { getImage } from '../../core/utils/helpers';
-import { Frame } from '../../ui/components/Frame';
+import { getImage } from '@/modules/core/utils/helpers';
+import { Frame } from '@/modules/ui/components/Frame';
 
-export const ProjectItem = ({ locale, node }) => {
+export type ProjectItemProps = {
+    node: {
+        id: string;
+        name: string;
+        url: string;
+        descriptionHTML: string;
+    };
+};
+
+export const ProjectItem = ({ node }: ProjectItemProps) => {
     const { name, url, descriptionHTML } = node;
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState<HTMLImageElement>();
 
     useEffect(() => {
         getImage(`/images/projects/${name}.jpg`)
-            .then((img) => {
+            .then((img: HTMLImageElement) => {
                 img.className = 'modal-bg modal-full';
                 setImage(img);
             })
-            .catch((img) => {});
+            .catch(() => {});
     }, [name]);
 
     return (

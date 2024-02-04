@@ -2,10 +2,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { PageLayout } from '@/modules/core/components/PageLayout';
 import { Seo } from '@/modules/core/components/Seo/Seo';
+import { type AppContextType } from '@/modules/core/contexts/AppContext';
 
-import { ProjectItem } from '../../components/ProjectItem';
+import { ProjectItem, ProjectItemProps } from '../../components/ProjectItem';
 
-export const ProjectsPage = ({ locale }) => {
+export const ProjectsPage = ({ locale }: AppContextType) => {
     const data = useStaticQuery(graphql`
         query {
             allGithubData {
@@ -45,8 +46,8 @@ export const ProjectsPage = ({ locale }) => {
                     <h2 className="text-h2 text-center mb-8">My GitHub projects</h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 section">
-                        {projects.map(({ node }) => (
-                            <ProjectItem locale={locale} node={node} key={node.id} />
+                        {projects.map(({ node }: ProjectItemProps) => (
+                            <ProjectItem node={node} key={node.id} />
                         ))}
                     </div>
                 </div>
