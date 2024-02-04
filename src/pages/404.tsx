@@ -5,9 +5,10 @@ import { FormattedMessage } from 'react-intl';
 import { isBrowser } from '@/modules/core/utils/helpers';
 import { PageLayout } from '@/modules/core/components/PageLayout';
 import { Seo } from '@/modules/core/components/Seo/Seo';
+import { type AppContextType } from '@/modules/core/contexts/AppContext';
 
 const NotFoundPage = () => {
-    const [locale] = useState<'pl' | 'en'>(() =>
+    const [locale] = useState<AppContextType['locale']>(() =>
         isBrowser() ? (window.localStorage.getItem('locale') as any) ?? 'en' : 'en',
     );
 
