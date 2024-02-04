@@ -4,10 +4,10 @@ import { FormattedMessage } from 'react-intl';
 
 import { Seo } from '@/modules/core/components/Seo';
 import { Frame } from '@/modules/core/components/Frame';
+import { ContactForm } from '@/modules/contact/components/ContactForm';
 
 import { LandingLayout } from '../../components/LandingLayout';
 import { Section } from '../../components/Section';
-import { ContactForm } from '../../../core/components/ContactForm/ContactForm';
 import { ProjectsSection } from '../../components/ProjectsSection';
 import { SkillsSection } from '../../components/SkillsSection';
 import { AboutSection } from '../../components/AboutSection';

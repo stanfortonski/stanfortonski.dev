@@ -1,4 +1,4 @@
-@import '../../styles/components/utils';
+@import '../../../core/styles/components/utils';
 
 .present {
     @apply box-shadow;

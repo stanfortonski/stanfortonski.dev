@@ -1,6 +1,6 @@
 {
     "**/*.{js,jsx,ts,tsx,json,md,css,html}": ["prettier --check --ignore-unknown --write"],
     "**/*.{js,jsx,ts,tsx}": ["eslint --quiet --fix"],
-    "**/*.{ts,tsx}": ["tsc"],
+    "**/*.{ts,tsx}": ["bash -c 'yarn tsc --project tsconfig.json'"],
     "**/*.css": ["stylelint --fix"]
 }

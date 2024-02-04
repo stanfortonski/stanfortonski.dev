@@ -4,7 +4,8 @@ import { FormattedMessage } from 'react-intl';
 import { PageLayout } from '@/modules/core/components/PageLayout';
 import { Seo } from '@/modules/core/components/Seo/Seo';
 import { Frame } from '@/modules/core/components/Frame';
-import { ContactForm } from '@/modules/core/components/ContactForm';
+
+import { ContactForm } from '../components/ContactForm';
 
 export const ContactPage = ({ locale }) => {
     return (

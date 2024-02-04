@@ -9,7 +9,7 @@ import {
     SliderNavigation,
 } from '@/modules/core/components/Slider';
 import { Frame } from '@/modules/core/components/Frame';
-import { useAppContext } from '@/modules/core/components/App';
+import { useAppContext } from '@/modules/core/contexts/AppContext';
 
 export const ProjectsSection = () => {
     const [runWebGLApp, setRunWebGLApp] = useState(false);
