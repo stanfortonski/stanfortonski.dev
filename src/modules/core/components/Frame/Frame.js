@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';

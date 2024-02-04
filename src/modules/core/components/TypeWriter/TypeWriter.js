@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export const TypeWriter = ({ text, duration, delay, cursor }) => {
     const [typed, setTyped] = useState('');

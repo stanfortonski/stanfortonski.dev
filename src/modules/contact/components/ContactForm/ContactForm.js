@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';

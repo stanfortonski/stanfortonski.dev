@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
 
-import { PageLayout } from '../../../core/components/PageLayout';
+import { PageLayout } from '@/modules/core/components/PageLayout';
+import { Seo } from '@/modules/core/components/Seo/Seo';
+
 import { ProjectItem } from '../../components/ProjectItem';
-import { Seo } from '../../../core/components/Seo/Seo';
 
 export const ProjectsPage = ({ locale }) => {
     const data = useStaticQuery(graphql`

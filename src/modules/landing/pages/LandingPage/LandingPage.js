@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import { Seo } from '@/modules/core/components/Seo';

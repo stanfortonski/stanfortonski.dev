@@ -1,4 +1,3 @@
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import { PageLayout } from '@/modules/core/components/PageLayout';
