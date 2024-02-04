@@ -3,10 +3,11 @@ import { FormattedMessage } from 'react-intl';
 import { PageLayout } from '@/modules/core/components/PageLayout';
 import { Seo } from '@/modules/core/components/Seo/Seo';
 import { Frame } from '@/modules/ui/components/Frame';
+import { type AppContextType } from '@/modules/core/contexts/AppContext';
 
 import { ContactForm } from '../components/ContactForm';
 
-export const ContactPage = ({ locale }) => {
+export const ContactPage = ({ locale }: AppContextType) => {
     return (
         <PageLayout locale={locale}>
             <Seo locale={locale} title="contact.title" description="contact.description" />

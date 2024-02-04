@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { useIntl } from 'react-intl';
 
 import { isBrowser } from '../../utils/helpers';
-import { AppContextType } from '../../contexts/AppContext';
+import { type AppContextType } from '../../contexts/AppContext';
 
 export type SEOProps = {
     title: string;

@@ -6,10 +6,18 @@ import { toast } from 'react-toastify';
 
 import './styles.css';
 
+export type ContactFormValues = {
+    mail: string;
+    name: string;
+    title: string;
+    description: string;
+    recaptcha_response?: string;
+};
+
 export const ContactForm = () => {
     const intl = useIntl();
     const [sending, setSending] = useState(false);
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState<Record<string, string>>({});
     const { site } = useStaticQuery(graphql`
         query {
             site {
@@ -21,8 +29,8 @@ export const ContactForm = () => {
         }
     `);
 
-    const validate = ({ mail, name, title, description }) => {
-        const newErrors = {};
+    const validate = ({ mail, name, title, description }: ContactFormValues) => {
+        const newErrors: Record<string, string> = {};
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)) {
             newErrors.mail = 'contact.errors.mail';
@@ -45,9 +53,9 @@ export const ContactForm = () => {
         return JSON.stringify(newErrors) === JSON.stringify({});
     };
 
-    const sendMail = (e) => {
+    const sendMail = (e: any) => {
         e.preventDefault();
-        const data = {
+        const data: ContactFormValues = {
             mail: e.target.elements.mail.value,
             name: e.target.elements.name.value,
             title: e.target.elements.title.value,
@@ -57,7 +65,7 @@ export const ContactForm = () => {
         window?.grecaptcha?.ready(() => {
             window?.grecaptcha
                 .execute(site.siteMetadata.recaptcha_public, { action: 'submit' })
-                .then(function (token) {
+                .then(function (token: string) {
                     data.recaptcha_response = token;
                     if (validate(data)) {
                         setSending(true);

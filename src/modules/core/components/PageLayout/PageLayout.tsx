@@ -8,7 +8,7 @@ import { Nav } from '@/modules/ui/components/Nav';
 import { Cookies } from '../Cookies';
 import { isBrowser } from '../../utils/helpers';
 import { App } from '../App';
-import { AppContextType } from '../../contexts/AppContext';
+import { type AppContextType } from '../../contexts/AppContext';
 
 export type PageLayoutProps = {
     locale: AppContextType['locale'];
