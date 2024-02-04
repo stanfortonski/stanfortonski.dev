@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { type AppContextProps, AppContextProvider } from '@/modules/core/contexts/AppContext';
 import { messages } from '@/lang/messages';
 
-import '../../styles/global.css';
+import '@/modules/ui/styles/global.css';
 
 export const App = ({ locale, children }: AppContextProps) => {
     return (

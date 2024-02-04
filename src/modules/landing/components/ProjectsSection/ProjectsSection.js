@@ -7,8 +7,8 @@ import {
     SliderContent,
     SliderSlide,
     SliderNavigation,
-} from '@/modules/core/components/Slider';
-import { Frame } from '@/modules/core/components/Frame';
+} from '@/modules/ui/components/Slider';
+import { Frame } from '@/modules/ui/components/Frame';
 import { useAppContext } from '@/modules/core/contexts/AppContext';
 
 export const ProjectsSection = () => {

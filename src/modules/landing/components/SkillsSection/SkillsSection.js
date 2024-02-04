@@ -1,6 +1,6 @@
 import { FormattedMessage } from 'react-intl';
 
-import { Frame } from '@/modules/core/components/Frame';
+import { Frame } from '@/modules/ui/components/Frame';
 
 import { SkillProgressBar as ProgressBar } from '../SkillProgressBar';
 

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import { CloseButton } from '../Frame/CloseButton';
-import { Modal, ModalHeader, ModalTitle, ModalBody } from '../Modal';
+import { CloseButton } from '../../../ui/components/Frame/CloseButton';
+import { Modal, ModalHeader, ModalTitle, ModalBody } from '../../../ui/components/Modal';
 import './styles.css';
 
 export const Cookies = () => {

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import { getImage } from '../../core/utils/helpers';
-import { Frame } from '../../core/components/Frame';
+import { Frame } from '../../ui/components/Frame';
 
 export const ProjectItem = ({ locale, node }) => {
     const { name, url, descriptionHTML } = node;

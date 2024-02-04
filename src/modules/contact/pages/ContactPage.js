@@ -2,14 +2,14 @@ import { FormattedMessage } from 'react-intl';
 
 import { PageLayout } from '@/modules/core/components/PageLayout';
 import { Seo } from '@/modules/core/components/Seo/Seo';
-import { Frame } from '@/modules/core/components/Frame';
+import { Frame } from '@/modules/ui/components/Frame';
 
 import { ContactForm } from '../components/ContactForm';
 
 export const ContactPage = ({ locale }) => {
     return (
         <PageLayout locale={locale}>
-            <Seo lang={locale} title="contact.title" description="contact.description" />
+            <Seo locale={locale} title="contact.title" description="contact.description" />
 
             <div className="container mx-auto">
                 <div className="section">

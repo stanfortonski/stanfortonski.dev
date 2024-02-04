@@ -7,11 +7,13 @@ import { PageLayout } from '../modules/core/components/PageLayout';
 import { Seo } from '../modules/core/components/Seo/Seo';
 
 const NotFoundPage = () => {
-    const [locale] = useState(isBrowser() ? window.localStorage.getItem('lang') ?? 'en' : 'en');
+    const [locale] = useState<'pl' | 'en'>(() =>
+        isBrowser() ? (window.localStorage.getItem('locale') as any) ?? 'en' : 'en',
+    );
 
     return (
         <PageLayout locale={locale}>
-            <Seo lang={locale} title="404.title" description="404.description" />
+            <Seo locale={locale} title="404.title" description="404.description" />
             <div className="container mx-auto">
                 <div className="section text-center">
                     <h1 className="text-h1 mb-12">

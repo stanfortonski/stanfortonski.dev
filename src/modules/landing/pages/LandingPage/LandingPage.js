@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import { FormattedMessage } from 'react-intl';
 
 import { Seo } from '@/modules/core/components/Seo';
-import { Frame } from '@/modules/core/components/Frame';
+import { Frame } from '@/modules/ui/components/Frame';
 import { ContactForm } from '@/modules/contact/components/ContactForm';
 
 import { LandingLayout } from '../../components/LandingLayout';
@@ -14,7 +14,7 @@ import { AboutSection } from '../../components/AboutSection';
 export const LandingPage = ({ locale }) => {
     return (
         <LandingLayout locale={locale}>
-            <Seo lang={locale} title="index.title" />
+            <Seo locale={locale} title="index.title" />
 
             <div className="container-fluid text-center">
                 <Section>

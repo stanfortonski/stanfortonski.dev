@@ -1,7 +1,13 @@
-import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-export const TypeWriter = ({ text, duration, delay, cursor }) => {
+export type TypeWriterProps = {
+    text: string;
+    duration: number;
+    delay: number;
+    cursor: string;
+};
+
+export const TypeWriter = ({ text, duration, delay, cursor }: TypeWriterProps) => {
     const [typed, setTyped] = useState('');
 
     useEffect(() => {
@@ -26,17 +32,4 @@ export const TypeWriter = ({ text, duration, delay, cursor }) => {
             <span className="blink">{cursor}</span>
         </>
     );
-};
-
-TypeWriter.propTypes = {
-    text: PropTypes.string.isRequired,
-    duration: PropTypes.number,
-    delay: PropTypes.number,
-    cursor: PropTypes.string,
-};
-
-TypeWriter.defaultProps = {
-    duration: 200,
-    delay: 0,
-    cursor: '_',
 };

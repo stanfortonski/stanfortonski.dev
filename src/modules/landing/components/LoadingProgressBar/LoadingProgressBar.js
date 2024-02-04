@@ -3,7 +3,7 @@ import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FormattedMessage } from 'react-intl';
 
-import { ProgressBar as BasicProgressBar } from '@/modules/core/components/ProgressBar';
+import { ProgressBar as BasicProgressBar } from '@/modules/ui/components/ProgressBar';
 
 import './styles.css';
 

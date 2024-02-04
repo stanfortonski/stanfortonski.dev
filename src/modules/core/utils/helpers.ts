@@ -1,4 +1,4 @@
-export function getImage(url) {
+export function getImage(url: string) {
     return new Promise(function (resolve, reject) {
         var img = new Image();
         img.onload = function () {

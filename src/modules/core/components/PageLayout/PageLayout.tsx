@@ -1,15 +1,22 @@
-import { useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { type ReactNode, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Header } from '../Header';
-import { Footer } from '../Footer';
-import { Nav } from '../Nav';
+import { Header } from '@/modules/ui/components/Header';
+import { Footer } from '@/modules/ui/components/Footer';
+import { Nav } from '@/modules/ui/components/Nav';
+
 import { Cookies } from '../Cookies';
 import { isBrowser } from '../../utils/helpers';
 import { App } from '../App';
+import { AppContextType } from '../../contexts/AppContext';
 
-export const PageLayout = ({ children, locale, showHeader }) => {
+export type PageLayoutProps = {
+    locale: AppContextType['locale'];
+    showHeader?: boolean;
+    children: ReactNode;
+};
+
+export const PageLayout = ({ children, locale, showHeader }: PageLayoutProps) => {
     useEffect(() => {
         return () => {
             document.body.style.overflowY = 'visible';
@@ -36,15 +43,4 @@ export const PageLayout = ({ children, locale, showHeader }) => {
             {isBrowser() && <Cookies />}
         </App>
     );
-};
-
-PageLayout.defaultProps = {
-    showHeader: false,
-    locale: 'en',
-};
-
-PageLayout.propTypes = {
-    showHeader: PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    locale: PropTypes.string.isRequired,
 };

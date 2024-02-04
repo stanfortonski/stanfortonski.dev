@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { App } from '@/modules/core/components/App';
-import { Footer } from '@/modules/core/components/Footer';
-import { Nav } from '@/modules/core/components/Nav';
-import { Header } from '@/modules/core/components/Header';
+import { Footer } from '@/modules/ui/components/Footer';
+import { Nav } from '@/modules/ui/components/Nav';
+import { Header } from '@/modules/ui/components/Header';
 import { Cookies } from '@/modules/core/components/Cookies';
 import { isBrowser } from '@/modules/core/utils/helpers';
 
