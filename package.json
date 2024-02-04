@@ -16,7 +16,7 @@
         "clean": "env-cmd gatsby clean",
         "format": "prettier --check --ignore-unknown --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
         "lint": "eslint ./src",
-        "lint:tsc": "tsc",
+        "lint:tsc": "tsc --project tsconfig.json",
         "lint:style": "stylelint \"src/**/*.css\"",
         "lint:style:fix": "stylelint \"src/**/*.css\" --fix",
         "prepare": "husky install"

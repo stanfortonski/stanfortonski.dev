@@ -9,6 +9,7 @@ import { Nav } from '@/modules/ui/components/Nav';
 import { Header } from '@/modules/ui/components/Header';
 import { Cookies } from '@/modules/core/components/Cookies';
 import { isBrowser } from '@/modules/core/utils/helpers';
+import { type AppContextProps } from '@/modules/core/contexts/AppContext';
 
 import { LoadingProgressBar } from '../LoadingProgressBar';
 import './styles.css';
@@ -41,7 +42,7 @@ const showPageVariants = {
     },
 };
 
-export const LandingLayout = ({ children, locale }) => {
+export const LandingLayout = ({ children, locale }: AppContextProps) => {
     const [loaded, setLoaded] = useState(false);
     const [showLoadingScreen, setShowLoadingScreen] = useState(true);
     const data = useStaticQuery(graphql`

@@ -1,18 +1,19 @@
 import { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FormattedMessage } from 'react-intl';
 
 import { ProgressBar as BasicProgressBar } from '@/modules/ui/components/ProgressBar';
-
-import './styles.css';
 
 const ProgressBarVariants = {
     visible: { opacity: 1, transition: { duration: 0.25 } },
     hidden: { opacity: 0 },
 };
 
-export const LoadingProgressBar = ({ procent }) => {
+export type SkillProgressBarProps = {
+    procent?: number;
+};
+
+export const SkillProgressBar = ({ procent }: SkillProgressBarProps) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
@@ -24,15 +25,7 @@ export const LoadingProgressBar = ({ procent }) => {
 
     return (
         <motion.span ref={ref} animate={controls} initial="hidden" variants={ProgressBarVariants}>
-            {inView && (
-                <BasicProgressBar
-                    label={<FormattedMessage id="layout.loading" />}
-                    className="progress-bar--landing"
-                    procent={procent}
-                    duration={0.75}
-                    delay={0.25}
-                />
-            )}
+            {inView && <BasicProgressBar procent={procent} />}
         </motion.span>
     );
 };

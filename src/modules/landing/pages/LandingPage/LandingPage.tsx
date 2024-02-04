@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { Seo } from '@/modules/core/components/Seo';
 import { Frame } from '@/modules/ui/components/Frame';
 import { ContactForm } from '@/modules/contact/components/ContactForm';
+import { type AppContextType } from '@/modules/core/contexts/AppContext';
 
 import { LandingLayout } from '../../components/LandingLayout';
 import { Section } from '../../components/Section';
@@ -11,7 +12,7 @@ import { ProjectsSection } from '../../components/ProjectsSection';
 import { SkillsSection } from '../../components/SkillsSection';
 import { AboutSection } from '../../components/AboutSection';
 
-export const LandingPage = ({ locale }) => {
+export const LandingPage = ({ locale }: AppContextType) => {
     return (
         <LandingLayout locale={locale}>
             <Seo locale={locale} title="index.title" />

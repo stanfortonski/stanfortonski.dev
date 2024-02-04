@@ -1,16 +1,20 @@
-import { useEffect } from 'react';
+import { type ReactNode, useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import PropTypes from 'prop-types';
 
 import './styles.css';
+
+export type SectionType = {
+    className?: string;
+    children: ReactNode;
+};
 
 const SectionVariants = {
     visible: { opacity: 1, transition: { duration: 1 } },
     hidden: { opacity: 0 },
 };
 
-export const Section = ({ children, className }) => {
+export const Section = ({ children, className }: SectionType) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
@@ -26,18 +30,9 @@ export const Section = ({ children, className }) => {
             animate={controls}
             initial="hidden"
             variants={SectionVariants}
-            className={`section ${className}`}
+            className={`section ${className ?? ''}`}
         >
             {children}
         </motion.section>
     );
-};
-
-Section.defaultProps = {
-    className: '',
-};
-
-Section.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node,
 };
