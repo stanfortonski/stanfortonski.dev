@@ -1,5 +1,6 @@
 .footer {
     @apply absolute bottom-0 text-center flex items-end;
+
     left: 5%;
     width: 90%;
 
@@ -64,6 +65,7 @@
 .footer__side-before,
 .footer__side-after {
     @apply inline-block absolute top-0;
+
     content: '';
     width: 20px;
     height: 0;

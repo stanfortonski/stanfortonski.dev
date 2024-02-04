@@ -2,11 +2,13 @@
 
 .modal {
     @apply overflow-hidden flex flex-col box-shadow-lg;
+
     background: #b2b2b2;
     position: relative;
 
     .modal-header {
         @apply flex justify-around items-center;
+
         height: 3.5rem;
         background: rgba(0, 0, 0, 0.1);
     }
@@ -17,12 +19,14 @@
 
     .modal-title {
         @apply text-center text-shadow text-white;
+
         flex-grow: 30;
         font-size: 1.1em;
     }
 
     .modal-btn {
         @apply px-2 text-white text-shadow text-3xl;
+
         width: 3.5rem;
         user-select: none;
     }
@@ -37,6 +41,7 @@
 
     .btn-close span {
         @apply text-5xl relative;
+
         top: -0.25rem;
     }
 
@@ -54,6 +59,7 @@
 
     .modal-body {
         @apply p-5 flex-1;
+
         overflow: auto;
         overflow-x: hidden;
     }
@@ -69,17 +75,20 @@
 
 .modal-overlay {
     @apply fixed top-0 left-0 w-screen h-screen;
+
     z-index: 1;
     will-change: opacity;
 }
 
 .modal-overlay .modal {
     @apply w-full h-full;
+
     background: #b2b2b2;
 }
 
 .modal-project {
     @apply text-center;
+
     min-height: 550px;
 
     .modal-body {
@@ -98,6 +107,7 @@
 
     .modal-btn-placement {
         @apply absolute bottom-0 left-0 w-full flex justify-center items-center;
+
         height: 100%;
         height: calc(100% - 3.5rem);
     }

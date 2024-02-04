@@ -14,6 +14,7 @@ html {
 
 body {
     @apply font-vt323;
+
     font-size: 32px;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -27,12 +28,14 @@ body,
 body,
 .body-sizing {
     @apply relative;
+
     min-height: 100%;
     min-height: 100vh;
 }
 
 main.layout-content {
     @apply pb-5 flex-grow;
+
     padding-bottom: 150px;
 
     @media screen and (max-width: 764px) {
@@ -50,6 +53,6 @@ main.layout-content {
     }
 
     .nav-menu .modal {
-        margin-top: 0em;
+        margin-top: 0;
     }
 }

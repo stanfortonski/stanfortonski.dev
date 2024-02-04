@@ -1,7 +1,6 @@
 @import '../../styles/components/utils';
 
 .progress-bar {
-    background: rgba(0, 0, 0, 0.4);
     border: 0.12em solid rgba(0, 0, 0, 0.1);
     display: inline-block;
     position: relative;

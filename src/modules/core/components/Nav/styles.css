@@ -47,6 +47,7 @@
 
 .nav-toggler .label {
     @apply neon-green;
+
     user-select: none;
 }
 
@@ -57,6 +58,7 @@
 
 .nav-menu-overlay {
     @apply text-center top-0 left-0 w-full h-full fixed;
+
     background: rgba(0, 0, 255, 0.5);
     overflow: hidden;
     z-index: 9999;
@@ -82,7 +84,7 @@
 
 @media screen and (max-width: 1024px) {
     .nav-menu .modal {
-        margin-top: 0em;
+        margin-top: 0;
     }
 
     .nav-toggler::before {

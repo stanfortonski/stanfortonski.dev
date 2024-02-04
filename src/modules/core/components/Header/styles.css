@@ -5,6 +5,7 @@
 
     h1 {
         @apply neon-green;
+
         font-size: 3.4em;
         text-shadow: none;
         color: rgba(0, 0, 0, 0.4);

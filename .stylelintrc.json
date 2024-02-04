@@ -1,0 +1,13 @@
+{
+    "extends": "stylelint-config-standard-scss",
+    "rules": {
+        "scss/at-rule-no-unknown": null,
+        "selector-class-pattern": null,
+        "no-descending-specificity": null,
+        "import-notation": null,
+        "media-feature-range-notation": null,
+        "no-duplicate-selectors": null,
+        "alpha-value-notation": "number",
+        "color-function-notation": "legacy"
+    }
+}
