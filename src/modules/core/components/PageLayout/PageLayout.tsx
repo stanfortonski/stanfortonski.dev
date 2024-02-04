@@ -35,7 +35,12 @@ export const PageLayout = ({ children, locale, showHeader }: PageLayoutProps) =>
 
     return (
         <App locale={locale}>
-            {showHeader && <Header siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`} />}
+            {showHeader && (
+                <Header
+                    siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`}
+                    isAnimate={true}
+                />
+            )}
             <Nav />
             <main className="layout-content">{children}</main>
             <Footer />

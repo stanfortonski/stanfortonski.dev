@@ -94,7 +94,7 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
                                         siteTitle={
                                             data.site.siteMetadata?.title || `Stan Fortoński`
                                         }
-                                        animate={false}
+                                        isAnimate={false}
                                     />
                                     <Nav />
                                     <main className="layout-content">{children}</main>
@@ -120,7 +120,7 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
                     >
                         <Header
                             siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`}
-                            animate={true}
+                            isAnimate={true}
                         />
                         <Nav />
                         <main className="layout-content">{children}</main>
