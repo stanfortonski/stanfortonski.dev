@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -132,15 +131,4 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
             )}
         </App>
     );
-};
-
-LandingLayout.defaultProps = {
-    showHeader: false,
-    locale: 'en',
-};
-
-LandingLayout.propTypes = {
-    showHeader: PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    locale: PropTypes.string.isRequired,
 };
