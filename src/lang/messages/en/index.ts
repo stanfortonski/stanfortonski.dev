@@ -3,8 +3,4 @@ import homepage from './homepage.json';
 import contact from './contact.json';
 import projects from './projects.json';
 
-export const enTranslations = (() => {
-    console.log(global, homepage, contact, projects);
-
-    return {};
-})();
+export const enTranslations = { ...global, ...homepage, ...contact, ...projects };

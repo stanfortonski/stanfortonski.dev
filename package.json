@@ -10,11 +10,11 @@
     ],
     "scripts": {
         "build": "env-cmd gatsby build",
-        "develop": "env-cmd gatsby develop --port 8080",
-        "format": "prettier --check --ignore-unknown --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
+        "dev": "env-cmd gatsby develop --port 8080",
         "start": "env-cmd gatsby develop",
         "serve": "env-cmd gatsby serve",
         "clean": "env-cmd gatsby clean",
+        "format": "prettier --check --ignore-unknown --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
         "lint": "eslint ./src",
         "lint:tsc": "tsc",
         "lint:style": "stylelint \"src/**/*.css\"",
