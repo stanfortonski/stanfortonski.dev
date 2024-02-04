@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -25,6 +24,16 @@ const FrameExpandedVariant = {
     exit: { opacity: 0, transition: { duration: 0.15 } },
 };
 
+export type FrameProps = {
+    title: string | ReactNode;
+    children: ReactNode;
+    footer?: ReactNode;
+    showExpand?: boolean;
+    showClose?: boolean;
+    showMinimize?: boolean;
+    className?: string;
+};
+
 export const Frame = ({
     title,
     footer,
@@ -33,9 +42,9 @@ export const Frame = ({
     showClose,
     showMinimize,
     className,
-}) => {
+}: FrameProps) => {
     const [status, setStatus] = useState(STATUSES.default);
-    const modalRef = useRef();
+    const modalRef: any = useRef<HTMLDivElement>();
     const [layoutId] = useState(uuidv4());
     const inExpanded =
         status === STATUSES.expanding ||
@@ -92,8 +101,10 @@ export const Frame = ({
                         <div ref={modalRef}>
                             <ModalHeader>
                                 <ModalTitle>{title}</ModalTitle>
-                                {showExpand && <ExpandButton onClick={onExpand} />}
-                                {showMinimize && <MinimizeButton onClick={onMinimizeToggle} />}
+                                {(showExpand ?? true) && <ExpandButton onClick={onExpand} />}
+                                {(showMinimize ?? true) && (
+                                    <MinimizeButton onClick={onMinimizeToggle} />
+                                )}
                             </ModalHeader>
 
                             <motion.div
@@ -130,7 +141,7 @@ export const Frame = ({
                         <Modal className={className}>
                             <ModalHeader>
                                 <ModalTitle>{title}</ModalTitle>
-                                {showClose && <CloseButton onClick={onClose} />}
+                                {(showClose ?? true) && <CloseButton onClick={onClose} />}
                             </ModalHeader>
 
                             <ModalBody>{children}</ModalBody>
@@ -142,22 +153,4 @@ export const Frame = ({
             </AnimatePresence>
         </AnimateSharedLayout>
     );
-};
-
-Frame.defaultProps = {
-    title: '',
-    showExpand: true,
-    showClose: true,
-    showMinimize: true,
-    className: '',
-};
-
-Frame.propTypes = {
-    title: PropTypes.any,
-    footer: PropTypes.node,
-    showExpand: PropTypes.bool,
-    showClose: PropTypes.bool,
-    showMinimize: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
 };

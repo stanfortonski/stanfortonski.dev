@@ -1,20 +1,19 @@
-import { useContext } from 'react';
-import PropTypes from 'prop-types';
+import { type ComponentProps, useContext } from 'react';
 
 import { SliderContext } from './Slider';
 
-export const SliderNavigation = ({ className }) => {
+export const SliderNavigation = ({ className }: ComponentProps<any>) => {
     const { slides, setCurrent, current } = useContext(SliderContext);
 
     const setPrev = () => {
-        setCurrent((prevState) => {
+        setCurrent((prevState: number) => {
             if (prevState === 0) return prevState;
             return prevState - 1;
         });
     };
 
     const setNext = () => {
-        setCurrent((prevState) => {
+        setCurrent((prevState: number) => {
             if (prevState === slides.length - 1) return prevState;
             return prevState + 1;
         });
@@ -33,12 +32,4 @@ export const SliderNavigation = ({ className }) => {
             </button>
         </div>
     );
-};
-
-SliderNavigation.defaultProps = {
-    className: '',
-};
-
-SliderNavigation.propTypes = {
-    className: PropTypes.string,
 };

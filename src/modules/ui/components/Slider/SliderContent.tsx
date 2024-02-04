@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { type ReactNode, useContext, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { SliderContext } from './Slider';
 
-const defaultVariants = (current) => {
+const defaultVariants = (current: number) => {
     return {
         initial: { left: `-${current * 100}%` },
         animate: {
@@ -16,7 +15,13 @@ const defaultVariants = (current) => {
     };
 };
 
-export const SliderContent = ({ className, children, variants }) => {
+export type SliderContentProps = {
+    className?: string;
+    children: ReactNode;
+    variants?: CallableFunction;
+};
+
+export const SliderContent = ({ className, children, variants }: SliderContentProps) => {
     const { current, setCurrent, slides, setSlides } = useContext(SliderContext);
 
     useEffect(() => {
@@ -30,8 +35,8 @@ export const SliderContent = ({ className, children, variants }) => {
 
     return (
         <motion.div
-            className={`slider-content ${className}`}
-            variants={variants(current)}
+            className={`slider-content ${className ?? ''}`}
+            variants={variants ? variants(current) : defaultVariants(current)}
             initial="initial"
             animate="animate"
         >
@@ -46,15 +51,4 @@ export const SliderContent = ({ className, children, variants }) => {
             ))}
         </motion.div>
     );
-};
-
-SliderContent.defaultProps = {
-    className: '',
-    variants: defaultVariants,
-};
-
-SliderContent.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node,
-    variants: PropTypes.func,
 };
