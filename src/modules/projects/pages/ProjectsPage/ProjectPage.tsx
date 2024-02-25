@@ -53,7 +53,7 @@ export const ProjectsPage = ({ locale }: AppContextType) => {
                 </div>
 
                 <a
-                    className="btn btn-chars btn-shadows btn-primary mb-10"
+                    className="button button--chars-and-shadows button--secondary mb-10"
                     href="https://github.com/stanfortonski?tab=repositories"
                 >
                     All My GitHub Projects

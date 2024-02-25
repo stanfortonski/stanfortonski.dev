@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Link } from 'gatsby';
 
 import {
     Slider,
@@ -10,6 +9,7 @@ import {
 } from '@/modules/ui/components/Slider';
 import { Frame } from '@/modules/ui/components/Frame';
 import { useAppContext } from '@/modules/core/contexts/AppContext';
+import { ButtonGatsbyLink } from '@/modules/ui/components/Button';
 
 import { Section } from '../Section';
 
@@ -43,7 +43,7 @@ export const ProjectsSection = () => {
                                 <div>
                                     <a
                                         href="https://github.com/stanfortonski/StickMan-3D"
-                                        className="btn btn-primary btn-shadows btn-chars mb-5"
+                                        className="button button--secondary button--chars-and-shadows mb-5"
                                         target="_blank"
                                         rel="noreferrer noopener"
                                     >
@@ -87,7 +87,7 @@ export const ProjectsSection = () => {
                                     <div className="modal-btn-placement">
                                         <div>
                                             <button
-                                                className="btn btn-primary btn-shadows btn-chars mb-5"
+                                                className="button button--secondary button--chars-and-shadows mb-5"
                                                 onClick={() => setRunWebGLApp(true)}
                                             >
                                                 <FormattedMessage id="Run" />
@@ -114,7 +114,7 @@ export const ProjectsSection = () => {
                                 <div>
                                     <a
                                         href="https://github.com/stanfortonski/Procedural-Terrain-Generator-OpenGL"
-                                        className="btn btn-primary btn-shadows btn-chars mb-5"
+                                        className="button button--secondary button--chars-and-shadows mb-5"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
@@ -132,12 +132,14 @@ export const ProjectsSection = () => {
                 <SliderNavigation />
             </Slider>
 
-            <Link
-                className="btn btn-chars btn-shadows btn-primary md:mt-20 mt-10"
+            <ButtonGatsbyLink
+                variant="chars-and-shadows"
+                color="secondary"
+                className="md:mt-20 mt-10"
                 to={`/${locale}/projects`}
             >
                 <FormattedMessage id="index.projects.button" />
-            </Link>
+            </ButtonGatsbyLink>
         </Section>
     );
 };

@@ -1,10 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { Link } from 'gatsby';
 import { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import { Modal, ModalBody, ModalHeader, ModalTitle } from '../Modal';
 import { CloseButton } from '../Frame/CloseButton';
+import { ButtonGatsbyLink } from '../Button';
 import './styles.css';
 
 const navMenuOverlayVariants = {
@@ -65,32 +65,35 @@ export const Nav = () => {
                                 <ModalBody>
                                     <ul>
                                         <li>
-                                            <Link
-                                                className="btn btn-chars btn-shadows w-full mb-5"
+                                            <ButtonGatsbyLink
+                                                variant="chars-and-shadows"
+                                                className="w-full mb-5"
                                                 to={`/${intl.locale}`}
                                             >
                                                 <FormattedMessage id="index.title" />
-                                            </Link>
+                                            </ButtonGatsbyLink>
                                         </li>
                                         <li>
-                                            <Link
-                                                className="btn btn-chars btn-shadows w-full mb-5"
+                                            <ButtonGatsbyLink
+                                                variant="chars-and-shadows"
+                                                className="w-full mb-5"
                                                 to={`/${intl.locale}/projects`}
                                             >
                                                 <FormattedMessage id="projects.title" />
-                                            </Link>
+                                            </ButtonGatsbyLink>
                                         </li>
                                         <li>
-                                            <Link
-                                                className="btn btn-chars btn-shadows w-full mb-5"
+                                            <ButtonGatsbyLink
+                                                variant="chars-and-shadows"
+                                                className="w-full mb-5"
                                                 to={`/${intl.locale}/contact`}
                                             >
                                                 <FormattedMessage id="contact.title" />
-                                            </Link>
+                                            </ButtonGatsbyLink>
                                         </li>
                                         <li>
                                             <a
-                                                className="btn btn-chars btn-shadows w-full mb-5"
+                                                className="button button--primary button--chars-and-shadows w-full mb-5"
                                                 href="https://github.com/stanfortonski"
                                             >
                                                 <FormattedMessage id="My GitHub" />

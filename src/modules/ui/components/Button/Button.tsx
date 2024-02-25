@@ -1,5 +1,7 @@
 import { Link } from 'gatsby';
 
+import { ButtonLink as BaseButtonLink } from '@/modules/core/components/ButtonLink';
+
 import './styles.css';
 
 type BaseButtonProps = {
@@ -10,7 +12,7 @@ type BaseButtonProps = {
     children?: React.ReactNode;
 };
 
-type ButtonProps = BaseButtonProps & React.HTMLAttributes<HTMLButtonElement>;
+type ButtonProps = BaseButtonProps & JSX.IntrinsicElements['button'];
 
 type ButtonLinkProps = {
     to: string;
@@ -57,28 +59,14 @@ export const ButtonGatsbyLink = ({
 export const ButtonLink = ({
     color = 'primary',
     variant = 'default',
-    target,
     className = '',
-    to,
     children,
-    onClick,
     ...props
 }: ButtonLinkProps) => {
-    const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-        onClick?.(e);
-        if (target !== undefined) window.open(to, target);
-        else window.location.href = to;
-    };
-
     return (
-        <button
-            type="button"
-            className={getButtonClass({ className, variant, color })}
-            onClick={handleClick}
-            {...props}
-        >
+        <BaseButtonLink className={getButtonClass({ className, variant, color })} {...props}>
             {children}
-        </button>
+        </BaseButtonLink>
     );
 };
 

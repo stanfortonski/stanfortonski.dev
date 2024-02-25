@@ -38,7 +38,7 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
                 <div>
                     <a
                         href={url}
-                        className="btn btn-primary btn-shadows btn-chars mb-5"
+                        className="button button--secondary button--chars-and-shadows mb-5"
                         target="_blank"
                         rel="noreferrer noopener"
                     >

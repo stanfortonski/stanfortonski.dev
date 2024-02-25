@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
@@ -6,6 +5,7 @@ import { isBrowser } from '@/modules/core/utils/helpers';
 import { PageLayout } from '@/modules/core/components/PageLayout';
 import { Seo } from '@/modules/core/components/Seo/Seo';
 import { type AppContextType } from '@/modules/core/contexts/AppContext';
+import { ButtonGatsbyLink } from '@/modules/ui/components/Button';
 
 const NotFoundPage = () => {
     const [locale] = useState<AppContextType['locale']>(() =>
@@ -23,9 +23,9 @@ const NotFoundPage = () => {
                     <p className="text-white mb-8">
                         <FormattedMessage id="404.description" />
                     </p>
-                    <Link to={`/${locale}`} className="btn btn-shadows btn-primary">
+                    <ButtonGatsbyLink to={`/${locale}`} variant="shadows" color="secondary">
                         <FormattedMessage id="404.button" />
-                    </Link>
+                    </ButtonGatsbyLink>
                 </div>
             </div>
         </PageLayout>

@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { toast } from 'react-toastify';
 
+import { Button } from '@/modules/ui/components/Button';
+
 import './styles.css';
 
 export type ContactFormValues = {
@@ -166,11 +168,7 @@ export const ContactForm = () => {
                         </div>
 
                         <div className="col-span-2">
-                            <button
-                                type="submit"
-                                className="btn btn-shadows btn-chars"
-                                disabled={sending}
-                            >
+                            <Button type="submit" variant="chars-and-shadows" disabled={sending}>
                                 {sending ? (
                                     <span className="blink">
                                         <FormattedMessage id="contact.form.sending" />
@@ -179,7 +177,7 @@ export const ContactForm = () => {
                                 ) : (
                                     <FormattedMessage id="contact.form.send" />
                                 )}
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </fieldset>
