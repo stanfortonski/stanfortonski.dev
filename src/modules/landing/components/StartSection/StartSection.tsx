@@ -10,9 +10,10 @@ export const StartSection = () => {
 
     return (
         <Section>
-            <h2 className="text-h1">Full Stack Developer</h2>
+            <h2 className="text-h1">Senior Frontend Developer</h2>
             <h3 className="text-h2">
-                Frontend Web Developer |{' '}
+                FullStack Web Developer <span className="md:inline hidden">| </span>
+                <div className="md:hidden block"></div>
                 <span className="text-h4 md:text-h3">React Vue Laravel</span>
             </h3>
 
