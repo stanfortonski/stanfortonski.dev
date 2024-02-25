@@ -120,8 +120,8 @@ export const Frame = ({
                 ) : (
                     <div
                         style={{
-                            width: modalRef.current.parentNode.clientWidth ?? 1,
-                            height: modalRef.current.parentNode.clientHeight ?? 1,
+                            width: modalRef?.current?.parentNode?.clientWidth ?? 1,
+                            height: modalRef?.current?.parentNode?.clientHeight ?? 1,
                         }}
                     ></div>
                 )}
