@@ -3,10 +3,11 @@ import { FormattedMessage } from 'react-intl';
 import { Frame } from '@/modules/ui/components/Frame';
 
 import { SkillProgressBar as ProgressBar } from '../SkillProgressBar';
+import { Section } from '../Section';
 
 export const SkillsSection = () => {
     return (
-        <>
+        <Section>
             <h2 className="text-h1">
                 <FormattedMessage id="index.skills.h1" />
             </h2>
@@ -811,6 +812,6 @@ export const SkillsSection = () => {
                     </ul>
                 </Frame>
             </div>
-        </>
+        </Section>
     );
 };

@@ -1,0 +1,66 @@
+.button {
+    @apply font-vt323 cursor-pointer;
+
+    display: inline-block;
+    color: #fff;
+    padding: 0.2em 0.4em;
+    user-select: none;
+
+    &--primary {
+        background: rgba(0, 0, 0, 0.3) !important;
+    }
+
+    &--secondary {
+        background: #55a89d !important;
+    }
+
+    &--chars {
+        &::before,
+        &::after {
+            display: inline;
+            position: relative;
+            top: 0;
+        }
+
+        &::before {
+            content: '< ';
+        }
+
+        &::after {
+            content: ' >';
+        }
+
+        &:hover::before {
+            left: 0.1em;
+        }
+
+        &:hover::after {
+            right: 0.1em;
+        }
+
+        &:active::before {
+            left: 0.22em;
+        }
+
+        &:active::after {
+            right: 0.22em;
+        }
+    }
+
+    &--shadows {
+        @apply box-shadow;
+
+        transition: 0.17s transform linear, 0.17s box-shadow linear;
+
+        &:hover,
+        &:focus {
+            @apply box-shadow-sm;
+
+            transform: scale(1.05);
+        }
+    }
+
+    &--chars-and-shadows {
+        @apply button--chars button--shadows;
+    }
+}

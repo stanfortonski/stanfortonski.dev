@@ -3,34 +3,34 @@
 @layer {
     .anr {
         position: relative;
-        color: #000;
-        font-weight: bold;
-    }
+        color: #000 !important;
+        font-weight: bold !important;
 
-    .anr::after,
-    .anr::before {
-        display: inline;
-        position: relative;
-        top: 0;
-        opacity: 0;
-    }
+        &::after,
+        &::before {
+            display: inline;
+            position: relative;
+            top: 0;
+            opacity: 0;
+        }
 
-    .anr::before {
-        content: '{';
-        left: 0;
-    }
+        &::before {
+            content: '{';
+            left: 0;
+        }
 
-    .anr::after {
-        content: '}';
-        right: 0;
-    }
+        &::after {
+            content: '}';
+            right: 0;
+        }
 
-    .anr:hover {
-        color: #0b0faa;
-    }
+        &:hover {
+            color: #0b0faa;
+        }
 
-    .anr:hover::after,
-    .anr:hover::before {
-        opacity: 1;
+        &:hover::after,
+        &:hover::before {
+            opacity: 1;
+        }
     }
 }

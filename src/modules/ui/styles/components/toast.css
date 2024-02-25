@@ -6,16 +6,16 @@
     border-radius: 0;
     font-size: 1.4rem;
     line-height: 1.75rem;
-}
 
-.Toastify__toast-icon {
-    @apply mr-4;
-}
+    &-icon {
+        @apply mr-4;
+    }
 
-.Toastify__toast--error {
-    background: #fff;
-}
+    &--error {
+        background: #fff;
+    }
 
-.Toastify__toast--success {
-    background: #fff;
+    &--success {
+        background: #fff;
+    }
 }

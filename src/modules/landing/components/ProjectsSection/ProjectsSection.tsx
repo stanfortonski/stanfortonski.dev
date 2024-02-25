@@ -11,12 +11,14 @@ import {
 import { Frame } from '@/modules/ui/components/Frame';
 import { useAppContext } from '@/modules/core/contexts/AppContext';
 
+import { Section } from '../Section';
+
 export const ProjectsSection = () => {
     const [runWebGLApp, setRunWebGLApp] = useState(false);
     const { locale } = useAppContext();
 
     return (
-        <>
+        <Section className="px-0">
             <h2 className="text-h1">
                 <FormattedMessage id="index.projects.h1" />
             </h2>
@@ -136,6 +138,6 @@ export const ProjectsSection = () => {
             >
                 <FormattedMessage id="index.projects.button" />
             </Link>
-        </>
+        </Section>
     );
 };
