@@ -6,113 +6,113 @@
     background: #b2b2b2;
     position: relative;
 
-    .modal-header {
+    &--transparent {
+        background: #b2b2b2b2;
+    }
+
+    &__header {
         @apply flex justify-around items-center;
 
         height: 3.5rem;
         background: rgba(0, 0, 0, 0.1);
     }
 
-    .modal-header * {
+    &__header * {
         height: 100%;
     }
 
-    .modal-title {
+    &__title {
         @apply text-center text-shadow text-white;
 
         flex-grow: 30;
         font-size: 1.1em;
     }
 
-    .modal-btn {
+    &__button {
         @apply px-2 text-white text-shadow text-3xl;
 
         width: 3.5rem;
         user-select: none;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
     }
 
-    .modal-btn:hover {
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .btn-minimize {
+    .button-minimize {
         @apply text-4xl;
     }
 
-    .btn-close span {
+    .button-close span {
         @apply text-5xl relative;
 
         top: -0.25rem;
     }
 
-    .btn-expand .space {
+    .button-expand .space {
         display: none;
         transition: all 0.25s;
     }
 
-    .btn-expand:hover,
-    .btn-expand:focus {
+    .button-expand:hover,
+    .button-expand:focus {
         .space {
             display: inline;
         }
     }
 
-    .modal-body {
+    .modal__body {
         @apply p-5 flex-1;
 
         overflow: auto;
         overflow-x: hidden;
     }
 
-    .modal-footer {
+    .modal__footer {
         @apply px-5;
+    }
+
+    &__overlay {
+        @apply fixed top-0 left-0 w-screen h-screen;
+
+        z-index: 1;
+        will-change: opacity;
+    }
+
+    &__overlay .modal {
+        @apply w-full h-full;
+
+        background: #b2b2b2;
     }
 }
 
-.modal.modal-transparent {
-    background: #b2b2b2b2;
-}
-
-.modal-overlay {
-    @apply fixed top-0 left-0 w-screen h-screen;
-
-    z-index: 1;
-    will-change: opacity;
-}
-
-.modal-overlay .modal {
-    @apply w-full h-full;
-
-    background: #b2b2b2;
-}
-
-.modal-project {
+.modal--project {
     @apply text-center;
 
     min-height: 550px;
 
-    .modal-body {
-        padding: 0 !important;
-        background: #000;
-    }
-
-    .modal-full {
+    .modal--full {
         @apply absolute w-full h-full left-0;
     }
 
-    .modal-bg {
+    .modal--bg {
         object-fit: cover;
         filter: grayscale(20%) blur(1px);
     }
 
-    .modal-btn-placement {
+    .modal__body {
+        padding: 0 !important;
+        background: #000;
+    }
+
+    .modal__button-placement {
         @apply absolute bottom-0 left-0 w-full flex justify-center items-center;
 
         height: 100%;
         height: calc(100% - 3.5rem);
     }
 
-    .modal-description-placement {
+    .modal__description-placement {
         @apply absolute bottom-0 w-full text-shadow-sm text-white;
     }
 }

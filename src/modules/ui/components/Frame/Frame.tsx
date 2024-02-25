@@ -131,7 +131,7 @@ export const Frame = ({
                 {inExpanded && (
                     <motion.div
                         layoutId={layoutId}
-                        className="modal-overlay"
+                        className="modal__overlay"
                         variants={FrameExpandedVariant}
                         animate="animate"
                         initial="initial"

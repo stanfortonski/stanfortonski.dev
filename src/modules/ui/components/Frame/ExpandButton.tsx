@@ -3,7 +3,7 @@ export type ExpandButtonProps = {
 };
 
 export const ExpandButton = ({ onClick }: ExpandButtonProps) => (
-    <button className="modal-btn btn-expand" onClick={onClick}>
+    <button className="modal__button button-expand" onClick={onClick}>
         [<span className="space"> </span>]
     </button>
 );

@@ -30,16 +30,16 @@ export const ProjectsSection = () => {
                 <SliderContent>
                     <SliderSlide>
                         <Frame
-                            className="modal-project"
+                            className="modal--project"
                             title="Stickman 3D: First Round"
                             showMinimize={false}
                         >
                             <img
                                 src="/images/projects/StickMan-3D.jpg"
                                 alt="StickMan 3D"
-                                className="modal-full modal-bg"
+                                className="modal--full modal--bg"
                             />
-                            <div className="modal-btn-placement">
+                            <div className="modal__button-placement">
                                 <div>
                                     <a
                                         href="https://github.com/stanfortonski/StickMan-3D"
@@ -67,14 +67,14 @@ export const ProjectsSection = () => {
 
                     <SliderSlide>
                         <Frame
-                            className="modal-project"
+                            className="modal--project"
                             title="Room Viewer WebGL"
                             showMinimize={false}
                         >
                             {runWebGLApp ? (
                                 <iframe
                                     src="https://stanfortonski.github.io/examples/webgl-room"
-                                    className="modal-full"
+                                    className="modal--full"
                                     title="Room Viewer WebGL"
                                 ></iframe>
                             ) : (
@@ -82,9 +82,9 @@ export const ProjectsSection = () => {
                                     <img
                                         src="/images/projects/webgl-room.jpg"
                                         alt="WebGL example app"
-                                        className="modal-full modal-bg"
+                                        className="modal--full modal--bg"
                                     />
-                                    <div className="modal-btn-placement">
+                                    <div className="modal__button-placement">
                                         <div>
                                             <button
                                                 className="button button--secondary button--chars-and-shadows mb-5"
@@ -101,16 +101,16 @@ export const ProjectsSection = () => {
 
                     <SliderSlide>
                         <Frame
-                            className="modal-project"
+                            className="modal--project"
                             title="Terrain Generator"
                             showMinimize={false}
                         >
                             <img
                                 src="/images/projects/Procedural-Terrain-Generator-OpenGL.jpg"
                                 alt="Terrain Generator OpenGL"
-                                className="modal-full modal-bg"
+                                className="modal--full modal--bg"
                             />
-                            <div className="modal-btn-placement">
+                            <div className="modal__button-placement">
                                 <div>
                                     <a
                                         href="https://github.com/stanfortonski/Procedural-Terrain-Generator-OpenGL"

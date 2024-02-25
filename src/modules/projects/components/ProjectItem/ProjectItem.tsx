@@ -20,21 +20,21 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
     useEffect(() => {
         getImage(`/images/projects/${name}.jpg`)
             .then((img: HTMLImageElement) => {
-                img.className = 'modal-bg modal-full';
+                img.className = 'modal--bg modal--full';
                 setImage(img);
             })
             .catch(() => {});
     }, [name]);
 
     return (
-        <Frame className="modal-project" title={name} showMinimize={false}>
+        <Frame className="modal--project" title={name} showMinimize={false}>
             {image ? (
                 <div dangerouslySetInnerHTML={{ __html: image.outerHTML }} />
             ) : (
-                <div className="modal-bg modal-full bg-black"></div>
+                <div className="modal--bg modal--full bg-black"></div>
             )}
 
-            <div className="modal-btn-placement">
+            <div className="modal__button-placement">
                 <div>
                     <a
                         href={url}
