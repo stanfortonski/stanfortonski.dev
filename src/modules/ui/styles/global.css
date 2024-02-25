@@ -1,11 +1,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import './components/button';
 @import './components/form';
 @import './components/utils';
 @import './components/typography';
 @import './components/toast';
+@import './components/button';
 @import './components/anchor';
 @import url('https://fonts.googleapis.com/css?family=VT323&display=swap&subset=latin-ext');
 

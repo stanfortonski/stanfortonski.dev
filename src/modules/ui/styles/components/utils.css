@@ -1,6 +1,6 @@
 @tailwind utilities;
 
-@layer utilities {
+@layer {
     .neon-green {
         filter: drop-shadow(0 0 0.35rem green) saturate(1.5);
     }
