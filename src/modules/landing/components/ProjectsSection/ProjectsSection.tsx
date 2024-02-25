@@ -18,7 +18,7 @@ export const ProjectsSection = () => {
     const { locale } = useAppContext();
 
     return (
-        <Section className="px-0">
+        <Section className="px-0" containerClass="">
             <h2 className="text-h1">
                 <FormattedMessage id="index.projects.h1" />
             </h2>
@@ -51,7 +51,7 @@ export const ProjectsSection = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="modal-description-placement">
+                            <div className="modal__description-placement">
                                 <FormattedMessage id="stickman" />
                                 <a
                                     className="anr no-text-shadow"
@@ -122,7 +122,7 @@ export const ProjectsSection = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="modal-description-placement">
+                            <div className="modal__description-placement">
                                 <FormattedMessage id="terrain-generator" />
                             </div>
                         </Frame>

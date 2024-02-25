@@ -46,7 +46,7 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
                     </a>
                 </div>
             </div>
-            <div className="modal-description-placement">
+            <div className="modal__description-placement">
                 <div dangerouslySetInnerHTML={{ __html: descriptionHTML }}></div>
             </div>
         </Frame>

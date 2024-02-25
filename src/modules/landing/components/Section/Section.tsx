@@ -6,6 +6,7 @@ import './styles.css';
 
 export type SectionType = {
     className?: string;
+    containerClass?: string;
     children: ReactNode;
 };
 
@@ -14,7 +15,11 @@ const SectionVariants = {
     hidden: { opacity: 0 },
 };
 
-export const Section = ({ children, className }: SectionType) => {
+export const Section = ({
+    children,
+    className = '',
+    containerClass = 'container mx-auto',
+}: SectionType) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
@@ -30,9 +35,9 @@ export const Section = ({ children, className }: SectionType) => {
             animate={controls}
             initial="hidden"
             variants={SectionVariants}
-            className={`section ${className ?? ''}`}
+            className={`section ${className}`}
         >
-            {children}
+            <div className={containerClass}>{children}</div>
         </motion.section>
     );
 };

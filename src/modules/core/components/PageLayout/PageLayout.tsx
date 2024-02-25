@@ -42,7 +42,9 @@ export const PageLayout = ({ children, locale, showHeader }: PageLayoutProps) =>
                 />
             )}
             <Nav />
-            <main className="layout-content">{children}</main>
+            <main className="layout-content">
+                <div className="container mx-auto">{children}</div>
+            </main>
             <Footer />
 
             {isBrowser() && <Cookies />}
