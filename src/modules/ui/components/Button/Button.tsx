@@ -2,8 +2,6 @@ import { Link } from 'gatsby';
 
 import { ButtonLink as BaseButtonLink } from '@/modules/core/components/ButtonLink';
 
-import './styles.css';
-
 type BaseButtonProps = {
     className?: string;
     onClick?: CallableFunction;
