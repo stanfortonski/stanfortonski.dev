@@ -24,14 +24,14 @@ export const SliderNavigation = ({ className }: ComponentProps<any>) => {
         <div className={classNames('slider-navigation', className)}>
             <button
                 type="button"
-                className={`prev ${current === 0 ? 'disabled' : ''}`}
+                className={classNames('prev', { disabled: current === 0 })}
                 onClick={setPrev}
             >
                 &lt;
             </button>
             <button
                 type="button"
-                className={`next ${current === slides.length - 1 ? 'disabled' : ''}`}
+                className={classNames('next', { disabled: current === slides.length - 1 })}
                 onClick={setNext}
             >
                 &gt;
