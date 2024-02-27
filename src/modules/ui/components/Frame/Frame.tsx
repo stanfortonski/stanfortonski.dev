@@ -1,4 +1,4 @@
-import { type ReactNode, useEffect, useRef, useState } from 'react';
+import { type ReactNode, useRef, useState } from 'react';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -6,23 +6,7 @@ import { Modal, ModalBody, ModalHeader, ModalTitle, ModalFooter } from '../Modal
 import { CloseButton } from './CloseButton';
 import { ExpandButton } from './ExpandButton';
 import { MinimizeButton } from './MinimizeButton';
-
-const DEFAULT_Z_INDEX = 1;
-const EXPANDED_Z_INDEX = 9999;
-
-enum STATUSES {
-    default,
-    minimized,
-    expanding,
-    expanded,
-    closing,
-}
-
-const FrameExpandedVariant = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 0.225, delay: 0.05 } },
-    exit: { opacity: 0, transition: { duration: 0.15 } },
-};
+import { useFrameStatus, STATUSES } from './useFrameStatus';
 
 export type FrameProps = {
     title: string | ReactNode;
@@ -34,64 +18,26 @@ export type FrameProps = {
     className?: string;
 };
 
+export const FrameExpandedVariant = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { duration: 0.225, delay: 0.05 } },
+    exit: { opacity: 0, transition: { duration: 0.15 } },
+};
+
 export const Frame = ({
     title,
     footer,
     children,
-    showExpand,
-    showClose,
-    showMinimize,
+    showExpand = true,
+    showClose = true,
+    showMinimize = true,
     className,
 }: FrameProps) => {
-    const [status, setStatus] = useState(STATUSES.default);
+    const { status, inExpanded, zIndex, onExpand, onClose, onMinimizeToggle } = useFrameStatus({
+        variantAnimation: FrameExpandedVariant,
+    });
     const modalRef: any = useRef<HTMLDivElement>();
     const [layoutId] = useState(uuidv4());
-    const inExpanded =
-        status === STATUSES.expanding ||
-        status === STATUSES.expanded ||
-        status === STATUSES.closing;
-    const zIndex = inExpanded ? EXPANDED_Z_INDEX : DEFAULT_Z_INDEX;
-
-    useEffect(() => {
-        if (status === STATUSES.expanding) {
-            const delay =
-                FrameExpandedVariant.animate.transition.duration * 1000 +
-                FrameExpandedVariant.animate.transition.delay * 1000;
-            setTimeout(() => {
-                setStatus(STATUSES.expanded);
-            }, delay);
-        } else if (status === STATUSES.closing) {
-            const delay = FrameExpandedVariant.exit.transition.duration * 1000;
-            setTimeout(() => {
-                setStatus(STATUSES.default);
-            }, delay);
-        }
-
-        if (inExpanded) {
-            document.body.style.overflowY = 'hidden';
-        } else document.body.style.overflowY = 'visible';
-    }, [status, inExpanded]);
-
-    const onExpand = () => {
-        if (status === STATUSES.minimized) {
-            setStatus(STATUSES.default);
-            setTimeout(() => {
-                setStatus(STATUSES.expanding);
-            }, 200);
-        } else {
-            setStatus(STATUSES.expanding);
-        }
-    };
-
-    const onClose = () => {
-        setStatus(STATUSES.closing);
-    };
-
-    const onMinimizeToggle = () => {
-        setStatus((prevState) =>
-            prevState === STATUSES.minimized ? STATUSES.default : STATUSES.minimized,
-        );
-    };
 
     return (
         <AnimateSharedLayout>
@@ -100,10 +46,8 @@ export const Frame = ({
                     <Modal className={className} ref={modalRef}>
                         <ModalHeader>
                             <ModalTitle>{title}</ModalTitle>
-                            {(showExpand ?? true) && <ExpandButton onClick={onExpand} />}
-                            {(showMinimize ?? true) && (
-                                <MinimizeButton onClick={onMinimizeToggle} />
-                            )}
+                            {showExpand && <ExpandButton onClick={onExpand} />}
+                            {showMinimize && <MinimizeButton onClick={onMinimizeToggle} />}
                         </ModalHeader>
 
                         <motion.div
@@ -111,7 +55,6 @@ export const Frame = ({
                             animate={{ height: status !== STATUSES.minimized ? 'auto' : 0 }}
                         >
                             <ModalBody>{children}</ModalBody>
-
                             {footer && <ModalFooter>{footer}</ModalFooter>}
                         </motion.div>
                     </Modal>
@@ -134,16 +77,15 @@ export const Frame = ({
                         animate="animate"
                         initial="initial"
                         exit="exit"
-                        style={{ pointerEvents: 'auto', zIndex: EXPANDED_Z_INDEX }}
+                        style={{ pointerEvents: 'auto', zIndex }}
                     >
                         <Modal className={className}>
                             <ModalHeader>
                                 <ModalTitle>{title}</ModalTitle>
-                                {(showClose ?? true) && <CloseButton onClick={onClose} />}
+                                {showClose && <CloseButton onClick={onClose} />}
                             </ModalHeader>
 
                             <ModalBody>{children}</ModalBody>
-
                             {footer && <ModalFooter>{footer}</ModalFooter>}
                         </Modal>
                     </motion.div>

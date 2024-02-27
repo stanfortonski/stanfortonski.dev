@@ -3,7 +3,7 @@ export type CloseButtonProps = {
 };
 
 export const CloseButton = ({ onClick }: CloseButtonProps) => (
-    <button className="modal__button button-close" onClick={onClick}>
+    <button type="button" className="modal__button button-close" onClick={onClick}>
         <span>x</span>
     </button>
 );

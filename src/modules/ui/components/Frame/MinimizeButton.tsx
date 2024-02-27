@@ -3,7 +3,7 @@ export type MinimizeButtonProps = {
 };
 
 export const MinimizeButton = ({ onClick }: MinimizeButtonProps) => (
-    <button className="modal__button button-minimize" onClick={onClick}>
+    <button type="button" className="modal__button button-minimize" onClick={onClick}>
         _
     </button>
 );
