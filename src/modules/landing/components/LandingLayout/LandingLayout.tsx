@@ -36,7 +36,7 @@ const showPageVariants = {
     },
     animate: {
         opacity: 1,
-        filter: 'none',
+        filter: 'blur(0px)',
         transition: { duration: 0.45, delay: 0.9 },
     },
 };
