@@ -1,5 +1,6 @@
 import React, { type ReactNode, useContext, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
 
 import { SliderContext } from './Slider';
 
@@ -35,7 +36,7 @@ export const SliderContent = ({ className, children, variants }: SliderContentPr
 
     return (
         <motion.div
-            className={`slider-content ${className ?? ''}`}
+            className={classNames('slider-content', className)}
             variants={variants ? variants(current) : defaultVariants(current)}
             initial="initial"
             animate="animate"

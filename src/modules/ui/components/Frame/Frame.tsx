@@ -10,13 +10,13 @@ import { MinimizeButton } from './MinimizeButton';
 const DEFAULT_Z_INDEX = 1;
 const EXPANDED_Z_INDEX = 9999;
 
-const STATUSES = {
-    default: 'default',
-    minimized: 'minimized',
-    expanding: 'expanding',
-    expanded: 'expanded',
-    closing: 'closing',
-};
+enum STATUSES {
+    default,
+    minimized,
+    expanding,
+    expanded,
+    closing,
+}
 
 const FrameExpandedVariant = {
     initial: { opacity: 0 },
@@ -97,25 +97,23 @@ export const Frame = ({
         <AnimateSharedLayout>
             <motion.div layoutId={layoutId} style={{ zIndex }}>
                 {status !== STATUSES.expanded ? (
-                    <Modal className={className}>
-                        <div ref={modalRef}>
-                            <ModalHeader>
-                                <ModalTitle>{title}</ModalTitle>
-                                {(showExpand ?? true) && <ExpandButton onClick={onExpand} />}
-                                {(showMinimize ?? true) && (
-                                    <MinimizeButton onClick={onMinimizeToggle} />
-                                )}
-                            </ModalHeader>
+                    <Modal className={className} ref={modalRef}>
+                        <ModalHeader>
+                            <ModalTitle>{title}</ModalTitle>
+                            {(showExpand ?? true) && <ExpandButton onClick={onExpand} />}
+                            {(showMinimize ?? true) && (
+                                <MinimizeButton onClick={onMinimizeToggle} />
+                            )}
+                        </ModalHeader>
 
-                            <motion.div
-                                initial={{ height: status === STATUSES.minimized ? 0 : 'auto' }}
-                                animate={{ height: status !== STATUSES.minimized ? 'auto' : 0 }}
-                            >
-                                <ModalBody>{children}</ModalBody>
+                        <motion.div
+                            initial={{ height: status === STATUSES.minimized ? 0 : 'auto' }}
+                            animate={{ height: status !== STATUSES.minimized ? 'auto' : 0 }}
+                        >
+                            <ModalBody>{children}</ModalBody>
 
-                                {footer && <ModalFooter>{footer}</ModalFooter>}
-                            </motion.div>
-                        </div>
+                            {footer && <ModalFooter>{footer}</ModalFooter>}
+                        </motion.div>
                     </Modal>
                 ) : (
                     <div

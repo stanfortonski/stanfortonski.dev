@@ -96,7 +96,7 @@
     }
 
     .modal--bg {
-        object-fit: cover;
+        object-fit: fill;
         filter: grayscale(20%) blur(1px);
     }
 

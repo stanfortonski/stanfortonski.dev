@@ -1,4 +1,5 @@
 import { type ComponentProps, useContext } from 'react';
+import classNames from 'classnames';
 
 import { SliderContext } from './Slider';
 
@@ -20,11 +21,16 @@ export const SliderNavigation = ({ className }: ComponentProps<any>) => {
     };
 
     return (
-        <div className={`slider-navigation ${className}`}>
-            <button className={`prev ${current === 0 ? 'disabled' : ''}`} onClick={setPrev}>
+        <div className={classNames('slider-navigation', className)}>
+            <button
+                type="button"
+                className={`prev ${current === 0 ? 'disabled' : ''}`}
+                onClick={setPrev}
+            >
                 &lt;
             </button>
             <button
+                type="button"
                 className={`next ${current === slides.length - 1 ? 'disabled' : ''}`}
                 onClick={setNext}
             >

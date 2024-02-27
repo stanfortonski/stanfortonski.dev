@@ -1,6 +1,7 @@
 import { type ReactNode, useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import classNames from 'classnames';
 
 import './styles.css';
 
@@ -17,7 +18,7 @@ const SectionVariants = {
 
 export const Section = ({
     children,
-    className = '',
+    className,
     containerClass = 'container mx-auto',
 }: SectionType) => {
     const controls = useAnimation();
@@ -35,7 +36,7 @@ export const Section = ({
             animate={controls}
             initial="hidden"
             variants={SectionVariants}
-            className={`section ${className}`}
+            className={classNames('section', className)}
         >
             <div className={containerClass}>{children}</div>
         </motion.section>

@@ -1,4 +1,5 @@
 import { type ComponentProps, createContext, useState } from 'react';
+import classNames from 'classnames';
 
 import './styles.css';
 
@@ -17,7 +18,7 @@ export const Slider = ({ className, children }: ComponentProps<any>) => {
 
     return (
         <SliderContext.Provider value={{ current, setCurrent, slides, setSlides }}>
-            <div className={`slider ${className}`}>{children}</div>
+            <div className={classNames('slider', className)}>{children}</div>
         </SliderContext.Provider>
     );
 };

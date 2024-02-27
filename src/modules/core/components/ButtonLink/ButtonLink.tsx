@@ -8,10 +8,10 @@ export type ButtonLinkProps = {
 
 export const ButtonLink = ({
     to,
-    target = '',
-    className = '',
+    className,
     onClick,
     children,
+    target = undefined,
     ...props
 }: ButtonLinkProps) => {
     const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {

@@ -1,8 +1,9 @@
 import { Link } from 'gatsby';
+import classNames from 'classnames';
 
 import { ButtonLink as BaseButtonLink } from '@/modules/core/components/ButtonLink';
 
-type BaseButtonProps = {
+export type BaseButtonProps = {
     className?: string;
     onClick?: CallableFunction;
     color?: 'primary' | 'secondary';
@@ -10,14 +11,14 @@ type BaseButtonProps = {
     children?: React.ReactNode;
 };
 
-type ButtonProps = BaseButtonProps & JSX.IntrinsicElements['button'];
+export type ButtonProps = BaseButtonProps & JSX.IntrinsicElements['button'];
 
-type ButtonLinkProps = {
+export type ButtonLinkProps = {
     to: string;
     target?: string;
 } & ButtonProps;
 
-type ButtonGatsbyLinkProps = {
+export type ButtonGatsbyLinkProps = {
     to: string;
     target?: string;
 } & BaseButtonProps;
@@ -25,7 +26,7 @@ type ButtonGatsbyLinkProps = {
 export const Button = ({
     color = 'primary',
     variant = 'default',
-    className = '',
+    className,
     children,
     onClick,
     ...props
@@ -43,7 +44,7 @@ export const Button = ({
 export const ButtonGatsbyLink = ({
     color = 'primary',
     variant = 'default',
-    className = '',
+    className,
     to,
     onClick,
     children,
@@ -57,7 +58,7 @@ export const ButtonGatsbyLink = ({
 export const ButtonLink = ({
     color = 'primary',
     variant = 'default',
-    className = '',
+    className,
     children,
     ...props
 }: ButtonLinkProps) => {
@@ -68,6 +69,10 @@ export const ButtonLink = ({
     );
 };
 
-function getButtonClass({ variant, color, className }: any) {
-    return `button button--${color} button--${variant} ${className}`;
+function getButtonClass({
+    variant,
+    color,
+    className,
+}: Pick<BaseButtonProps, 'variant' | 'color' | 'className'>) {
+    return classNames('button', `button--${color}`, `button--${variant}`, className);
 }

@@ -1,5 +1,6 @@
 import { useMemo, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
 
 import './styles.css';
 
@@ -42,7 +43,7 @@ export const ProgressBar = ({
     );
 
     return (
-        <div className={`progress-bar ${className ?? ''}`}>
+        <div className={classNames('progress-bar', className)}>
             {label && <div className="progress-bar__text">{label}</div>}
             <motion.div
                 className="progress-bar__progress"

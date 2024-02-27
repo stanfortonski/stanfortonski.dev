@@ -22,6 +22,7 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "classnames": "^2.5.1",
         "framer-motion": "^6.5.1",
         "gatsby": "^5.13.3",
         "gatsby-plugin-alias-imports": "^1.0.5",
