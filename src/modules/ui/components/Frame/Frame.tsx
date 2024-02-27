@@ -1,6 +1,5 @@
-import { type ReactNode, useRef, useState } from 'react';
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
-import { v4 as uuidv4 } from 'uuid';
+import { type ReactNode, useRef, useId } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { Modal, ModalBody, ModalHeader, ModalTitle, ModalFooter } from '../Modal';
 import { CloseButton } from './CloseButton';
@@ -37,10 +36,10 @@ export const Frame = ({
         variantAnimation: FrameExpandedVariant,
     });
     const modalRef: any = useRef<HTMLDivElement>();
-    const [layoutId] = useState(uuidv4());
+    const layoutId = useId();
 
     return (
-        <AnimateSharedLayout>
+        <>
             <motion.div layoutId={layoutId} style={{ zIndex }}>
                 {status !== STATUSES.expanded ? (
                     <Modal className={className} ref={modalRef}>
@@ -91,6 +90,6 @@ export const Frame = ({
                     </motion.div>
                 )}
             </AnimatePresence>
-        </AnimateSharedLayout>
+        </>
     );
 };
