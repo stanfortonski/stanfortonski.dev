@@ -44,7 +44,7 @@ export const SliderContent = ({ className, children, variants }: SliderContentPr
             {slides.map((slide, index) => (
                 <div
                     key={index}
-                    className={`slide ${current === index ? 'current' : ''}`}
+                    className={classNames('slide', { current: current === index })}
                     onClick={() => setCurrent(index)}
                 >
                     {slide}

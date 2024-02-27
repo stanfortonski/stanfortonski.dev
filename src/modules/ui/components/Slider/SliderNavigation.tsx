@@ -7,17 +7,13 @@ export const SliderNavigation = ({ className }: ComponentProps<any>) => {
     const { slides, setCurrent, current } = useContext(SliderContext);
 
     const setPrev = () => {
-        setCurrent((prevState: number) => {
-            if (prevState === 0) return prevState;
-            return prevState - 1;
-        });
+        setCurrent((prevState: number) => (prevState === 0 ? prevState : prevState - 1));
     };
 
     const setNext = () => {
-        setCurrent((prevState: number) => {
-            if (prevState === slides.length - 1) return prevState;
-            return prevState + 1;
-        });
+        setCurrent((prevState: number) =>
+            prevState === slides.length - 1 ? prevState : prevState + 1,
+        );
     };
 
     return (
