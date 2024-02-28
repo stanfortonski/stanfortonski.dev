@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { graphql, useStaticQuery } from 'gatsby';
+import classNames from 'classnames';
 
 import { App } from '@/modules/core/components/App';
 import { Footer } from '@/modules/ui/components/Footer';
@@ -63,7 +64,7 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
                 {showLoadingScreen && (
                     <div className="loading-screen">
                         <motion.div
-                            className={`monitor ${loaded ? 'monitor--scale' : ''}`}
+                            className={classNames('monitor', { 'monitor--scale': loaded })}
                             variants={monitorBlurVariants}
                             initial="initial"
                             animate="animate"
