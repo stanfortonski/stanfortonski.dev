@@ -83,7 +83,6 @@ export const Frame = ({
                                 <ModalTitle>{title}</ModalTitle>
                                 {showClose && <CloseButton onClick={onClose} />}
                             </ModalHeader>
-
                             <ModalBody>{children}</ModalBody>
                             {footer && <ModalFooter>{footer}</ModalFooter>}
                         </Modal>

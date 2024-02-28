@@ -45,7 +45,7 @@ export const ProjectsPage = ({ locale }: AppContextType) => {
                     <h1 className="text-h1 text-center mb-5">Projects</h1>
                     <h2 className="text-h2 text-center mb-8">My GitHub projects</h2>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 section">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 section">
                         {projects.map(({ node }: ProjectItemProps) => (
                             <ProjectItem node={node} key={node.id} />
                         ))}

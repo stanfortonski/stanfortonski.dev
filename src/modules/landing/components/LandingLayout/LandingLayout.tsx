@@ -111,22 +111,14 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
 
             {loaded && (
                 <>
-                    <motion.div
-                        variants={showPageVariants}
-                        initial="initial"
-                        animate="animate"
-                        className="body-sizing"
-                    >
-                        <Header
-                            siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`}
-                            isAnimate={true}
-                        />
-                        <Nav />
-                        <main className="layout-content">{children}</main>
-                        <Footer />
-
-                        {isBrowser() && <Cookies />}
-                    </motion.div>
+                    <Header
+                        siteTitle={data.site.siteMetadata?.title || `Stan Fortoński`}
+                        isAnimate={true}
+                    />
+                    <Nav />
+                    <main className="layout-content">{children}</main>
+                    <Footer />
+                    {isBrowser() && <Cookies />}
                 </>
             )}
         </App>
