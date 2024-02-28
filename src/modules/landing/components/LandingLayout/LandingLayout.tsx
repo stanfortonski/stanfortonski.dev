@@ -29,18 +29,6 @@ const hideProgressVariants = {
     },
 };
 
-const showPageVariants = {
-    initial: {
-        opacity: 0,
-        filter: 'blur(3px)',
-    },
-    animate: {
-        opacity: 1,
-        filter: 'blur(0px)',
-        transition: { duration: 0.45, delay: 0.9 },
-    },
-};
-
 export const LandingLayout = ({ children, locale }: AppContextProps) => {
     const [loaded, setLoaded] = useState(false);
     const [showLoadingScreen, setShowLoadingScreen] = useState(true);
@@ -75,12 +63,12 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
                 {showLoadingScreen && (
                     <div className="loading-screen">
                         <motion.div
-                            className={`monitor ${loaded ? 'scale' : ''}`}
+                            className={`monitor ${loaded ? 'monitor--scale' : ''}`}
                             variants={monitorBlurVariants}
                             initial="initial"
                             animate="animate"
                         >
-                            <div className="monitor-screen">
+                            <div className="monitor__screen">
                                 <motion.div
                                     className="progress-place"
                                     variants={hideProgressVariants}
@@ -100,11 +88,11 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
                                     <Footer />
                                 </div>
                             </div>
-                            <div className="monitor-footer"></div>
-                            <div className="monitor-holder"></div>
-                            <div className="monitor-btn"></div>
+                            <div className="monitor__footer"></div>
+                            <div className="monitor__holder"></div>
+                            <div className="monitor__button"></div>
                         </motion.div>
-                        <div className="desk"></div>
+                        <div className="loading-screen__desk"></div>
                     </div>
                 )}
             </AnimatePresence>
