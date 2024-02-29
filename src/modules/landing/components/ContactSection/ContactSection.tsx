@@ -13,7 +13,7 @@ export const ContactSection = () => {
             </h2>
 
             <div className="px-5 mt-14">
-                <Frame title={<FormattedMessage id="contact.form" />}>
+                <Frame title={<FormattedMessage id="contact.form" />} showMinimize={false}>
                     <div className="md:px-24 md:py-10">
                         <ContactForm />
                     </div>

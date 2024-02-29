@@ -6,8 +6,15 @@
     "index.projects.h1": "Projekty",
     "index.projects.h2": "Moje przykładowe projekty na GitHub.",
     "index.projects.button": "Więcej projektów tutaj",
-    "stickman": "Gra bijatyka. Napisana w C++ OpenGL. Strona gry itch.io:",
-    "terrain-generator": "Generator terenów metodą Perlina. Napisany w C++ OpenGL.",
+    "index.projects.stickman-description": "Gra bijatyka. Napisana w C++ OpenGL. Strona gry itch.io:",
+    "index.projects.terrain-generator-description": "Generator terenów metodą Perlina. Napisany w C++ OpenGL.",
     "index.skills.h1": "Umiejętności",
-    "index.skills.h2": "Technologie i narzędzia z którymi pracowałem."
+    "index.skills.h2": "Technologie i narzędzia z którymi pracowałem.",
+    "index.skills.experience": "Doświadczenie:",
+    "index.skills.level.fluent": "Biegły:",
+    "index.skills.level.intermediate": "Średniozaawansowany:",
+    "index.skills.level.medium": "Średni:",
+    "index.skills.level.basic": "Podstawy:",
+    "index.skills.level.episodic": "Epizodycznie:",
+    "index.skills.tools": "Narzędzia:"
 }

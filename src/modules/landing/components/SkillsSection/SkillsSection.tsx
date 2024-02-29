@@ -38,7 +38,7 @@ export const FrameJavaScript = () => (
     <Frame title="JavaScript / TypeScript" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={95} />
         </div>
@@ -46,7 +46,7 @@ export const FrameJavaScript = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Fluent" />
+                    <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://reactjs.org" target="_blank">
@@ -77,7 +77,7 @@ export const FrameJavaScript = () => (
                     <ButtonLink className="anr" to="https://jquery.com" target="_blank">
                         jQuery
                     </ButtonLink>
-                    <b>&</b>
+                    <span className="font-bold">&</span>
                     <ButtonLink className="anr" to="https://jqueryui.com" target="_blank">
                         jQuery UI
                     </ButtonLink>
@@ -86,7 +86,7 @@ export const FrameJavaScript = () => (
 
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Basic" />
+                    <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://vuetifyjs.com" target="_blank">
@@ -114,10 +114,6 @@ export const FrameJavaScript = () => (
                     </ButtonLink>
                 </li>
                 <li>
-                    <ButtonLink className="anr" to="https://graphql.org" target="_blank">
-                        GraphQL
-                    </ButtonLink>
-                    <b>&</b>
                     <ButtonLink className="anr" to="https://www.apollographql.com" target="_blank">
                         Apollo
                     </ButtonLink>
@@ -141,7 +137,7 @@ export const FrameJavaScript = () => (
 
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Tools" />
+                    <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://npmjs.com" target="_blank">
@@ -162,7 +158,7 @@ export const FrameJavaScript = () => (
                     <ButtonLink className="anr" to="https://jestjs.io" target="_blank">
                         Jest
                     </ButtonLink>
-                    <b>&</b>
+                    <span className="font-bold">&</span>
                     <ButtonLink className="anr" to="https://qunitjs.com" target="_blank">
                         QUnit
                     </ButtonLink>
@@ -176,7 +172,7 @@ export const FramePHP = () => (
     <Frame title="PHP" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={95} />
         </div>
@@ -184,7 +180,7 @@ export const FramePHP = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Fluent" />
+                    <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://laravel.com" target="_blank">
@@ -222,7 +218,7 @@ export const FramePHP = () => (
 
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Medium" />
+                    <FormattedMessage id="index.skills.level.medium" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://symfony.com" target="_blank">
@@ -231,7 +227,7 @@ export const FramePHP = () => (
                 </li>
 
                 <li className="text-h6">
-                    <FormattedMessage id="Basic" />
+                    <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="http://socketo.me" target="_blank">
@@ -251,7 +247,7 @@ export const FramePHP = () => (
 
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Episodic" />
+                    <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://wordpress.org" target="_blank">
@@ -260,7 +256,7 @@ export const FramePHP = () => (
                 </li>
 
                 <li className="text-h6">
-                    <FormattedMessage id="Tools" />
+                    <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://phpunit.de" target="_blank">
@@ -281,7 +277,7 @@ export const FrameWebDev = () => (
     <Frame title="Rest Web Dev" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={90} />
         </div>
@@ -289,10 +285,15 @@ export const FrameWebDev = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Fluent" />
+                    <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
                     <span className="font-bold pl-3">REST API</span>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://graphql.org" target="_blank">
+                        GraphQL
+                    </ButtonLink>
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://www.w3.org" target="_blank">
@@ -327,7 +328,7 @@ export const FrameWebDev = () => (
 
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Tools" />
+                    <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://www.docker.com" target="_blank">
@@ -343,11 +344,11 @@ export const FrameWebDev = () => (
                     <ButtonLink className="anr" to="https://www.mysql.com" target="_blank">
                         MySQL
                     </ButtonLink>
-                    <b>&</b>
+                    <span className="font-bold">&</span>
                     <ButtonLink className="anr" to="https://mariadb.org" target="_blank">
                         MariaDB
                     </ButtonLink>
-                    <b>&</b>
+                    <span className="font-bold">&</span>
                     <ButtonLink className="anr" to="https://www.sqlite.org" target="_blank">
                         SQLite
                     </ButtonLink>
@@ -375,7 +376,7 @@ export const FrameCpp = () => (
     <Frame title="C++" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={70} />
         </div>
@@ -383,7 +384,7 @@ export const FrameCpp = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Fluent" />
+                    <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://www.glfw.org" target="_blank">
@@ -397,7 +398,7 @@ export const FrameCpp = () => (
                 </li>
 
                 <li className="text-h6">
-                    <FormattedMessage id="Basic" />
+                    <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://www.assimp.org" target="_blank">
@@ -413,7 +414,7 @@ export const FrameCpp = () => (
 
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Episodic" />
+                    <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://www.freetype.org" target="_blank">
@@ -422,7 +423,7 @@ export const FrameCpp = () => (
                 </li>
 
                 <li className="text-h6">
-                    <FormattedMessage id="Tools" />
+                    <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
                     <ButtonLink
@@ -447,7 +448,7 @@ export const FramePython = () => (
     <Frame title="Python" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={60} />
         </div>
@@ -455,7 +456,7 @@ export const FramePython = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Basic" />
+                    <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
                     <ButtonLink
@@ -498,7 +499,7 @@ export const FrameCSharp = () => (
     <Frame title="C#" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={23} />
         </div>
@@ -506,7 +507,7 @@ export const FrameCSharp = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Episodic" />
+                    <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://unity.com" target="_blank">
@@ -531,7 +532,7 @@ export const FrameJava = () => (
     <Frame title="Java" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={23} />
         </div>
@@ -539,7 +540,7 @@ export const FrameJava = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Basic" />
+                    <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
                     <ButtonLink
@@ -552,7 +553,7 @@ export const FrameJava = () => (
                 </li>
 
                 <li className="text-h6">
-                    <FormattedMessage id="Episodic" />
+                    <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://developer.android.com" target="_blank">
@@ -568,7 +569,7 @@ export const FrameOpenGL = () => (
     <Frame title="OpenGL" className="h-full" showMinimize={false}>
         <div className="mb-3">
             <span className="text-h6 pr-3">
-                <FormattedMessage id="Experience" />
+                <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={55} />
         </div>
@@ -576,7 +577,7 @@ export const FrameOpenGL = () => (
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
                 <li className="text-h6">
-                    <FormattedMessage id="Basic" />
+                    <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
                     <ButtonLink

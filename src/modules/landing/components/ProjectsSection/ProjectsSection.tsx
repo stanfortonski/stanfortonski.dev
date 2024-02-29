@@ -52,7 +52,7 @@ export const ProjectsSection = () => {
                                 </div>
                             </div>
                             <div className="modal__description-placement">
-                                <FormattedMessage id="stickman" />
+                                <FormattedMessage id="index.projects.stickman-description" />
                                 <a
                                     className="anr no-text-shadow"
                                     href="https://stan-fortonski.itch.io/stickman-3d-first-round"
@@ -123,7 +123,7 @@ export const ProjectsSection = () => {
                                 </div>
                             </div>
                             <div className="modal__description-placement">
-                                <FormattedMessage id="terrain-generator" />
+                                <FormattedMessage id="index.projects.terrain-generator-description" />
                             </div>
                         </Frame>
                     </SliderSlide>
