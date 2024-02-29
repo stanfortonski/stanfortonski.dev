@@ -29,11 +29,7 @@ export const ProjectsSection = () => {
             <Slider className="slider-modal mt-12">
                 <SliderContent>
                     <SliderSlide>
-                        <Frame
-                            className="modal--project"
-                            title="Stickman 3D: First Round"
-                            showMinimize={false}
-                        >
+                        <Frame className="modal--project" title="Stickman 3D: First Round">
                             <img
                                 src="/images/projects/StickMan-3D.jpg"
                                 alt="StickMan 3D"
@@ -66,11 +62,7 @@ export const ProjectsSection = () => {
                     </SliderSlide>
 
                     <SliderSlide>
-                        <Frame
-                            className="modal--project"
-                            title="Room Viewer WebGL"
-                            showMinimize={false}
-                        >
+                        <Frame className="modal--project" title="Room Viewer WebGL">
                             {runWebGLApp ? (
                                 <iframe
                                     src="https://stanfortonski.github.io/examples/webgl-room"
@@ -100,11 +92,7 @@ export const ProjectsSection = () => {
                     </SliderSlide>
 
                     <SliderSlide>
-                        <Frame
-                            className="modal--project"
-                            title="Terrain Generator"
-                            showMinimize={false}
-                        >
+                        <Frame className="modal--project" title="Terrain Generator">
                             <img
                                 src="/images/projects/Procedural-Terrain-Generator-OpenGL.jpg"
                                 alt="Terrain Generator OpenGL"

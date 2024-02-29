@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Modal, ModalBody, ModalHeader, ModalTitle, ModalFooter } from '../Modal';
 import { CloseButton } from './CloseButton';
 import { ExpandButton } from './ExpandButton';
-import { MinimizeButton } from './MinimizeButton';
 import { useFrameStatus, STATUSES } from './useFrameStatus';
 
 export type FrameProps = {
@@ -13,7 +12,6 @@ export type FrameProps = {
     footer?: ReactNode;
     showExpand?: boolean;
     showClose?: boolean;
-    showMinimize?: boolean;
     className?: string;
 };
 
@@ -29,10 +27,9 @@ export const Frame = ({
     children,
     showExpand = true,
     showClose = true,
-    showMinimize = true,
     className,
 }: FrameProps) => {
-    const { status, inExpanded, zIndex, onExpand, onClose, onMinimizeToggle } = useFrameStatus({
+    const { status, inExpanded, zIndex, onExpand, onClose } = useFrameStatus({
         variantAnimation: FrameExpandedVariant,
     });
     const modalRef: any = useRef<HTMLDivElement>();
@@ -46,17 +43,9 @@ export const Frame = ({
                         <ModalHeader>
                             <ModalTitle>{title}</ModalTitle>
                             {showExpand && <ExpandButton onClick={onExpand} />}
-                            {showMinimize && <MinimizeButton onClick={onMinimizeToggle} />}
                         </ModalHeader>
-
-                        <motion.div
-                            className="relative"
-                            initial={{ height: status === STATUSES.minimized ? 0 : '100%' }}
-                            animate={{ height: status !== STATUSES.minimized ? '100%' : 0 }}
-                        >
-                            <ModalBody>{children}</ModalBody>
-                            {footer && <ModalFooter>{footer}</ModalFooter>}
-                        </motion.div>
+                        <ModalBody>{children}</ModalBody>
+                        {footer && <ModalFooter>{footer}</ModalFooter>}
                     </Modal>
                 ) : (
                     <div

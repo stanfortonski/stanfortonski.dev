@@ -35,7 +35,7 @@ export const SkillsSection = () => (
 );
 
 export const FrameJavaScript = () => (
-    <Frame title="JavaScript / TypeScript" className="h-full" showMinimize={false}>
+    <Frame title="JavaScript / TypeScript">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />
@@ -169,7 +169,7 @@ export const FrameJavaScript = () => (
 );
 
 export const FramePHP = () => (
-    <Frame title="PHP" className="h-full" showMinimize={false}>
+    <Frame title="PHP">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />
@@ -274,7 +274,7 @@ export const FramePHP = () => (
 );
 
 export const FrameWebDev = () => (
-    <Frame title="Rest Web Dev" className="h-full" showMinimize={false}>
+    <Frame title="Rest Web Dev">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />
@@ -373,7 +373,7 @@ export const FrameWebDev = () => (
 );
 
 export const FrameCpp = () => (
-    <Frame title="C++" className="h-full" showMinimize={false}>
+    <Frame title="C++" className="h-full">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />
@@ -445,7 +445,7 @@ export const FrameCpp = () => (
 );
 
 export const FramePython = () => (
-    <Frame title="Python" className="h-full" showMinimize={false}>
+    <Frame title="Python" className="h-full">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />
@@ -496,7 +496,7 @@ export const FramePython = () => (
 );
 
 export const FrameCSharp = () => (
-    <Frame title="C#" className="h-full" showMinimize={false}>
+    <Frame title="C#" className="h-full">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />
@@ -529,7 +529,7 @@ export const FrameCSharp = () => (
 );
 
 export const FrameJava = () => (
-    <Frame title="Java" className="h-full" showMinimize={false}>
+    <Frame title="Java" className="h-full">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />
@@ -566,7 +566,7 @@ export const FrameJava = () => (
 );
 
 export const FrameOpenGL = () => (
-    <Frame title="OpenGL" className="h-full" showMinimize={false}>
+    <Frame title="OpenGL" className="h-full">
         <div className="mb-3">
             <span className="text-h6 pr-3">
                 <FormattedMessage id="index.skills.experience" />

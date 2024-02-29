@@ -5,7 +5,6 @@ export const EXPANDED_Z_INDEX = 9999;
 
 export enum STATUSES {
     default,
-    minimized,
     expanding,
     expanded,
     closing,
@@ -40,24 +39,11 @@ export const useFrameStatus = ({ variantAnimation }: any) => {
     }, [status, inExpanded, variantAnimation]);
 
     const onExpand = () => {
-        if (status === STATUSES.minimized) {
-            setStatus(STATUSES.default);
-            setTimeout(() => {
-                setStatus(STATUSES.expanding);
-            }, 200);
-        } else {
-            setStatus(STATUSES.expanding);
-        }
+        setStatus(STATUSES.expanding);
     };
 
     const onClose = () => {
         setStatus(STATUSES.closing);
-    };
-
-    const onMinimizeToggle = () => {
-        setStatus((prevState) =>
-            prevState === STATUSES.minimized ? STATUSES.default : STATUSES.minimized,
-        );
     };
 
     return {
@@ -66,6 +52,5 @@ export const useFrameStatus = ({ variantAnimation }: any) => {
         zIndex,
         onExpand,
         onClose,
-        onMinimizeToggle,
     };
 };

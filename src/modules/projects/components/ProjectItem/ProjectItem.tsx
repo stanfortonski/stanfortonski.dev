@@ -27,7 +27,7 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
     }, [name]);
 
     return (
-        <Frame className="modal--project" title={name} showMinimize={false}>
+        <Frame className="modal--project" title={name}>
             {image ? (
                 <div dangerouslySetInnerHTML={{ __html: image.outerHTML }} />
             ) : (
