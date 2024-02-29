@@ -19,42 +19,42 @@
     height: 1.75em;
     font-size: 1.7em;
     color: rgba(0, 0, 0, 0.4);
-}
 
-.nav-toggler::before,
-.nav-toggler::after {
-    @apply border-t-primary-proper inline-block absolute top-0;
+    &::before,
+    &::after {
+        @apply border-t-primary-proper inline-block absolute top-0;
 
-    content: '';
-    width: 0;
-    height: 0;
-    border-top-width: 1.75em;
-}
+        content: '';
+        width: 0;
+        height: 0;
+        border-top-width: 1.75em;
+    }
 
-.nav-toggler::before {
-    left: -53px;
-    border-left: 54px solid transparent;
-}
+    &::before {
+        left: -53px;
+        border-left: 54px solid transparent;
+    }
 
-.nav-toggler::after {
-    right: -53px;
-    border-right: 54px solid transparent;
-}
+    &::after {
+        right: -53px;
+        border-right: 54px solid transparent;
+    }
 
-.nav-toggler:hover::before,
-.nav-toggler:hover::after {
-    @apply border-t-primary-dark;
-}
+    &:hover::before,
+    &:hover::after {
+        @apply border-t-primary-dark;
+    }
 
-.nav-toggler .label {
-    @apply neon-green;
+    .label {
+        @apply neon-green;
 
-    user-select: none;
-}
+        user-select: none;
+    }
 
-.nav-toggler:hover .label,
-.nav-toggler:hover .label {
-    @apply neon-purple;
+    &:hover .label,
+    &:hover .label {
+        @apply neon-purple;
+    }
 }
 
 .nav-menu-overlay {
@@ -67,20 +67,20 @@
 
 .nav-menu {
     @apply w-screen h-screen;
-}
 
-.nav-menu .modal {
-    background: blue !important;
-    border: double #fff 0.4em;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    max-width: 10em;
-    max-height: 18em;
-    width: 80%;
-    height: 100%;
-    margin-top: -2em;
-    transform: translate(-50%, -50%);
+    .modal {
+        background: blue !important;
+        border: double #fff 0.4em;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        max-width: 10em;
+        max-height: 18em;
+        width: 80%;
+        height: 100%;
+        margin-top: -2em;
+        transform: translate(-50%, -50%);
+    }
 }
 
 @media screen and (max-width: 1024px) {
