@@ -1,0 +1,9 @@
+.list-arrow {
+    li::before {
+        content: '>';
+    }
+
+    li.text-h6::before {
+        display: none;
+    }
+}

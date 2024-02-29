@@ -7,6 +7,7 @@
 @import './components/toast';
 @import './components/button';
 @import './components/anchor';
+@import './components/list';
 @import url('https://fonts.googleapis.com/css?family=VT323&display=swap&subset=latin-ext');
 
 html {

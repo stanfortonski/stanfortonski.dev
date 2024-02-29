@@ -44,7 +44,7 @@ export const FrameJavaScript = () => (
         </div>
 
         <div className="flex justify-center text-left gap-12 pb-4">
-            <ul>
+            <ul className="list-arrow">
                 <li className="text-h6">
                     <FormattedMessage id="Fluent" />
                 </li>
@@ -84,8 +84,8 @@ export const FrameJavaScript = () => (
                 </li>
             </ul>
 
-            <ul>
-                <li className="text-h6 mt-3">
+            <ul className="list-arrow">
+                <li className="text-h6">
                     <FormattedMessage id="Basic" />
                 </li>
                 <li>
@@ -139,8 +139,8 @@ export const FrameJavaScript = () => (
                 </li>
             </ul>
 
-            <ul>
-                <li className="text-h6 mt-3">
+            <ul className="list-arrow">
+                <li className="text-h6">
                     <FormattedMessage id="Tools" />
                 </li>
                 <li>
@@ -182,7 +182,7 @@ export const FramePHP = () => (
         </div>
 
         <div className="flex justify-center text-left gap-12 pb-4">
-            <ul>
+            <ul className="list-arrow">
                 <li className="text-h6">
                     <FormattedMessage id="Fluent" />
                 </li>
@@ -220,8 +220,8 @@ export const FramePHP = () => (
                 </li>
             </ul>
 
-            <ul>
-                <li className="text-h6 mt-3">
+            <ul className="list-arrow">
+                <li className="text-h6">
                     <FormattedMessage id="Medium" />
                 </li>
                 <li>
@@ -230,7 +230,7 @@ export const FramePHP = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6 mt-3">
+                <li className="text-h6">
                     <FormattedMessage id="Basic" />
                 </li>
                 <li>
@@ -249,8 +249,8 @@ export const FramePHP = () => (
                 </li>
             </ul>
 
-            <ul>
-                <li className="text-h6 mt-3">
+            <ul className="list-arrow">
+                <li className="text-h6">
                     <FormattedMessage id="Episodic" />
                 </li>
                 <li>
@@ -259,7 +259,7 @@ export const FramePHP = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6 mt-3">
+                <li className="text-h6">
                     <FormattedMessage id="Tools" />
                 </li>
                 <li>
@@ -287,12 +287,12 @@ export const FrameWebDev = () => (
         </div>
 
         <div className="flex justify-center text-left gap-12 pb-4">
-            <ul>
+            <ul className="list-arrow">
                 <li className="text-h6">
                     <FormattedMessage id="Fluent" />
                 </li>
                 <li>
-                    <b>REST API</b>
+                    <span className="font-bold pl-3">REST API</span>
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://www.w3.org" target="_blank">
@@ -324,8 +324,9 @@ export const FrameWebDev = () => (
                     </ButtonLink>
                 </li>
             </ul>
-            <ul>
-                <li className="text-h6 mt-3">
+
+            <ul className="list-arrow">
+                <li className="text-h6">
                     <FormattedMessage id="Tools" />
                 </li>
                 <li>
@@ -379,58 +380,66 @@ export const FrameCpp = () => (
             <ProgressBar procent={70} />
         </div>
 
-        <ul>
-            <li className="text-h6">
-                <FormattedMessage id="Fluent" />
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://www.glfw.org" target="_blank">
-                    GLFW
-                </ButtonLink>
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://glm.g-truc.net" target="_blank">
-                    GLM
-                </ButtonLink>
-            </li>
+        <div className="flex justify-center text-left gap-12 pb-4">
+            <ul className="list-arrow">
+                <li className="text-h6">
+                    <FormattedMessage id="Fluent" />
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://www.glfw.org" target="_blank">
+                        GLFW
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://glm.g-truc.net" target="_blank">
+                        GLM
+                    </ButtonLink>
+                </li>
 
-            <li className="text-h6 mt-3">
-                <FormattedMessage id="Basic" />
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://www.assimp.org" target="_blank">
-                    Assimp
-                </ButtonLink>
-            </li>
-            <li>
-                <ButtonLink className="anr" to="ttp://glew.sourceforge.net" target="_blank">
-                    GLEW
-                </ButtonLink>
-            </li>
+                <li className="text-h6">
+                    <FormattedMessage id="Basic" />
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://www.assimp.org" target="_blank">
+                        Assimp
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="ttp://glew.sourceforge.net" target="_blank">
+                        GLEW
+                    </ButtonLink>
+                </li>
+            </ul>
 
-            <li className="text-h6 mt-3">
-                <FormattedMessage id="Episodic" />
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://www.freetype.org" target="_blank">
-                    FreeType
-                </ButtonLink>
-            </li>
+            <ul className="list-arrow">
+                <li className="text-h6">
+                    <FormattedMessage id="Episodic" />
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://www.freetype.org" target="_blank">
+                        FreeType
+                    </ButtonLink>
+                </li>
 
-            <li className="text-h6 mt-3">
-                <FormattedMessage id="Tools" />
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://www.gnu.org/software/gdb" target="_blank">
-                    GDB
-                </ButtonLink>
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://cmake.org" target="_blank">
-                    CMake
-                </ButtonLink>
-            </li>
-        </ul>
+                <li className="text-h6">
+                    <FormattedMessage id="Tools" />
+                </li>
+                <li>
+                    <ButtonLink
+                        className="anr"
+                        to="https://www.gnu.org/software/gdb"
+                        target="_blank"
+                    >
+                        GDB
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://cmake.org" target="_blank">
+                        CMake
+                    </ButtonLink>
+                </li>
+            </ul>
+        </div>
     </Frame>
 );
 
@@ -443,39 +452,45 @@ export const FramePython = () => (
             <ProgressBar procent={60} />
         </div>
 
-        <ul>
-            <li className="text-h6">
-                <FormattedMessage id="Basic" />
-            </li>
-            <li>
-                <ButtonLink
-                    className="anr"
-                    to="https://selenium-python.readthedocs.io"
-                    target="_blank"
-                >
-                    Python Selenium
-                </ButtonLink>
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://pypi.org/project/PyOpenGL" target="_blank">
-                    PyOpenGL
-                </ButtonLink>
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://pypi.org/project/PyGLM" target="_blank">
-                    PyGLM
-                </ButtonLink>
-            </li>
-            <li>
-                <ButtonLink
-                    className="anr"
-                    to="https://docs.python.org/3/library/sqlite3.html"
-                    target="_blank"
-                >
-                    SQLite3
-                </ButtonLink>
-            </li>
-        </ul>
+        <div className="flex justify-center text-left gap-12 pb-4">
+            <ul className="list-arrow">
+                <li className="text-h6">
+                    <FormattedMessage id="Basic" />
+                </li>
+                <li>
+                    <ButtonLink
+                        className="anr"
+                        to="https://selenium-python.readthedocs.io"
+                        target="_blank"
+                    >
+                        Python Selenium
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink
+                        className="anr"
+                        to="https://pypi.org/project/PyOpenGL"
+                        target="_blank"
+                    >
+                        PyOpenGL
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://pypi.org/project/PyGLM" target="_blank">
+                        PyGLM
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink
+                        className="anr"
+                        to="https://docs.python.org/3/library/sqlite3.html"
+                        target="_blank"
+                    >
+                        SQLite3
+                    </ButtonLink>
+                </li>
+            </ul>
+        </div>
     </Frame>
 );
 
@@ -488,25 +503,27 @@ export const FrameCSharp = () => (
             <ProgressBar procent={23} />
         </div>
 
-        <ul>
-            <li className="text-h6">
-                <FormattedMessage id="Episodic" />
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://unity.com" target="_blank">
-                    Unity
-                </ButtonLink>
-            </li>
-            <li>
-                <ButtonLink
-                    className="anr"
-                    to="https://docs.microsoft.com/en-us/dotnet/framework/winforms"
-                    target="_blank"
-                >
-                    Windows Forms
-                </ButtonLink>
-            </li>
-        </ul>
+        <div className="flex justify-center text-left gap-12 pb-4">
+            <ul className="list-arrow">
+                <li className="text-h6">
+                    <FormattedMessage id="Episodic" />
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://unity.com" target="_blank">
+                        Unity
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink
+                        className="anr"
+                        to="https://docs.microsoft.com/en-us/dotnet/framework/winforms"
+                        target="_blank"
+                    >
+                        Windows Forms
+                    </ButtonLink>
+                </li>
+            </ul>
+        </div>
     </Frame>
 );
 
@@ -519,29 +536,31 @@ export const FrameJava = () => (
             <ProgressBar procent={23} />
         </div>
 
-        <ul>
-            <li className="text-h6">
-                <FormattedMessage id="Basic" />
-            </li>
-            <li>
-                <ButtonLink
-                    className="anr"
-                    to="https://docs.oracle.com/javase/8/docs/api/index.html?javax/swing/package-summary.html"
-                    target="_blank"
-                >
-                    Java Swing
-                </ButtonLink>
-            </li>
+        <div className="flex justify-center text-left gap-12 pb-4">
+            <ul className="list-arrow">
+                <li className="text-h6">
+                    <FormattedMessage id="Basic" />
+                </li>
+                <li>
+                    <ButtonLink
+                        className="anr"
+                        to="https://docs.oracle.com/javase/8/docs/api/index.html?javax/swing/package-summary.html"
+                        target="_blank"
+                    >
+                        Java Swing
+                    </ButtonLink>
+                </li>
 
-            <li className="text-h6 mt-3">
-                <FormattedMessage id="Episodic" />
-            </li>
-            <li>
-                <ButtonLink className="anr" to="https://developer.android.com" target="_blank">
-                    Android
-                </ButtonLink>
-            </li>
-        </ul>
+                <li className="text-h6">
+                    <FormattedMessage id="Episodic" />
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://developer.android.com" target="_blank">
+                        Android
+                    </ButtonLink>
+                </li>
+            </ul>
+        </div>
     </Frame>
 );
 
@@ -554,19 +573,21 @@ export const FrameOpenGL = () => (
             <ProgressBar procent={55} />
         </div>
 
-        <ul>
-            <li className="text-h6">
-                <FormattedMessage id="Basic" />
-            </li>
-            <li>
-                <ButtonLink
-                    className="anr"
-                    to="https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)"
-                    target="_blank"
-                >
-                    GLSL
-                </ButtonLink>
-            </li>
-        </ul>
+        <div className="flex justify-center text-left gap-12 pb-4">
+            <ul className="list-arrow">
+                <li className="text-h6">
+                    <FormattedMessage id="Basic" />
+                </li>
+                <li>
+                    <ButtonLink
+                        className="anr"
+                        to="https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)"
+                        target="_blank"
+                    >
+                        GLSL
+                    </ButtonLink>
+                </li>
+            </ul>
+        </div>
     </Frame>
 );
