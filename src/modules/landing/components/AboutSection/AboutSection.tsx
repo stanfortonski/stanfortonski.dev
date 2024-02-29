@@ -24,7 +24,10 @@ export const AboutSection = () => {
 
     return (
         <Section>
-            <div className="flex flex-col md:flex-row gap-10 items-center xl:px-48 lg:px-24 px-12">
+            <span className="sr-only">
+                <FormattedMessage id="index.about.title" />
+            </span>
+            <div className="flex flex-col md:flex-row gap-10 items-center">
                 <img
                     src={avatarUrl}
                     alt="Stanisław Fortoński"
