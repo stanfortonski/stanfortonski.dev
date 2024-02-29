@@ -20,10 +20,8 @@ export const ProjectsPage = ({ locale }: AppContextType) => {
                                         node {
                                             id
                                             name
+                                            url
                                             descriptionHTML
-                                            readme {
-                                                text
-                                            }
                                         }
                                     }
                                 }
@@ -49,7 +47,7 @@ export const ProjectsPage = ({ locale }: AppContextType) => {
                     <h2 className="text-h2 text-center mb-8">
                         <FormattedMessage id="projects.subtitle" />
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 section">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 section">
                         {projects.map(({ node }: ProjectItemProps) => (
                             <ProjectItem node={node} key={node.id} />
                         ))}

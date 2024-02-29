@@ -81,23 +81,20 @@
     &__overlay .modal {
         @apply w-full h-full;
 
+        aspect-ratio: auto !important;
         background: #b2b2b2;
+    }
+
+    &__bg {
+        @apply w-full h-full;
+
+        object-fit: fill;
+        filter: grayscale(20%) blur(1px);
     }
 }
 
 .modal--project {
-    @apply text-center;
-
-    min-height: 550px;
-
-    .modal--full {
-        @apply absolute w-full h-full left-0;
-    }
-
-    .modal--bg {
-        object-fit: fill;
-        filter: grayscale(20%) blur(1px);
-    }
+    @apply text-center aspect-video;
 
     .modal__body {
         padding: 0 !important;

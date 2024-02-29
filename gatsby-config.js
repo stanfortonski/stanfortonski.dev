@@ -15,7 +15,7 @@ module.exports = {
                 alias: {
                     '@': path.resolve(__dirname, 'src'),
                 },
-                extensions: ['js', 'css'],
+                extensions: ['js', 'css', 'ts', 'tsx'],
             },
         },
         {
@@ -43,17 +43,12 @@ module.exports = {
               edges {
                 node {
                   id
-                  stargazerCount,
+                  stargazerCount
                   forkCount
                   name
                   descriptionHTML
                   createdAt
                   url
-                  readme: object(expression: "master:README.md") {
-                    ... on Blob {
-                      text
-                    }
-                  }
                 }
               }
             }
@@ -73,6 +68,5 @@ module.exports = {
                 icon: 'src/images/favicon.png',
             },
         },
-        // 'gatsby-plugin-offline',
     ],
 };

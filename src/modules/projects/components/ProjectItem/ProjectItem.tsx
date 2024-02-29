@@ -20,7 +20,7 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
     useEffect(() => {
         getImage(`/images/projects/${name}.jpg`)
             .then((img: HTMLImageElement) => {
-                img.className = 'modal--bg modal--full';
+                img.className = 'modal__bg';
                 setImage(img);
             })
             .catch(() => {});
@@ -31,7 +31,7 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
             {image ? (
                 <div dangerouslySetInnerHTML={{ __html: image.outerHTML }} />
             ) : (
-                <div className="modal--bg modal--full bg-black"></div>
+                <div className="modal__bg bg-black"></div>
             )}
 
             <div className="modal__button-placement">
