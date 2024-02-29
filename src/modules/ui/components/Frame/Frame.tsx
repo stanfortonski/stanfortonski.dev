@@ -50,8 +50,9 @@ export const Frame = ({
                         </ModalHeader>
 
                         <motion.div
-                            initial={{ height: status === STATUSES.minimized ? 0 : 'auto' }}
-                            animate={{ height: status !== STATUSES.minimized ? 'auto' : 0 }}
+                            className="relative"
+                            initial={{ height: status === STATUSES.minimized ? 0 : '100%' }}
+                            animate={{ height: status !== STATUSES.minimized ? '100%' : 0 }}
                         >
                             <ModalBody>{children}</ModalBody>
                             {footer && <ModalFooter>{footer}</ModalFooter>}

@@ -37,7 +37,7 @@ export const ProjectsSection = () => {
                             <img
                                 src="/images/projects/StickMan-3D.jpg"
                                 alt="StickMan 3D"
-                                className="modal--full modal--bg"
+                                className="modal__bg"
                             />
                             <div className="modal__button-placement">
                                 <div>
@@ -74,7 +74,7 @@ export const ProjectsSection = () => {
                             {runWebGLApp ? (
                                 <iframe
                                     src="https://stanfortonski.github.io/examples/webgl-room"
-                                    className="modal--full"
+                                    className="modal__bg"
                                     title="Room Viewer WebGL"
                                 ></iframe>
                             ) : (
@@ -82,7 +82,7 @@ export const ProjectsSection = () => {
                                     <img
                                         src="/images/projects/webgl-room.jpg"
                                         alt="WebGL example app"
-                                        className="modal--full modal--bg"
+                                        className="modal__bg"
                                     />
                                     <div className="modal__button-placement">
                                         <div>
@@ -108,7 +108,7 @@ export const ProjectsSection = () => {
                             <img
                                 src="/images/projects/Procedural-Terrain-Generator-OpenGL.jpg"
                                 alt="Terrain Generator OpenGL"
-                                className="modal--full modal--bg"
+                                className="modal__bg"
                             />
                             <div className="modal__button-placement">
                                 <div>

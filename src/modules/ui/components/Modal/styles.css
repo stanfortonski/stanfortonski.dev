@@ -1,7 +1,7 @@
 @import '../../styles/components/utils';
 
 .modal {
-    @apply overflow-hidden flex flex-col box-shadow-lg;
+    @apply flex flex-col box-shadow-lg;
 
     background: #b2b2b2;
     position: relative;
@@ -39,6 +39,36 @@
         }
     }
 
+    &__body {
+        @apply p-5 flex-1 relative h-full;
+
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    &__footer {
+        @apply px-5;
+    }
+
+    &__overlay {
+        @apply fixed top-0 left-0 w-screen h-screen;
+
+        z-index: 1;
+    }
+
+    &__overlay .modal {
+        @apply w-full h-full;
+
+        aspect-ratio: auto !important;
+        background: #b2b2b2;
+    }
+
+    &__bg {
+        @apply w-full h-full absolute;
+
+        object-fit: cover;
+    }
+
     .button-minimize {
         @apply text-4xl;
     }
@@ -59,37 +89,6 @@
         .space {
             display: inline;
         }
-    }
-
-    .modal__body {
-        @apply p-5 flex-1;
-
-        overflow: auto;
-        overflow-x: hidden;
-    }
-
-    .modal__footer {
-        @apply px-5;
-    }
-
-    &__overlay {
-        @apply fixed top-0 left-0 w-screen h-screen;
-
-        z-index: 1;
-    }
-
-    &__overlay .modal {
-        @apply w-full h-full;
-
-        aspect-ratio: auto !important;
-        background: #b2b2b2;
-    }
-
-    &__bg {
-        @apply w-full h-full;
-
-        object-fit: fill;
-        filter: grayscale(20%) blur(1px);
     }
 }
 
