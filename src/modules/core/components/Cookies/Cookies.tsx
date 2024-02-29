@@ -25,13 +25,13 @@ export const Cookies = () => {
                         <CloseButton onClick={onClose} />
                     </ModalHeader>
                     <ModalBody>
-                        <FormattedMessage id="cookies.description" />
+                        <FormattedMessage id="global.cookies.description" />
                         <a
                             className="anr"
                             rel="nofollow noreferrer noopener"
-                            href={formatMessage({ id: 'cookies.link.url' })}
+                            href={formatMessage({ id: 'global.cookies.link.url' })}
                         >
-                            <FormattedMessage id="Read more" />
+                            <FormattedMessage id="global.read-more" />
                         </a>
                     </ModalBody>
                 </Modal>

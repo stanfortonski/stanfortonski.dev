@@ -86,13 +86,15 @@ export const ContactForm = () => {
                                 console.log(res);
 
                                 if (res.success)
-                                    toast.success(intl.formatMessage({ id: 'send.success' }));
-                                else toast.error(intl.formatMessage({ id: 'send.error' }));
+                                    toast.success(
+                                        intl.formatMessage({ id: 'global.send.success' }),
+                                    );
+                                else toast.error(intl.formatMessage({ id: 'global.send.error' }));
                             })
                             .catch((err) => {
                                 setSending(false);
                                 console.error(err);
-                                toast.error(intl.formatMessage({ id: 'send.error' }));
+                                toast.error(intl.formatMessage({ id: 'global.send.error' }));
                             });
                     }
                 });

@@ -1,4 +1,6 @@
 {
     "projects.title": "Projects",
-    "projects.description": "Stan Fortoński GitHub Portfolio Page. See my projects."
+    "projects.subtitle": "My GitHub projects",
+    "projects.button-rest-projects": "All My GitHub Projects",
+    "projects.description": "Check Stan's Fortoński GitHub portfolio open source projects."
 }

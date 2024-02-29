@@ -30,7 +30,7 @@ export const LoadingProgressBar = ({ procent }: LoadingProgressBarProps) => {
         <motion.span ref={ref} animate={controls} initial="hidden" variants={ProgressBarVariants}>
             {inView && (
                 <BasicProgressBar
-                    label={<FormattedMessage id="layout.loading" />}
+                    label={<FormattedMessage id="global.loading" />}
                     className="progress-bar--landing"
                     procent={procent}
                     duration={0.75}

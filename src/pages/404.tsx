@@ -18,13 +18,13 @@ const NotFoundPage = () => {
             <div className="container mx-auto">
                 <div className="section text-center">
                     <h1 className="text-h1 mb-12">
-                        <FormattedMessage id="404.title" />
+                        <FormattedMessage id="global.404.title" />
                     </h1>
                     <p className="text-white mb-8">
-                        <FormattedMessage id="404.description" />
+                        <FormattedMessage id="global.404.description" />
                     </p>
                     <ButtonGatsbyLink to={`/${locale}`} variant="shadows" color="secondary">
-                        <FormattedMessage id="404.button" />
+                        <FormattedMessage id="global.404.button" />
                     </ButtonGatsbyLink>
                 </div>
             </div>

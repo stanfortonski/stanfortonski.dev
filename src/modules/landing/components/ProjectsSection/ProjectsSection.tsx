@@ -47,7 +47,7 @@ export const ProjectsSection = () => {
                                         target="_blank"
                                         rel="noreferrer noopener"
                                     >
-                                        <FormattedMessage id="Download" />
+                                        <FormattedMessage id="global.download" />
                                     </a>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ export const ProjectsSection = () => {
                                                 className="button button--secondary button--chars-and-shadows mb-5"
                                                 onClick={() => setRunWebGLApp(true)}
                                             >
-                                                <FormattedMessage id="Run" />
+                                                <FormattedMessage id="global.run" />
                                             </button>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@ export const ProjectsSection = () => {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        <FormattedMessage id="Download" />
+                                        <FormattedMessage id="global.download" />
                                     </a>
                                 </div>
                             </div>

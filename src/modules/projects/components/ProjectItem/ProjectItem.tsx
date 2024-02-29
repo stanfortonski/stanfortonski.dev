@@ -42,7 +42,7 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
                         target="_blank"
                         rel="noreferrer noopener"
                     >
-                        <FormattedMessage id="Read more" />
+                        <FormattedMessage id="global.read-more" />
                     </a>
                 </div>
             </div>
