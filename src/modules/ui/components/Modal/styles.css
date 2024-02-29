@@ -69,25 +69,25 @@
         object-fit: cover;
     }
 
-    .button-minimize {
-        @apply text-4xl;
+    .button-close {
+        span {
+            @apply text-5xl relative;
+
+            top: -0.25rem;
+        }
     }
 
-    .button-close span {
-        @apply text-5xl relative;
+    .button-expand {
+        &__space {
+            padding: 0;
+            transition: padding linear 0.1s;
+        }
 
-        top: -0.25rem;
-    }
-
-    .button-expand .space {
-        display: none;
-        transition: all 0.25s;
-    }
-
-    .button-expand:hover,
-    .button-expand:focus {
-        .space {
-            display: inline;
+        &:hover,
+        &:focus {
+            .button-expand__space {
+                padding: 0 0.2rem;
+            }
         }
     }
 }
