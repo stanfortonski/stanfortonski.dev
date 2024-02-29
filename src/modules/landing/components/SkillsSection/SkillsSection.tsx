@@ -54,6 +54,11 @@ export const FrameJavaScript = () => (
                     </ButtonLink>
                 </li>
                 <li>
+                    <ButtonLink className="anr" to="https://vuejs.org" target="_blank">
+                        Vue.js
+                    </ButtonLink>
+                </li>
+                <li>
                     <ButtonLink className="anr" to="https://chakra-ui.com" target="_blank">
                         Chakra UI
                     </ButtonLink>
@@ -61,11 +66,6 @@ export const FrameJavaScript = () => (
                 <li>
                     <ButtonLink className="anr" to="https://redux.js.org" target="_blank">
                         Redux
-                    </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink className="anr" to="https://vuejs.org" target="_blank">
-                        Vue.js
                     </ButtonLink>
                 </li>
                 <li>
@@ -88,9 +88,15 @@ export const FrameJavaScript = () => (
                 <li className="text-h6">
                     <FormattedMessage id="index.skills.level.basic" />
                 </li>
+
                 <li>
-                    <ButtonLink className="anr" to="https://vuetifyjs.com" target="_blank">
-                        Vuetify
+                    <ButtonLink className="anr" to="https://nextjs.org" target="_blank">
+                        Next.js
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://remix.run" target="_blank">
+                        Remix
                     </ButtonLink>
                 </li>
                 <li>
@@ -99,23 +105,8 @@ export const FrameJavaScript = () => (
                     </ButtonLink>
                 </li>
                 <li>
-                    <ButtonLink className="anr" to="https://nextjs.org" target="_blank">
-                        Next.js
-                    </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink className="anr" to="https://nodejs.org" target="_blank">
-                        Node.js
-                    </ButtonLink>
-                </li>
-                <li>
                     <ButtonLink className="anr" to="https://expressjs.com" target="_blank">
                         Express
-                    </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink className="anr" to="https://www.apollographql.com" target="_blank">
-                        Apollo
                     </ButtonLink>
                 </li>
                 <li>
@@ -133,6 +124,11 @@ export const FrameJavaScript = () => (
                         Framer Motion
                     </ButtonLink>
                 </li>
+                <li>
+                    <ButtonLink className="anr" to="https://vuetifyjs.com" target="_blank">
+                        Vuetify
+                    </ButtonLink>
+                </li>
             </ul>
 
             <ul className="list-arrow">
@@ -140,18 +136,8 @@ export const FrameJavaScript = () => (
                     <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
-                    <ButtonLink className="anr" to="https://npmjs.com" target="_blank">
-                        npm
-                    </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink className="anr" to="https://babeljs.io" target="_blank">
-                        Babel
-                    </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink className="anr" to="https://webpack.js.org" target="_blank">
-                        Webpack
+                    <ButtonLink className="anr" to="https://nodejs.org" target="_blank">
+                        Node.js
                     </ButtonLink>
                 </li>
                 <li>
@@ -161,6 +147,29 @@ export const FrameJavaScript = () => (
                     <span className="font-bold">&</span>
                     <ButtonLink className="anr" to="https://qunitjs.com" target="_blank">
                         QUnit
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://webpack.js.org" target="_blank">
+                        Webpack
+                    </ButtonLink>
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://npmjs.com" target="_blank">
+                        npm
+                    </ButtonLink>
+                    <span className="font-bold">&</span>
+                    <ButtonLink className="anr" to="https://yarnpkg.com/" target="_blank">
+                        yarn
+                    </ButtonLink>
+                </li>
+
+                <li className="text-h6">
+                    <FormattedMessage id="index.skills.level.episodic" />
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://angular.io/" target="_blank">
+                        Angular
                     </ButtonLink>
                 </li>
             </ul>
@@ -231,7 +240,7 @@ export const FramePHP = () => (
                 </li>
                 <li>
                     <ButtonLink className="anr" to="http://socketo.me" target="_blank">
-                        Ratchet
+                        Websockets Ratchet
                     </ButtonLink>
                 </li>
                 <li>
@@ -251,7 +260,7 @@ export const FramePHP = () => (
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://wordpress.org" target="_blank">
-                        Wordpress Themes & Plugins
+                        Wordpress
                     </ButtonLink>
                 </li>
 
@@ -296,39 +305,35 @@ export const FrameWebDev = () => (
                     </ButtonLink>
                 </li>
                 <li>
-                    <ButtonLink className="anr" to="https://www.w3.org" target="_blank">
-                        HTML5 + CSS3
-                    </ButtonLink>
-                </li>
-                <li>
                     <ButtonLink className="anr" to="https://getbootstrap.com" target="_blank">
                         Bootstrap 4/5
                     </ButtonLink>
                 </li>
                 <li>
-                    <ButtonLink className="anr" to="https://tailwindcss.com" target="_blank">
-                        Tailwind CSS
-                    </ButtonLink>
-                </li>
-                <li>
                     <ButtonLink className="anr" to="https://sass-lang.com" target="_blank">
-                        Sass
+                        SASS
                     </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink
-                        className="anr"
-                        to="https://pl.wikipedia.org/wiki/SQL"
-                        target="_blank"
-                    >
-                        SQL
+                    <span className="font-bold">&</span>
+                    <ButtonLink className="anr" to="https://tailwindcss.com" target="_blank">
+                        TailwindCSS
                     </ButtonLink>
+                    <li>
+                        <ButtonLink className="anr" to="https://www.w3.org" target="_blank">
+                            HTML5 + CSS3
+                        </ButtonLink>
+                    </li>
                 </li>
             </ul>
 
             <ul className="list-arrow">
                 <li className="text-h6">
                     <FormattedMessage id="index.skills.tools" />
+                </li>
+                <li>
+                    <span className="font-bold pl-3">Monorepo &</span>
+                    <ButtonLink className="anr" to="https://turbo.build/" target="_blank">
+                        Turborepo
+                    </ButtonLink>
                 </li>
                 <li>
                     <ButtonLink className="anr" to="https://www.docker.com" target="_blank">
@@ -351,20 +356,6 @@ export const FrameWebDev = () => (
                     <span className="font-bold">&</span>
                     <ButtonLink className="anr" to="https://www.sqlite.org" target="_blank">
                         SQLite
-                    </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink className="anr" to="https://analytics.google.com" target="_blank">
-                        Google Analytics
-                    </ButtonLink>
-                </li>
-                <li>
-                    <ButtonLink className="anr" to="https://schema.org" target="_blank">
-                        Microdata
-                    </ButtonLink>
-                    <b>&</b>
-                    <ButtonLink className="anr" to="http://microformats.org" target="_blank">
-                        Microformats
                     </ButtonLink>
                 </li>
             </ul>
@@ -488,6 +479,14 @@ export const FramePython = () => (
                         target="_blank"
                     >
                         SQLite3
+                    </ButtonLink>
+                </li>
+                <li className="text-h6">
+                    <FormattedMessage id="index.skills.level.episodic" />
+                </li>
+                <li>
+                    <ButtonLink className="anr" to="https://www.djangoproject.com" target="_blank">
+                        Django
                     </ButtonLink>
                 </li>
             </ul>
