@@ -76,9 +76,9 @@
     left: 50%;
     top: 50%;
     max-width: 10em;
-    max-height: 15em;
+    max-height: 18em;
     width: 80%;
-    height: 80%;
+    height: 100%;
     margin-top: -2em;
     transform: translate(-50%, -50%);
 }

@@ -70,7 +70,7 @@ export const Nav = () => {
                                                 className="w-full mb-5"
                                                 to={`/${intl.locale}`}
                                             >
-                                                <FormattedMessage id="index.title" />
+                                                Start
                                             </ButtonGatsbyLink>
                                         </li>
                                         <li>
@@ -98,6 +98,28 @@ export const Nav = () => {
                                             >
                                                 <FormattedMessage id="global.my-gitHub" />
                                             </a>
+                                        </li>
+                                        <li>
+                                            <span className="text-white text-3xl">
+                                                <FormattedMessage id="global.choose-language" />
+                                            </span>
+                                            <div className="flex justify-center gap-8 mt-1">
+                                                <ButtonGatsbyLink
+                                                    variant="chars-and-shadows"
+                                                    className="mb-5"
+                                                    to="/"
+                                                >
+                                                    EN
+                                                </ButtonGatsbyLink>
+
+                                                <ButtonGatsbyLink
+                                                    variant="chars-and-shadows"
+                                                    className="mb-5"
+                                                    to="/pl"
+                                                >
+                                                    PL
+                                                </ButtonGatsbyLink>
+                                            </div>
                                         </li>
                                     </ul>
                                 </ModalBody>

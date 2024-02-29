@@ -11,5 +11,6 @@
     "global.404.button": "Back to start page",
     "global.send.success": "The message was sent.",
     "global.send.error": "The message was not sent.",
-    "global.loading": "Loading..."
+    "global.loading": "Loading...",
+    "global.choose-language": "Choose language:"
 }

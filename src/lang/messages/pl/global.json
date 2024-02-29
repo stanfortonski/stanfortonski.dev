@@ -11,5 +11,6 @@
     "global.404.button": "Powrót do strony głównej",
     "global.send.success": "Wiadomość została wysłana.",
     "global.send.error": "Wiadomość nie została wysłana.",
-    "global.loading": "Ładowanie..."
+    "global.loading": "Ładowanie...",
+    "global.choose-language": "Wybierz język:"
 }
