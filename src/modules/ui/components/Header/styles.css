@@ -1,12 +1,11 @@
 @import '../../styles/components/utils';
 
 .header {
-    @apply bg-primary-proper text-center h-52 flex items-center justify-center;
+    @apply bg-primary-proper text-center lg:h-52 md:h-48 h-40 flex items-center justify-center;
 
     h1 {
-        @apply neon-green;
+        @apply neon-green lg:text-8xl md:text-7xl sm:text-6xl text-5xl;
 
-        font-size: 3.4em;
         text-shadow: none;
         color: rgba(0, 0, 0, 0.4);
         line-height: 100%;
