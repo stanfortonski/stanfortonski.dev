@@ -1,22 +1,23 @@
 @layer base {
     textarea {
         resize: none;
-        min-height: 5em;
+        min-height: 10rem;
     }
 
     label {
         display: block;
         cursor: pointer;
+        font-size: 2rem;
     }
 
     label span {
         display: block;
-        line-height: 1em;
-        font-size: 0.75em;
+        line-height: 2rem;
+        font-size: 1.5rem;
     }
 
     label span:first-of-type {
-        font-size: 1em;
+        font-size: 2rem;
     }
 
     input,
@@ -24,9 +25,9 @@
     select {
         background: rgba(0, 0, 0, 0.1);
         font-family: 'VT323', monospace;
-        font-size: 0.9em;
+        font-size: 1.8rem;
         color: #fff;
-        padding: 0.1em;
+        padding: 0.2rem;
         width: 100%;
     }
 
@@ -37,7 +38,7 @@
     .checkbox,
     .radio {
         background: rgba(0, 0, 0, 0.1);
-        border: rgba(0, 0, 0, 0.6) solid 0.15em;
+        border: rgba(0, 0, 0, 0.6) solid 0.3rem;
         border-right-color: rgba(0, 0, 0, 0.05);
         border-bottom-color: rgba(0, 0, 0, 0.05);
     }
@@ -58,9 +59,9 @@
     .checkbox,
     .radio {
         display: inline-block;
-        height: 1.2em;
-        width: 1.2em;
-        font-size: 0.85em;
+        height: 2.4rem;
+        width: 2.4rem;
+        font-size: 1.7rem;
         color: #fff;
     }
 
@@ -71,9 +72,9 @@
     .checkbox > .checker,
     .radio > .checker {
         visibility: hidden;
-        font-size: 1.4em;
+        font-size: 2.8rem;
         position: relative;
-        top: -0.325em;
+        top: -0.65rem;
     }
 
     input[type='checkbox']:checked + .checkbox,
@@ -100,6 +101,6 @@
     .anr:focus,
     input[type='checkbox']:focus + .checkbox,
     input[type='radio']:focus + .radio {
-        outline: 0.2rem dashed red !important;
+        outline: 0.4rem dashed red !important;
     }
 }

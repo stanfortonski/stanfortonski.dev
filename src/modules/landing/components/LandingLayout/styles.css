@@ -2,7 +2,7 @@
 
 .loading-screen {
     overflow: hidden;
-    perspective: 1.1em;
+    perspective: 2.2rem;
     margin-bottom: 0;
     font-size: 25px;
     height: 100vh;
@@ -31,7 +31,7 @@
     transition: 1s all;
 
     &--scale {
-        transform: translateZ(0.99em);
+        transform: translateZ(1.98rem);
     }
 
     &__screen {

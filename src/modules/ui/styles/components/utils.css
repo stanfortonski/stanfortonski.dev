@@ -2,11 +2,11 @@
 
 @layer {
     .neon-green {
-        filter: drop-shadow(0 0 0.35rem green) saturate(1.5);
+        filter: drop-shadow(0 0 0.7rem green) saturate(1.5);
     }
 
     .neon-purple {
-        filter: drop-shadow(0 0 0.8rem purple) saturate(1.5);
+        filter: drop-shadow(0 0 1.6rem purple) saturate(1.5);
     }
 
     .no-box-shadow {
@@ -14,15 +14,15 @@
     }
 
     .box-shadow-sm {
-        box-shadow: 0.07em 0.07em 0 0 #000;
+        box-shadow: 0.14rem 0.14rem 0 0 #000;
     }
 
     .box-shadow {
-        box-shadow: 0.15em 0.15em 0 0 #000;
+        box-shadow: 0.3rem 0.3rem 0 0 #000;
     }
 
     .box-shadow-lg {
-        box-shadow: 0.3em 0.3em 0 0 #000;
+        box-shadow: 0.6rem 0.6rem 0 0 #000;
     }
 
     .no-text-shadow {

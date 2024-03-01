@@ -35,25 +35,25 @@
         background-color: transparent;
         z-index: 1;
         color: #fff;
-        font-size: 2.5em;
-        text-shadow: 0.04em 0.05em 0 #000;
+        font-size: 5rem;
+        text-shadow: 0.08rem 0.1rem 0 #000;
         transition: transform 0.25s linear;
     }
 
     .prev {
-        left: 1em;
+        left: 2rem;
     }
 
     .next {
-        right: 1em;
+        right: 2rem;
     }
 
     .prev:hover {
-        transform: translateX(-0.1em);
+        transform: translateX(-0.2rem);
     }
 
     .next:hover {
-        transform: translateX(0.1em);
+        transform: translateX(0.2rem);
     }
 
     .prev.disabled,

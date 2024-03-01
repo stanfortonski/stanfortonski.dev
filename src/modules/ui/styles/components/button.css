@@ -1,9 +1,9 @@
 .button {
-    @apply font-vt323 cursor-pointer;
+    @apply font-vt323 cursor-pointer text-3xl;
 
     display: inline-block;
     color: #fff !important;
-    padding: 0.2em 0.4em;
+    padding: 0.8rem 1.6rem;
     user-select: none;
 
     &--primary {
@@ -31,19 +31,19 @@
         }
 
         &:hover::before {
-            left: 0.1em;
+            left: 0.2rem;
         }
 
         &:hover::after {
-            right: 0.1em;
+            right: 0.2rem;
         }
 
         &:active::before {
-            left: 0.22em;
+            left: 0.44rem;
         }
 
         &:active::after {
-            right: 0.22em;
+            right: 0.44rem;
         }
     }
 

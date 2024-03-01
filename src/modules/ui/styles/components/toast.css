@@ -4,8 +4,8 @@
     @apply font-vt323 box-shadow-lg;
 
     border-radius: 0;
-    font-size: 1.4rem;
-    line-height: 1.75rem;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
 
     &-icon {
         @apply mr-4;

@@ -27,7 +27,7 @@ export const AboutSection = () => {
             <span className="sr-only">
                 <FormattedMessage id="index.about.title" />
             </span>
-            <div className="flex flex-col md:flex-row gap-10 items-center">
+            <div className="flex flex-col md:flex-row gap-10 items-center lg:text-4xl md:text-3xl text-2xl">
                 <img
                     src={avatarUrl}
                     alt="Stanisław Fortoński"

@@ -37,13 +37,13 @@
 }
 
 .footer__center::before {
-    left: -2.5em;
-    border-left: 2.5em solid transparent;
+    left: -5rem;
+    border-left: 5rem solid transparent;
 }
 
 .footer__center::after {
-    right: -2.5em;
-    border-right: 2.5em solid transparent;
+    right: -5rem;
+    border-right: 5rem solid transparent;
 }
 
 .footer__side {
@@ -73,13 +73,13 @@
 }
 
 .footer__side-before {
-    left: -2.5em;
-    border-left: 2.5em solid transparent;
+    left: -5rem;
+    border-left: 5rem solid transparent;
 }
 
 .footer__side-after {
-    right: -2.5em;
-    border-right: 2.5em solid transparent;
+    right: -5rem;
+    border-right: 5rem solid transparent;
 }
 
 .footer__side--left {

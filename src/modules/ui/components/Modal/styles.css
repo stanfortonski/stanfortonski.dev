@@ -25,7 +25,7 @@
         @apply text-center text-shadow text-white;
 
         flex-grow: 30;
-        font-size: 1.1em;
+        font-size: 2.2rem;
     }
 
     &__button {
@@ -40,7 +40,7 @@
     }
 
     &__body {
-        @apply p-5 flex-1 relative h-full;
+        @apply p-5 flex-1 relative h-full text-3xl;
 
         overflow: auto;
         overflow-x: hidden;
@@ -86,14 +86,14 @@
         &:hover,
         &:focus {
             .button-expand__space {
-                padding: 0 0.2rem;
+                padding: 0 0.4rem;
             }
         }
     }
 }
 
 .modal--project {
-    @apply text-center aspect-video;
+    @apply text-center md:aspect-video aspect-square;
 
     .modal__body {
         padding: 0 !important;
@@ -104,7 +104,6 @@
         @apply absolute bottom-0 left-0 w-full flex justify-center items-center;
 
         height: 100%;
-        height: calc(100% - 3.5rem);
     }
 
     .modal__description-placement {
