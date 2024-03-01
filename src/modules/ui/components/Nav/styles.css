@@ -15,8 +15,8 @@
     width: 40%;
     min-width: 200px;
     max-width: 640px;
-    height: 100px;
-    font-size: 54px;
+    height: 6.25rem;
+    font-size: 3.38rem;
     color: rgba(0, 0, 0, 0.4);
 
     &::before,
@@ -26,17 +26,17 @@
         content: '';
         width: 0;
         height: 0;
-        border-top-width: 100px;
+        border-top-width: 6.25rem;
     }
 
     &::before {
-        left: -53px;
-        border-left: 54px solid transparent;
+        left: -3.31rem;
+        border-left: 3.38rem solid transparent;
     }
 
     &::after {
-        right: -53px;
-        border-right: 54px solid transparent;
+        right: -3.31rem;
+        border-right: 3.38rem solid transparent;
     }
 
     &:hover::before,
@@ -58,12 +58,12 @@
 
 @media screen and (max-width: 1024px) {
     .nav__toggler::before {
-        left: -39px;
-        border-left: 40px solid transparent;
+        left: -2.44rem;
+        border-left: 2.5rem solid transparent;
     }
 
     .nav__toggler::after {
-        right: -39px;
-        border-right: 40px solid transparent;
+        right: -2.44rem;
+        border-right: 2.5rem solid transparent;
     }
 }

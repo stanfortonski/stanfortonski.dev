@@ -13,7 +13,7 @@
 
     .modal {
         background: blue !important;
-        border: double #fff 12px;
+        border: double #fff 0.75rem;
         position: fixed;
         left: 50%;
         top: 50%;

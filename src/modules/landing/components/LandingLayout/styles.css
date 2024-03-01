@@ -4,7 +4,7 @@
     overflow: hidden;
     perspective: 2.2rem;
     margin-bottom: 0;
-    font-size: 25px;
+    font-size: 1.56rem;
     height: 100vh;
     width: 100vw;
 
@@ -39,7 +39,7 @@
         margin: 0 auto;
         overflow: hidden;
         border-style: solid;
-        border-width: 30px 30px 50px;
+        border-width: 1.88rem 1.88rem 3.13rem;
         border-color: #fff #989797 #989797 #fff;
         background: #000;
         width: 50vw;
@@ -68,25 +68,25 @@
         margin: 0 auto;
         background: #8c8c8c;
         width: 10%;
-        min-width: 130px;
-        height: 40px;
+        min-width: 8.13rem;
+        height: 2.5rem;
     }
 
     &__holder {
         background: #7d7b7b;
         width: 15%;
         min-width: 170px;
-        height: 25px;
+        height: 1.56rem;
         margin: 0 auto;
     }
 
     &__button {
         position: relative;
-        top: -73px;
+        top: -4.56rem;
         right: 0;
         width: 3%;
-        min-width: 50px;
-        height: 13.5px;
+        min-width: 3.13rem;
+        height: 0.84rem;
         background: red;
         border-bottom: 3px solid #c00;
         border-right: 3px solid #c00;
