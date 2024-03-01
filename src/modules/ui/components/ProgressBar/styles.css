@@ -12,9 +12,9 @@
     .progress-bar__text {
         position: absolute;
         left: 0;
-        top: -3rem;
+        top: -6rem;
         color: rgba(0, 0, 0, 0.5);
-        font-size: 5rem;
+        font-size: 4rem;
         width: 100%;
         text-align: center;
         cursor: default;
