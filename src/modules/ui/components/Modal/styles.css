@@ -3,6 +3,10 @@
 .modal {
     @apply flex flex-col box-shadow-lg;
 
+    @media screen and (max-width: 450px) {
+        @apply box-shadow;
+    }
+
     background: #b2b2b2;
     position: relative;
 
@@ -45,7 +49,7 @@
     }
 
     &__body {
-        @apply p-5 flex-1 relative h-full text-3xl;
+        @apply flex-1 relative h-full text-3xl p-5 sm:pb-5 pb-8;
 
         overflow: auto;
         overflow-x: hidden;
