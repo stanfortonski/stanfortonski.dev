@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { FormattedMessage, useIntl } from 'react-intl';
 
+import { useLocation } from '@/modules/core/useLocation';
+
 import { Modal, ModalBody, ModalHeader, ModalTitle } from '../Modal';
 import { CloseButton } from '../Frame/CloseButton';
 import { ButtonGatsbyLink } from '../Button';
@@ -33,6 +35,7 @@ export type NavMenuProps = {
 
 export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
     const intl = useIntl();
+    const { pathname } = useLocation();
 
     return (
         <motion.div
@@ -96,7 +99,8 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
                                     <ButtonGatsbyLink
                                         variant="chars-and-shadows"
                                         className="mb-5 px-4"
-                                        to="/"
+                                        to={`/en/${pathname}`}
+                                        activeClassName="button--active"
                                     >
                                         EN
                                     </ButtonGatsbyLink>
@@ -104,7 +108,8 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
                                     <ButtonGatsbyLink
                                         variant="chars-and-shadows"
                                         className="mb-5 px-4"
-                                        to="/pl"
+                                        to={`/pl/${pathname}`}
+                                        activeClassName="button--active"
                                     >
                                         PL
                                     </ButtonGatsbyLink>

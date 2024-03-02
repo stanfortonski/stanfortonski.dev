@@ -109,7 +109,7 @@ export const ContactForm = () => {
                 onSubmit={sendMail}
             >
                 <fieldset className="present p-10">
-                    <legend className="present-label">
+                    <legend className="present__label">
                         <FormattedMessage id="contact.form.label" />
                     </legend>
 

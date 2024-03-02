@@ -1,7 +1,12 @@
 import { Link } from 'gatsby';
+
+import { useLocation } from '@/modules/core/useLocation';
+
 import './styles.css';
 
 export const Footer = () => {
+    const { pathname } = useLocation();
+
     return (
         <footer className="footer">
             <div className="footer__side footer__side--left">
@@ -20,10 +25,10 @@ export const Footer = () => {
             <div className="footer__side footer__side--right">
                 <div className="footer__side-before"></div>
                 <div className="py-2 text-4xl text-right">
-                    <Link to="/" className="hover:text-primary-proper mx-2">
+                    <Link to={`/en/${pathname}`} className="hover:text-primary-proper mx-2">
                         EN
                     </Link>
-                    <Link to="/pl" className="hover:text-primary-proper mx-2">
+                    <Link to={`/pl/${pathname}`} className="hover:text-primary-proper mx-2">
                         PL
                     </Link>
                 </div>

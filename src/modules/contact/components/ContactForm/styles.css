@@ -6,12 +6,12 @@
     border: 0.15rem solid #000;
     text-align: center;
 
-    .present-label {
+    &__label {
         @apply box-shadow-sm text-shadow-sm text-white;
 
         border: 0.15rem solid #000;
         background: #4b4b4b9c;
-        padding: 0 0.5rem;
+        padding: 0.25rem 0.75rem;
         font-size: 2rem;
     }
 }
