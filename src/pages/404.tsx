@@ -20,7 +20,7 @@ const NotFoundPage = () => {
                     <h1 className="heading-1 mb-12">
                         <FormattedMessage id="global.404.title" />
                     </h1>
-                    <p className="text-white mb-8">
+                    <p className="text-white mb-8 text-3xl">
                         <FormattedMessage id="global.404.description" />
                     </p>
                     <ButtonGatsbyLink to={`/${locale}`} variant="shadows" color="secondary">
