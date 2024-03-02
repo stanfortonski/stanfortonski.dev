@@ -91,7 +91,6 @@ export const FrameJavaScript = () => (
                     <li className="heading-5">
                         <FormattedMessage id="index.skills.level.basic" />
                     </li>
-
                     <li>
                         <ButtonLink className="anr" to="https://nextjs.org" target="_blank">
                             Next.js
@@ -340,11 +339,11 @@ export const FrameWebDev = () => (
                         <ButtonLink className="anr" to="https://tailwindcss.com" target="_blank">
                             TailwindCSS
                         </ButtonLink>
-                        <li>
-                            <ButtonLink className="anr" to="https://www.w3.org" target="_blank">
-                                HTML5 + CSS3
-                            </ButtonLink>
-                        </li>
+                    </li>
+                    <li>
+                        <ButtonLink className="anr" to="https://www.w3.org" target="_blank">
+                            HTML5 + CSS3
+                        </ButtonLink>
                     </li>
                 </ul>
             </div>

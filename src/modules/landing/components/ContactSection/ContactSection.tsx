@@ -12,7 +12,7 @@ export const ContactSection = () => {
                 <FormattedMessage id="contact.heading" />
             </h2>
 
-            <h3 className="heading-4">
+            <h3 className="heading-4 mb-12">
                 <FormattedMessage id="contact.quick-subtitle" />
             </h3>
 
