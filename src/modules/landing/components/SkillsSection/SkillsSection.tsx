@@ -15,18 +15,18 @@ export const SkillsSection = () => (
             <FormattedMessage id="index.skills.subtitle" />
         </h3>
 
-        <div className="grid gap-8 grid-cols-1 px-5 mt-12 items-stretch">
+        <div className="grid gap-8 grid-cols-1 mt-12 items-stretch">
             <FrameJavaScript />
             <FramePHP />
             <FrameWebDev />
         </div>
 
-        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 px-5 mt-12 items-stretch">
+        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 mt-12 items-stretch">
             <FrameCpp />
             <FramePython />
         </div>
 
-        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 px-5 mt-12 items-stretch">
+        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mt-12 items-stretch">
             <FrameCSharp />
             <FrameJava />
             <FrameOpenGL />

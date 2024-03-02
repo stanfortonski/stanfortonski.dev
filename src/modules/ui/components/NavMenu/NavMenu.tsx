@@ -54,6 +54,7 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
                                 <ButtonGatsbyLink
                                     variant="chars-and-shadows"
                                     className="w-full mb-5"
+                                    activeClassName="button--active"
                                     to={`/${intl.locale}`}
                                 >
                                     Start
@@ -64,6 +65,7 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
                                     variant="chars-and-shadows"
                                     className="w-full mb-5"
                                     to={`/${intl.locale}/projects`}
+                                    activeClassName="button--active"
                                 >
                                     <FormattedMessage id="projects.title" />
                                 </ButtonGatsbyLink>
@@ -73,6 +75,7 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
                                     variant="chars-and-shadows"
                                     className="w-full mb-5"
                                     to={`/${intl.locale}/contact`}
+                                    activeClassName="button--active"
                                 >
                                     <FormattedMessage id="contact.title" />
                                 </ButtonGatsbyLink>
@@ -92,7 +95,7 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
                                 <div className="flex justify-center gap-8 mt-1">
                                     <ButtonGatsbyLink
                                         variant="chars-and-shadows"
-                                        className="mb-5"
+                                        className="mb-5 px-4"
                                         to="/"
                                     >
                                         EN
@@ -100,7 +103,7 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
 
                                     <ButtonGatsbyLink
                                         variant="chars-and-shadows"
-                                        className="mb-5"
+                                        className="mb-5 px-4"
                                         to="/pl"
                                     >
                                         PL

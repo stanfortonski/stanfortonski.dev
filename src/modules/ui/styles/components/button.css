@@ -30,20 +30,22 @@
             content: ' >';
         }
 
-        &:hover::before {
-            left: 0.2rem;
-        }
+        &:not(.button--active) {
+            &:hover::before {
+                left: 0.2rem;
+            }
 
-        &:hover::after {
-            right: 0.2rem;
-        }
+            &:hover::after {
+                right: 0.2rem;
+            }
 
-        &:active::before {
-            left: 0.44rem;
-        }
+            &:active::before {
+                left: 0.44rem;
+            }
 
-        &:active::after {
-            right: 0.44rem;
+            &:active::after {
+                right: 0.44rem;
+            }
         }
     }
 
@@ -52,15 +54,35 @@
 
         transition: 0.17s transform linear, 0.17s box-shadow linear;
 
-        &:hover,
-        &:focus {
-            @apply box-shadow-sm;
+        &:not(.button--active) {
+            &:hover,
+            &:focus {
+                @apply box-shadow-sm;
 
-            transform: scale(1.05);
+                transform: scale(1.05);
+            }
         }
     }
 
     &--chars-and-shadows {
         @apply button--chars button--shadows;
+    }
+
+    &--active {
+        background: rgba(0, 0, 0, 0.5) !important;
+
+        &::before {
+            content: '>';
+            margin-right: 5px;
+        }
+
+        &::after {
+            content: '<';
+            margin-left: 5px;
+        }
+
+        &:focus {
+            outline: none !important;
+        }
     }
 }

@@ -17,7 +17,7 @@
           flex 
           items-center 
           justify-center 
-          mx-0 md:mx-auto;
+          mx-0 md:mx-auto text-3xl;
 
     flex-grow: 1;
     height: 70px;

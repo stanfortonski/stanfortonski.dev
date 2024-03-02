@@ -21,6 +21,7 @@ export type ButtonLinkProps = {
 export type ButtonGatsbyLinkProps = {
     to: string;
     target?: string;
+    activeClassName?: string;
 } & BaseButtonProps;
 
 export const Button = ({

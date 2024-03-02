@@ -8,16 +8,16 @@
         display: block;
         cursor: pointer;
         font-size: 2rem;
-    }
 
-    label span {
-        display: block;
-        line-height: 2rem;
-        font-size: 1.5rem;
-    }
+        span {
+            display: block;
+            line-height: 2rem;
+            font-size: 1.5rem;
+        }
 
-    label span:first-of-type {
-        font-size: 2rem;
+        span:first-of-type {
+            font-size: 2rem;
+        }
     }
 
     input,
@@ -96,11 +96,10 @@
     input:focus,
     select:focus,
     textarea:focus,
-    .btn:focus,
-    .btn-lg:focus,
-    .anr:focus,
+    button:focus,
+    a:focus,
     input[type='checkbox']:focus + .checkbox,
     input[type='radio']:focus + .radio {
-        outline: 0.4rem dashed red !important;
+        outline: 0.3rem dashed red !important;
     }
 }
