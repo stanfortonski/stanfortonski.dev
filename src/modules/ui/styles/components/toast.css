@@ -1,13 +1,17 @@
 @import 'react-toastify/dist/ReactToastify.css';
 
 .Toastify__toast {
-    @apply font-vt323 box-shadow-lg text-2xl leading-tight;
+    @apply font-vt323;
 
+    box-shadow: 0.6rem 0.6rem 0 0 #000;
     border-radius: 0;
-    line-height: 3.5rem;
+
+    &-body {
+        @apply text-2xl leading-tight;
+    }
 
     &-icon {
-        @apply mr-4;
+        @apply mr-5;
     }
 
     &--error {
