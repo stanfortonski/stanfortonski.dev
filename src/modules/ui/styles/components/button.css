@@ -1,10 +1,13 @@
 .button {
-    @apply font-vt323 cursor-pointer text-3xl;
+    @apply font-vt323 cursor-pointer md:text-3xl text-2xl;
 
     display: inline-block;
     color: #fff !important;
     padding: 0.8rem 1.6rem;
     user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+    vertical-align: middle;
 
     &--primary {
         background: rgba(0, 0, 0, 0.3) !important;
@@ -15,36 +18,38 @@
     }
 
     &--chars {
-        &::before,
-        &::after {
-            display: inline;
-            position: relative;
-            top: 0;
-        }
-
-        &::before {
-            content: '< ';
-        }
-
-        &::after {
-            content: ' >';
-        }
-
-        &:not(.button--active) {
-            &:hover::before {
-                left: 0.2rem;
+        @media screen and (min-width: 300px) {
+            &::before,
+            &::after {
+                display: inline;
+                position: relative;
+                top: 0;
             }
 
-            &:hover::after {
-                right: 0.2rem;
+            &::before {
+                content: '< ';
             }
 
-            &:active::before {
-                left: 0.44rem;
+            &::after {
+                content: ' >';
             }
 
-            &:active::after {
-                right: 0.44rem;
+            &:not(.button--active) {
+                &:hover::before {
+                    left: 0.2rem;
+                }
+
+                &:hover::after {
+                    right: 0.2rem;
+                }
+
+                &:active::before {
+                    left: 0.44rem;
+                }
+
+                &:active::after {
+                    right: 0.44rem;
+                }
             }
         }
     }

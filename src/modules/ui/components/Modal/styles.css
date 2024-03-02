@@ -11,7 +11,7 @@
     }
 
     &__header {
-        @apply flex justify-around items-center;
+        @apply flex justify-end items-center;
 
         height: 3.5rem;
         background: rgba(0, 0, 0, 0.1);
@@ -22,15 +22,20 @@
     }
 
     &__title {
-        @apply text-center text-shadow text-white;
+        @apply text-center text-shadow text-white text-4xl leading-normal px-2;
 
-        flex-grow: 30;
-        font-size: 2.2rem;
+        flex: 1;
+        flex-shrink: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__button {
         @apply px-2 text-white text-shadow text-3xl;
 
+        flex-basis: 3.5rem;
+        flex-shrink: 0;
         width: 3.5rem;
         user-select: none;
 

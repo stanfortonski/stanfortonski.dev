@@ -1,9 +1,17 @@
 .list-arrow {
-    li::before {
-        content: '>';
-    }
+    @apply mb-4;
 
-    li.heading-5::before {
-        display: none;
+    @media screen and (min-width: 300px) {
+        li {
+            text-align: left;
+        }
+
+        li::before {
+            content: '>';
+        }
+
+        li.heading-5::before {
+            display: none;
+        }
     }
 }

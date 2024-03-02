@@ -92,14 +92,4 @@
     .checkbox {
         cursor: pointer;
     }
-
-    input:focus,
-    select:focus,
-    textarea:focus,
-    button:not(.nav__toggler):focus,
-    a:focus,
-    input[type='checkbox']:focus + .checkbox,
-    input[type='radio']:focus + .radio {
-        outline: 0.3rem dashed red !important;
-    }
 }
