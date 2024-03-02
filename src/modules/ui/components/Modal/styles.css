@@ -100,6 +100,10 @@
 .modal--project {
     @apply text-center md:aspect-video aspect-square;
 
+    @media screen and (max-width: 350px) {
+        aspect-ratio: 6 / 9 !important;
+    }
+
     .modal__body {
         padding: 0 !important;
         background: #000;
@@ -113,5 +117,9 @@
 
     .modal__description-placement {
         @apply absolute bottom-0 w-full text-shadow-sm text-white p-3 md:text-2xl text-xl;
+
+        @media screen and (max-width: 350px) {
+            max-height: 100px;
+        }
     }
 }

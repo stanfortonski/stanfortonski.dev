@@ -33,7 +33,6 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
             ) : (
                 <div className="modal__bg bg-black"></div>
             )}
-
             <div className="modal__button-placement">
                 <div>
                     <a
@@ -46,9 +45,10 @@ export const ProjectItem = ({ node }: ProjectItemProps) => {
                     </a>
                 </div>
             </div>
-            <div className="modal__description-placement">
-                <div dangerouslySetInnerHTML={{ __html: descriptionHTML }}></div>
-            </div>
+            <div
+                className="modal__description-placement"
+                dangerouslySetInnerHTML={{ __html: descriptionHTML }}
+            />
         </Frame>
     );
 };
