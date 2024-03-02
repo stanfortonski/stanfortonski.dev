@@ -39,7 +39,7 @@ module.exports = {
           viewer {
             avatarUrl
 
-            bestRepositories: repositories(orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, first: 8) {
+            bestRepositories: repositories(isFork: false, isLocked: false, isArchived: false, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, first: 7) {
               edges {
                 node {
                   id
