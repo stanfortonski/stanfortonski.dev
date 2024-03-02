@@ -11,9 +11,4 @@
     .progress-bar__text {
         @apply blink-fast;
     }
-
-    @media screen and (max-width: 720px), screen and (max-height: 450px) {
-        left: 5%;
-        width: 90%;
-    }
 }
