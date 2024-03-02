@@ -50,12 +50,12 @@ main.layout-content {
     display: none !important;
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:not(.nav__toggler):focus,
-a:focus,
-input[type='checkbox']:focus + .checkbox,
-input[type='radio']:focus + .radio {
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:not(.nav__toggler):focus-visible,
+a:focus-visible,
+input[type='checkbox']:focus-visible + .checkbox,
+input[type='radio']:focus-visible + .radio {
     outline: 0.3rem dashed red !important;
 }
