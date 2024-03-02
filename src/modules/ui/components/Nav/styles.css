@@ -12,8 +12,8 @@
           bg-primary-proper
           hover:bg-primary-dark;
 
-    width: 40%;
-    min-width: 200px;
+    width: 55%;
+    min-width: 180px;
     max-width: 640px;
     height: 6.25rem;
     font-size: 3.38rem;

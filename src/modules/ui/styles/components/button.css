@@ -5,9 +5,12 @@
     color: #fff !important;
     padding: 0.8rem 1.6rem;
     user-select: none;
-    white-space: nowrap;
     cursor: pointer;
     vertical-align: middle;
+
+    @media screen and (min-width: 300px) {
+        white-space: nowrap;
+    }
 
     &--primary {
         background: rgba(0, 0, 0, 0.3) !important;
@@ -76,14 +79,16 @@
     &--active {
         background: rgba(0, 0, 0, 0.5) !important;
 
-        &::before {
-            content: '>';
-            margin-right: 5px;
-        }
+        @media screen and (min-width: 300px) {
+            &::before {
+                content: '>';
+                margin-right: 5px;
+            }
 
-        &::after {
-            content: '<';
-            margin-left: 5px;
+            &::after {
+                content: '<';
+                margin-left: 5px;
+            }
         }
 
         &:focus {

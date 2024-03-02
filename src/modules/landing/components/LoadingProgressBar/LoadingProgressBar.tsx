@@ -27,7 +27,7 @@ export const LoadingProgressBar = ({ procent }: LoadingProgressBarProps) => {
     }, [controls, inView]);
 
     return (
-        <motion.span ref={ref} animate={controls} initial="hidden" variants={ProgressBarVariants}>
+        <motion.div ref={ref} animate={controls} initial="hidden" variants={ProgressBarVariants}>
             {inView && (
                 <BasicProgressBar
                     label={<FormattedMessage id="global.loading" />}
@@ -37,6 +37,6 @@ export const LoadingProgressBar = ({ procent }: LoadingProgressBarProps) => {
                     delay={0.25}
                 />
             )}
-        </motion.span>
+        </motion.div>
     );
 };

@@ -17,33 +17,38 @@
           flex 
           items-center 
           justify-center 
-          mx-0 md:mx-auto text-3xl;
+          mx-0 md:mx-auto text-3xl flex-grow-0 lg:flex-grow px-5;
 
-    flex-grow: 1;
     height: 70px;
+
+    @media screen and (max-width: 300px) {
+        min-height: 70px;
+        height: auto;
+    }
+
     color: rgba(0, 0, 0, 0.4);
     z-index: 2;
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
-}
 
-.footer__center::before,
-.footer__center::after {
-    @apply border-b-primary-proper md:inline-block absolute top-0 hidden;
+    &::before,
+    &::after {
+        @apply border-b-primary-proper md:inline-block absolute top-0 hidden;
 
-    content: '';
-    width: 0;
-    height: 0;
-    border-bottom-width: 70px !important;
-}
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom-width: 70px !important;
+    }
 
-.footer__center::before {
-    left: -5rem;
-    border-left: 5rem solid transparent;
-}
+    &::before {
+        left: -5rem;
+        border-left: 5rem solid transparent;
+    }
 
-.footer__center::after {
-    right: -5rem;
-    border-right: 5rem solid transparent;
+    &::after {
+        right: -5rem;
+        border-right: 5rem solid transparent;
+    }
 }
 
 .footer__side {
@@ -60,32 +65,32 @@
     color: rgba(0, 0, 0, 0.4);
     z-index: 1;
     filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.3));
-}
 
-.footer__side-before,
-.footer__side-after {
-    @apply inline-block absolute top-0;
+    &-before,
+    &-after {
+        @apply inline-block absolute top-0;
 
-    content: '';
-    width: 20px;
-    height: 0;
-    border-bottom: solid 85px #159182 !important;
-}
+        content: '';
+        width: 20px;
+        height: 0;
+        border-bottom: solid 85px #159182 !important;
+    }
 
-.footer__side-before {
-    left: -5rem;
-    border-left: 5rem solid transparent;
-}
+    &-before {
+        left: -5rem;
+        border-left: 5rem solid transparent;
+    }
 
-.footer__side-after {
-    right: -5rem;
-    border-right: 5rem solid transparent;
-}
+    &-after {
+        right: -5rem;
+        border-right: 5rem solid transparent;
+    }
 
-.footer__side--left {
-    left: 8%;
-}
+    &--left {
+        left: 8%;
+    }
 
-.footer__side--right {
-    right: 8%;
+    &--right {
+        right: 8%;
+    }
 }

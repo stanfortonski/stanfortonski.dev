@@ -112,6 +112,6 @@
     }
 
     .modal__description-placement {
-        @apply absolute bottom-0 w-full text-shadow-sm text-white p-3 text-2xl;
+        @apply absolute bottom-0 w-full text-shadow-sm text-white p-3 md:text-2xl text-xl;
     }
 }

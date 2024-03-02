@@ -2,10 +2,11 @@
 
 .progress-bar--landing {
     position: absolute;
-    top: 75%;
+    bottom: 12.5%;
     left: 12.5%;
     width: 75%;
-    height: 8%;
+    max-width: 75%;
+    height: 2.75rem;
 
     .progress-bar__text {
         @apply blink-fast;
