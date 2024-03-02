@@ -17,15 +17,13 @@
           flex 
           items-center 
           justify-center 
-          mx-0 md:mx-auto text-3xl flex-grow-0 lg:flex-grow px-5;
+          mx-0 md:mx-auto 
+          text-3xl 
+          flex-grow-0
+          lg:flex-grow
+          px-5 pt-1 md:pt-0;
 
-    height: 70px;
-
-    @media screen and (max-width: 300px) {
-        min-height: 70px;
-        height: auto;
-    }
-
+    min-height: 70px;
     color: rgba(0, 0, 0, 0.4);
     z-index: 2;
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
