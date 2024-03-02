@@ -12,12 +12,22 @@
           bg-primary-proper
           hover:bg-primary-dark;
 
+    --nav-toggler-height: 6.25rem;
+    --nav-toggler-border: 5rem;
+    --nav-toggler-font-size: 3.38rem;
+
+    height: var(--nav-toggler-height);
+    font-size: var(--nav-toggler-font-size);
     width: 55%;
-    min-width: 180px;
+    min-width: 150px;
     max-width: 640px;
-    height: 6.25rem;
-    font-size: 3.38rem;
     color: rgba(0, 0, 0, 0.4);
+
+    @media screen and (max-width: 500px) {
+        --nav-toggler-height: 5.25rem;
+        --nav-toggler-border: 3rem;
+        --nav-toggler-font-size: 2.75rem;
+    }
 
     &::before,
     &::after {
@@ -26,17 +36,17 @@
         content: '';
         width: 0;
         height: 0;
-        border-top-width: 6.25rem;
+        border-top-width: var(--nav-toggler-height);
     }
 
     &::before {
-        left: -3.31rem;
-        border-left: 3.38rem solid transparent;
+        left: calc(var(--nav-toggler-border) * -1 + 0.05rem);
+        border-left: var(--nav-toggler-border) solid transparent;
     }
 
     &::after {
-        right: -3.31rem;
-        border-right: 3.38rem solid transparent;
+        right: calc(var(--nav-toggler-border) * -1 + 0.05rem);
+        border-right: var(--nav-toggler-border) solid transparent;
     }
 
     &:hover::before,
@@ -53,17 +63,5 @@
     &:hover &-label,
     &:hover &-label {
         @apply neon-purple;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .nav__toggler::before {
-        left: -2.44rem;
-        border-left: 2.5rem solid transparent;
-    }
-
-    .nav__toggler::after {
-        right: -2.44rem;
-        border-right: 2.5rem solid transparent;
     }
 }
