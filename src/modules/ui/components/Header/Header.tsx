@@ -10,7 +10,7 @@ export const Header = ({ siteTitle, isAnimate }: HeaderType) => (
     <header className="header">
         <h1>
             <Link to="/">
-                {isAnimate === false ? (
+                {isAnimate ? (
                     <TypeWriter text={siteTitle} duration={120} delay={1100} cursor="_" />
                 ) : (
                     siteTitle
