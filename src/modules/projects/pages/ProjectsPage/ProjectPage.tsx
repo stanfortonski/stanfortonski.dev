@@ -44,10 +44,10 @@ export const ProjectsPage = ({ locale }: AppContextType) => {
                     <h1 className="heading-1 text-center">
                         <FormattedMessage id="projects.title" />
                     </h1>
-                    <h2 className="heading-4 text-center">
+                    <h2 className="heading-4 text-center mb-12">
                         <FormattedMessage id="projects.subtitle" />
                     </h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 section">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {projects.map(({ node }: ProjectItemProps) => (
                             <ProjectItem node={node} key={node.id} />
                         ))}
