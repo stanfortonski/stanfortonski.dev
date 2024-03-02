@@ -92,7 +92,7 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
                                 </a>
                             </li>
                             <li>
-                                <span className="text-white text-3xl">
+                                <span className="text-white text-2xl">
                                     <FormattedMessage id="global.choose-language" />
                                 </span>
                                 <div className="flex justify-center gap-8 mt-1">
