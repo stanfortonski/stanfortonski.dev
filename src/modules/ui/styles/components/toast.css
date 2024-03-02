@@ -1,7 +1,7 @@
 @import 'react-toastify/dist/ReactToastify.css';
 
 .Toastify__toast {
-    @apply font-vt323 box-shadow-lg text-2xl;
+    @apply font-vt323 box-shadow-lg text-2xl leading-tight;
 
     border-radius: 0;
     line-height: 3.5rem;
