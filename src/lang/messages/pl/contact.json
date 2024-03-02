@@ -1,7 +1,10 @@
 {
     "contact.title": "Kontakt",
-    "contact.description": "Skontaktuj się ze Stanisław Fortoński przez formularz kontaktowy lub e-mail: contact@stanfortonski.dev",
-    "contact.me": "Kontakt",
+    "contact.description": "Skontaktuj się ze Stanisławem Fortońskim przez formularz kontaktowy lub e-mail: contact@stanfortonski.dev",
+    "contact.heading": "Kontakt",
+    "contact.subtitle-1": "Gotowy do rozmowy?",
+    "contact.subtitle-2": "Użyj formularza poniżej, a odpowiem na Twoje pytania podczas przerwy na kawę.",
+    "contact.quick-subtitle": "Może to już czas na kontakt?",
     "contact.form": "Formularz kontaktowy",
     "contact.form.label": "Twoja wiadomość",
     "contact.form.name": "Twoje imię",

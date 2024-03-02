@@ -17,7 +17,7 @@ const NotFoundPage = () => {
             <Seo locale={locale} title="404.title" description="404.description" />
             <div className="container mx-auto">
                 <div className="section text-center">
-                    <h1 className="text-h1 mb-12">
+                    <h1 className="heading-1 mb-12">
                         <FormattedMessage id="global.404.title" />
                     </h1>
                     <p className="text-white mb-8">

@@ -10,12 +10,12 @@ export const StartSection = () => {
 
     return (
         <Section>
-            <h2 className="text-h1">Senior Frontend Developer</h2>
-            <h3 className="text-h2">
+            <h2 className="heading-1">Senior Frontend Developer</h2>
+            <h3 className="heading-3">
                 Fullstack Web Developer
                 <span className="md:inline hidden"> | </span>
                 <div className="md:hidden block"></div>
-                <span className="text-h4 md:text-h3">React Vue Laravel</span>
+                <span className="heading-4">React Vue Laravel</span>
             </h3>
 
             <ButtonGatsbyLink

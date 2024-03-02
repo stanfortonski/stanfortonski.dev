@@ -1,7 +1,10 @@
 {
     "contact.title": "Contact",
     "contact.description": "Contact with Stan Fortoński by contact form or e-mail: contact@stanfortonski.dev",
-    "contact.me": "Contact me",
+    "contact.heading": "Contact me",
+    "contact.subtitle-1": "Ready to talk?",
+    "contact.subtitle-2": "Use the form below and I will answer your questions during a coffee break.",
+    "contact.quick-subtitle": "Maybe it's time to get in touch?",
     "contact.form": "Contact Form",
     "contact.form.label": "Your message",
     "contact.form.name": "Your name",

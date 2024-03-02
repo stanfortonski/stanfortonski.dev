@@ -8,11 +8,11 @@ import { Section } from '../Section';
 
 export const SkillsSection = () => (
     <Section>
-        <h2 className="text-h1">
-            <FormattedMessage id="index.skills.h1" />
+        <h2 className="heading-1">
+            <FormattedMessage id="index.skills.heading" />
         </h2>
-        <h3 className="text-h2">
-            <FormattedMessage id="index.skills.h2" />
+        <h3 className="heading-4">
+            <FormattedMessage id="index.skills.subtitle" />
         </h3>
 
         <div className="grid gap-8 grid-cols-1 px-5 mt-12 items-stretch">
@@ -37,7 +37,7 @@ export const SkillsSection = () => (
 export const FrameJavaScript = () => (
     <Frame title="JavaScript / TypeScript">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={95} />
@@ -45,7 +45,7 @@ export const FrameJavaScript = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
@@ -85,7 +85,7 @@ export const FrameJavaScript = () => (
             </ul>
 
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.basic" />
                 </li>
 
@@ -132,7 +132,7 @@ export const FrameJavaScript = () => (
             </ul>
 
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
@@ -164,7 +164,7 @@ export const FrameJavaScript = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
@@ -180,7 +180,7 @@ export const FrameJavaScript = () => (
 export const FramePHP = () => (
     <Frame title="PHP">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={95} />
@@ -188,7 +188,7 @@ export const FramePHP = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
@@ -226,7 +226,7 @@ export const FramePHP = () => (
             </ul>
 
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.medium" />
                 </li>
                 <li>
@@ -235,7 +235,7 @@ export const FramePHP = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
@@ -255,7 +255,7 @@ export const FramePHP = () => (
             </ul>
 
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
@@ -264,7 +264,7 @@ export const FramePHP = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
@@ -285,7 +285,7 @@ export const FramePHP = () => (
 export const FrameWebDev = () => (
     <Frame title="Rest Web Dev">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={90} />
@@ -293,7 +293,7 @@ export const FrameWebDev = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
@@ -326,7 +326,7 @@ export const FrameWebDev = () => (
             </ul>
 
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
@@ -366,7 +366,7 @@ export const FrameWebDev = () => (
 export const FrameCpp = () => (
     <Frame title="C++" className="h-full">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={70} />
@@ -374,7 +374,7 @@ export const FrameCpp = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.fluent" />
                 </li>
                 <li>
@@ -388,7 +388,7 @@ export const FrameCpp = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
@@ -404,7 +404,7 @@ export const FrameCpp = () => (
             </ul>
 
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
@@ -413,7 +413,7 @@ export const FrameCpp = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.tools" />
                 </li>
                 <li>
@@ -438,7 +438,7 @@ export const FrameCpp = () => (
 export const FramePython = () => (
     <Frame title="Python" className="h-full">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={60} />
@@ -446,7 +446,7 @@ export const FramePython = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
@@ -481,7 +481,7 @@ export const FramePython = () => (
                         SQLite3
                     </ButtonLink>
                 </li>
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
@@ -497,7 +497,7 @@ export const FramePython = () => (
 export const FrameCSharp = () => (
     <Frame title="C#" className="h-full">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={23} />
@@ -505,7 +505,7 @@ export const FrameCSharp = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
@@ -530,7 +530,7 @@ export const FrameCSharp = () => (
 export const FrameJava = () => (
     <Frame title="Java" className="h-full">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={23} />
@@ -538,7 +538,7 @@ export const FrameJava = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>
@@ -551,7 +551,7 @@ export const FrameJava = () => (
                     </ButtonLink>
                 </li>
 
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.episodic" />
                 </li>
                 <li>
@@ -567,7 +567,7 @@ export const FrameJava = () => (
 export const FrameOpenGL = () => (
     <Frame title="OpenGL" className="h-full">
         <div className="mb-3">
-            <span className="text-h6 pr-3">
+            <span className="heading-5 pr-3">
                 <FormattedMessage id="index.skills.experience" />
             </span>
             <ProgressBar procent={55} />
@@ -575,7 +575,7 @@ export const FrameOpenGL = () => (
 
         <div className="flex justify-center text-left gap-12 pb-4">
             <ul className="list-arrow">
-                <li className="text-h6">
+                <li className="heading-5">
                     <FormattedMessage id="index.skills.level.basic" />
                 </li>
                 <li>

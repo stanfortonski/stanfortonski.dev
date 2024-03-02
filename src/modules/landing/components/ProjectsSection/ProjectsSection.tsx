@@ -19,11 +19,11 @@ export const ProjectsSection = () => {
 
     return (
         <Section className="px-0" containerClass="">
-            <h2 className="text-h1">
-                <FormattedMessage id="index.projects.h1" />
+            <h2 className="heading-1">
+                <FormattedMessage id="index.projects.heading" />
             </h2>
-            <h3 className="text-h2">
-                <FormattedMessage id="index.projects.h2" />
+            <h3 className="heading-4">
+                <FormattedMessage id="index.projects.subtitle" />
             </h3>
 
             <Slider className="slider-modal mt-12">

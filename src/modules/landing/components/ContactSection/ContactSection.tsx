@@ -8,9 +8,13 @@ import { Section } from '../Section';
 export const ContactSection = () => {
     return (
         <Section>
-            <h2 className="text-h1">
-                <FormattedMessage id="contact.me" />
+            <h2 className="heading-1">
+                <FormattedMessage id="contact.heading" />
             </h2>
+
+            <h3 className="heading-4">
+                <FormattedMessage id="contact.quick-subtitle" />
+            </h3>
 
             <div className="px-5 mt-14">
                 <Frame title={<FormattedMessage id="contact.form" />}>

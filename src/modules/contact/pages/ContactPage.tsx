@@ -13,9 +13,15 @@ export const ContactPage = ({ locale }: AppContextType) => {
             <Seo locale={locale} title="contact.title" description="contact.description" />
 
             <div className="section">
-                <h1 className="text-h1 text-center mb-12">
+                <h1 className="heading-1 text-center">
                     <FormattedMessage id="contact.title" />
                 </h1>
+
+                <p className="heading-4 text-center mb-12">
+                    <FormattedMessage id="contact.subtitle-1" />
+                    <br />
+                    <FormattedMessage id="contact.subtitle-2" />
+                </p>
 
                 <div className="grid gap-8 grid-cols-1">
                     <Frame title={<FormattedMessage id="contact.form" />}>
@@ -35,7 +41,7 @@ export const ContactPage = ({ locale }: AppContextType) => {
 
                     <Frame title={<FormattedMessage id="contact.media" />}>
                         <ul className="text-center">
-                            <li className="pb-2 text-h6">
+                            <li className="pb-2 heading-5">
                                 <FormattedMessage id="contact.visit" />
                             </li>
                             <li>

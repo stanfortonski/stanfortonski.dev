@@ -1,45 +1,39 @@
 @layer utilities {
-    .text-h1-desktop {
-        font-size: 5.5rem;
-    }
+    .heading-1 {
+        &--desktop {
+            font-size: 5.5rem;
+        }
 
-    .text-h1-mobile {
-        font-size: 3.3rem;
-    }
+        &--mobile {
+            font-size: 3.3rem;
+        }
 
-    .text-h1 {
-        @apply text-shadow-lg text-white mb-5 md:text-h1-desktop text-h1-mobile;
+        @apply text-shadow-lg text-white md:heading-1--desktop heading-1--mobile leading-relaxed mb-5;
 
         line-height: normal;
+
+        &::first-letter {
+            color: red;
+        }
     }
 
-    .text-h1::first-letter {
-        color: red;
+    .heading-2 {
+        @apply text-shadow-lg text-white md:text-6xl text-5xl leading-relaxed mb-5;
     }
 
-    .text-h2 {
-        @apply text-shadow-lg text-white text-3xl md:text-5xl mb-5;
+    .heading-3 {
+        @apply text-shadow-lg text-white md:text-5xl text-4xl leading-normal mb-4;
     }
 
-    .text-h3 {
-        @apply text-shadow-lg text-white mb-4;
-
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+    .heading-4 {
+        @apply text-shadow text-white md:text-4xl text-3xl leading-normal mb-3;
     }
 
-    .text-h4 {
-        @apply text-shadow text-white text-2xl md:text-3xl mb-3;
+    .heading-5 {
+        @apply text-shadow text-white md:text-3xl text-2xl leading-snug mb-2;
     }
 
-    .text-h5 {
-        font-size: 2.1rem;
-        line-height: 2rem;
-
-        @apply text-shadow text-white mb-2;
-    }
-
-    .text-h6 {
-        @apply text-shadow text-white;
+    .heading-6 {
+        @apply text-shadow text-white md:text-2xl text-xl leading-tight mb-1;
     }
 }

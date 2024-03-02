@@ -3,7 +3,7 @@
         content: '>';
     }
 
-    li.text-h6::before {
+    li.heading-5::before {
         display: none;
     }
 }

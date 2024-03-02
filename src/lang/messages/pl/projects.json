@@ -1,6 +1,7 @@
 {
     "projects.title": "Projekty",
-    "projects.subtitle": "Githubowe projekty Stanisława Fortońskiego",
-    "projects.button-rest-projects": "Wszystkie githubowe projekty",
+    "projects.subtitle": "Poniżej oddaje w Twoje ręce kilka open sourcowych prac które mogą Cię zainteresować.",
+    "projects.rest-projects.text": "Szukasz więcej projektów Stanisława Fortońskiego?",
+    "projects.rest-projects.button": "Wszystkie githubowe projekty",
     "projects.description": "Zapoznaj się z open sourcowymi projektami Stanisława Fortońskiego."
 }

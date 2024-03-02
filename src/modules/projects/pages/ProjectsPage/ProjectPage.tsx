@@ -41,10 +41,10 @@ export const ProjectsPage = ({ locale }: AppContextType) => {
 
             <div className="container-fluid text-center">
                 <div className="section">
-                    <h1 className="text-h1 text-center mb-5">
+                    <h1 className="heading-1 text-center">
                         <FormattedMessage id="projects.title" />
                     </h1>
-                    <h2 className="text-h2 text-center mb-8">
+                    <h2 className="heading-4 text-center">
                         <FormattedMessage id="projects.subtitle" />
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 section">
@@ -53,11 +53,14 @@ export const ProjectsPage = ({ locale }: AppContextType) => {
                         ))}
                     </div>
                 </div>
+                <p className="heading-5 mb-5">
+                    <FormattedMessage id="projects.rest-projects.text" />
+                </p>
                 <a
                     className="button button--chars-and-shadows button--secondary mb-10"
                     href="https://github.com/stanfortonski?tab=repositories"
                 >
-                    <FormattedMessage id="projects.button-rest-projects" />
+                    <FormattedMessage id="projects.rest-projects.button" />
                 </a>
             </div>
         </PageLayout>
