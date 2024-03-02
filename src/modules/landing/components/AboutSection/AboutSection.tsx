@@ -36,7 +36,7 @@ export const AboutSection = () => {
                     height={250}
                 />
 
-                <div className="text-white text-justify text-shadow">
+                <div className="text-white text-left text-shadow">
                     <FormattedMessage id="index.about.content" />
                 </div>
             </div>
