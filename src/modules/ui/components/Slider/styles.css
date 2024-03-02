@@ -101,11 +101,13 @@
         padding-right: 0 !important;
 
         .slider-navigation {
-            @apply relative w-full flex justify-center items-center gap-20 mt-5;
+            @apply relative w-full flex justify-center items-center gap-20;
 
             .prev,
             .next {
                 @apply static;
+
+                font-size: 4rem;
             }
         }
     }

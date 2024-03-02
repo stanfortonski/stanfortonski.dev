@@ -123,7 +123,7 @@ export const ProjectsSection = () => {
             <ButtonGatsbyLink
                 variant="chars-and-shadows"
                 color="secondary"
-                className="md:mt-20 mt-10"
+                className="md:mt-20 mt-5"
                 to={`/${locale}/projects`}
             >
                 <FormattedMessage id="index.projects.button" />
