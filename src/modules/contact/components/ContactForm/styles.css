@@ -1,13 +1,18 @@
 @import '../../../ui/styles/components/utils';
 
 .present {
-    @apply box-shadow;
+    @apply box-shadow sm:p-10 p-0 border-none sm:border-solid;
 
-    border: 0.15rem solid #000;
+    border-color: #000;
+    border-width: 0.15rem;
     text-align: center;
 
+    @media screen and (max-width: 640px) {
+        box-shadow: none;
+    }
+
     &__label {
-        @apply box-shadow-sm text-shadow-sm text-white;
+        @apply box-shadow-sm text-shadow-sm text-white sm:block hidden;
 
         border: 0.15rem solid #000;
         background: #4b4b4b9c;
@@ -22,8 +27,12 @@
     grid-template-columns: auto 1fr;
     align-items: center;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 640px) {
         display: block;
         text-align: left;
+
+        div {
+            @apply mb-3;
+        }
     }
 }

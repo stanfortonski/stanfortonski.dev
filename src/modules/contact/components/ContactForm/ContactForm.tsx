@@ -108,7 +108,7 @@ export const ContactForm = () => {
                 action={`${site.siteMetadata.siteUrl}/send-mail`}
                 onSubmit={sendMail}
             >
-                <fieldset className="present p-10">
+                <fieldset className="present">
                     <legend className="present__label">
                         <FormattedMessage id="contact.form.label" />
                     </legend>
