@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 
-import { useLocation } from '@/modules/core/useLocation';
+import { useLocation } from '@/modules/core/hooks/useLocation';
 
 import './styles.css';
 

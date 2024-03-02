@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import { useLocation } from '@/modules/core/useLocation';
+import { useLocation } from '@/modules/core/hooks/useLocation';
 
 import { Modal, ModalBody, ModalHeader, ModalTitle } from '../Modal';
 import { CloseButton } from '../Frame/CloseButton';
