@@ -5,8 +5,8 @@ import { Header } from '@/modules/ui/components/Header';
 import { Footer } from '@/modules/ui/components/Footer';
 import { Nav } from '@/modules/ui/components/Nav';
 
-import { Cookies } from '../Cookies';
-import { isBrowser } from '../../utils/helpers';
+// import { Cookies } from '../Cookies';
+// import { isBrowser } from '../../utils/helpers';
 import { App } from '../App';
 import { type AppContextType } from '../../contexts/AppContext';
 
@@ -47,7 +47,7 @@ export const PageLayout = ({ children, locale, showHeader }: PageLayoutProps) =>
             </main>
             <Footer />
 
-            {isBrowser() && <Cookies />}
+            {/* {isBrowser() && <Cookies />} */}
         </App>
     );
 };

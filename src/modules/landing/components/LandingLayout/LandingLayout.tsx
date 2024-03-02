@@ -7,8 +7,8 @@ import { App } from '@/modules/core/components/App';
 import { Footer } from '@/modules/ui/components/Footer';
 import { Nav } from '@/modules/ui/components/Nav';
 import { Header } from '@/modules/ui/components/Header';
-import { Cookies } from '@/modules/core/components/Cookies';
-import { isBrowser } from '@/modules/core/utils/helpers';
+// import { Cookies } from '@/modules/core/components/Cookies';
+// import { isBrowser } from '@/modules/core/utils/helpers';
 import { type AppContextProps } from '@/modules/core/contexts/AppContext';
 
 import { LoadingProgressBar } from '../LoadingProgressBar';
@@ -107,7 +107,7 @@ export const LandingLayout = ({ children, locale }: AppContextProps) => {
                     <Nav />
                     <main className="layout-content">{children}</main>
                     <Footer />
-                    {isBrowser() && <Cookies />}
+                    {/* {isBrowser() && <Cookies />} */}
                 </>
             )}
         </App>
