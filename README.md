@@ -4,6 +4,7 @@
 
 ### Build with
 
--   React
--   Gatsby
+-   React 18
+-   Gatsby 5
 -   Framer-motion
+-   Tailwind CSS

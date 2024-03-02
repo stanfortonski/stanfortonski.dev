@@ -1,0 +1,16 @@
+{
+    "site.description": "Stan Fortoński Website - programmer, web developer, frontend developer, backend developer, full stack developer, game developer IT enthusiasts.",
+    "global.cookies.description": "This site uses cookies. By using this site you accept this fact. If not, leave this page.",
+    "global.cookies.link.url": "https://www.aboutcookies.org.uk/cookies",
+    "global.read-more": "Read more",
+    "global.my-gitHub": "My GitHub",
+    "global.run": "Run",
+    "global.download": "Download",
+    "global.404.title": "404 Not Found",
+    "global.404.description": "Page not found.",
+    "global.404.button": "Back to start page",
+    "global.send.success": "The message was sent.",
+    "global.send.error": "The message was not sent.",
+    "global.loading": "Loading...",
+    "global.choose-language": "Choose language:"
+}

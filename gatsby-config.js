@@ -15,7 +15,7 @@ module.exports = {
                 alias: {
                     '@': path.resolve(__dirname, 'src'),
                 },
-                extensions: ['js', 'css'],
+                extensions: ['js', 'css', 'ts', 'tsx'],
             },
         },
         {
@@ -39,21 +39,16 @@ module.exports = {
           viewer {
             avatarUrl
 
-            bestRepositories: repositories(orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, first: 8) {
+            bestRepositories: repositories(isFork: false, isLocked: false, isArchived: false, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, first: 7) {
               edges {
                 node {
                   id
-                  stargazerCount,
+                  stargazerCount
                   forkCount
                   name
                   descriptionHTML
                   createdAt
                   url
-                  readme: object(expression: "master:README.md") {
-                    ... on Blob {
-                      text
-                    }
-                  }
                 }
               }
             }
@@ -73,6 +68,5 @@ module.exports = {
                 icon: 'src/images/favicon.png',
             },
         },
-        // 'gatsby-plugin-offline',
     ],
 };

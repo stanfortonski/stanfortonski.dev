@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './components/form';
+@import './components/utils';
+@import './components/typography';
+@import './components/toast';
+@import './components/button';
+@import './components/anchor';
+@import './components/list';
+@import './components/skills';
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap&subset=latin-ext');
+
+html {
+    height: 100%;
+}
+
+body {
+    @apply font-vt323;
+
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body,
+.website {
+    @apply bg-dark;
+}
+
+body,
+.body-sizing {
+    @apply relative;
+
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+main.layout-content {
+    @apply pb-5 flex-grow;
+
+    padding-bottom: 150px;
+
+    @media screen and (max-width: 764px) {
+        padding-bottom: 80px;
+    }
+}
+
+.grecaptcha-badge {
+    display: none !important;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:not(.nav__toggler):focus-visible,
+a:focus-visible,
+input[type='checkbox']:focus-visible + .checkbox,
+input[type='radio']:focus-visible + .radio {
+    outline: 0.3rem dashed red !important;
+}

@@ -1,0 +1,62 @@
+@tailwind utilities;
+
+@layer {
+    .neon-green {
+        filter: drop-shadow(0 0 0.7rem green) saturate(1.5);
+    }
+
+    .neon-purple {
+        filter: drop-shadow(0 0 1.6rem purple) saturate(1.5);
+    }
+
+    .no-box-shadow {
+        box-shadow: none !important;
+    }
+
+    .box-shadow-sm {
+        box-shadow: 0.14rem 0.14rem 0 0 #000;
+    }
+
+    .box-shadow {
+        box-shadow: 0.3rem 0.3rem 0 0 #000;
+    }
+
+    .box-shadow-lg {
+        box-shadow: 0.6rem 0.6rem 0 0 #000;
+    }
+
+    .no-text-shadow {
+        text-shadow: none !important;
+    }
+
+    .text-shadow-sm {
+        text-shadow: 0.07em 0.09em 0 #000;
+    }
+
+    .text-shadow {
+        text-shadow: 0.11em 0.14em 0 #000;
+    }
+
+    .text-shadow-lg {
+        text-shadow: 0.14em 0.17em 0 #000;
+    }
+
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .blink {
+        animation: blink 1s linear infinite;
+    }
+
+    .blink-fast {
+        animation: blink 0.5s linear infinite;
+    }
+}

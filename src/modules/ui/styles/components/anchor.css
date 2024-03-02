@@ -1,0 +1,34 @@
+@layer {
+    .anr {
+        position: relative;
+        color: #000 !important;
+        font-weight: bold !important;
+
+        &::after,
+        &::before {
+            display: inline;
+            position: relative;
+            top: 0;
+            opacity: 0;
+        }
+
+        &::before {
+            content: '{';
+            left: 0;
+        }
+
+        &::after {
+            content: '}';
+            right: 0;
+        }
+
+        &:hover {
+            color: #0b0faa;
+        }
+
+        &:hover::after,
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}

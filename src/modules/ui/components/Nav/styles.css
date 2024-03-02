@@ -1,0 +1,67 @@
+@import '../../styles/components/utils';
+
+.nav {
+    @apply mb-5 text-center;
+}
+
+.nav__toggler {
+    @apply relative 
+          inline-block
+          h-full 
+          cursor-pointer 
+          bg-primary-proper
+          hover:bg-primary-dark;
+
+    --nav-toggler-height: 6.25rem;
+    --nav-toggler-border: 5rem;
+    --nav-toggler-font-size: 3.38rem;
+
+    height: var(--nav-toggler-height);
+    font-size: var(--nav-toggler-font-size);
+    width: 55%;
+    min-width: 150px;
+    max-width: 640px;
+    color: rgba(0, 0, 0, 0.4);
+
+    @media screen and (max-width: 500px) {
+        --nav-toggler-height: 5.25rem;
+        --nav-toggler-border: 3rem;
+        --nav-toggler-font-size: 2.75rem;
+    }
+
+    &::before,
+    &::after {
+        @apply border-t-primary-proper inline-block absolute top-0;
+
+        content: '';
+        width: 0;
+        height: 0;
+        border-top-width: var(--nav-toggler-height);
+    }
+
+    &::before {
+        left: calc(var(--nav-toggler-border) * -1 + 0.05rem);
+        border-left: var(--nav-toggler-border) solid transparent;
+    }
+
+    &::after {
+        right: calc(var(--nav-toggler-border) * -1 + 0.05rem);
+        border-right: var(--nav-toggler-border) solid transparent;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        @apply border-t-primary-dark;
+    }
+
+    &-label {
+        @apply neon-green;
+
+        user-select: none;
+    }
+
+    &:hover &-label,
+    &:hover &-label {
+        @apply neon-purple;
+    }
+}

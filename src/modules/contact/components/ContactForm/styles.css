@@ -1,0 +1,29 @@
+@import '../../../ui/styles/components/utils';
+
+.present {
+    @apply box-shadow;
+
+    border: 0.15rem solid #000;
+    text-align: center;
+
+    &__label {
+        @apply box-shadow-sm text-shadow-sm text-white;
+
+        border: 0.15rem solid #000;
+        background: #4b4b4b9c;
+        padding: 0.25rem 0.75rem;
+        font-size: 2rem;
+    }
+}
+
+.contact-grid {
+    @apply grid gap-5;
+
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+        display: block;
+        text-align: left;
+    }
+}

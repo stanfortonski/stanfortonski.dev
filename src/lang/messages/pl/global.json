@@ -1,0 +1,16 @@
+{
+    "site.description": "Strona Stanisława Fortońskiego - programisty, web developera, frontend developera, backend developera, full stack developera, game developera, pasjonaty IT.",
+    "global.cookies.description": "Ta strona korzysta z plików cookies. Korzystając z tej strony akceptujesz ten fakt.",
+    "global.cookies.link.url": "https://wszystkoociasteczkach.pl/",
+    "global.read-more": "Dowiedz się więcej",
+    "global.my-gitHub": "Mój GitHub",
+    "global.run": "Uruchom",
+    "global.download": "Pobierz",
+    "global.404.title": "404 Nie znaleziono",
+    "global.404.description": "Strona nie została znaleziona.",
+    "global.404.button": "Powrót do strony głównej",
+    "global.send.success": "Wiadomość została wysłana.",
+    "global.send.error": "Wiadomość nie została wysłana.",
+    "global.loading": "Ładowanie...",
+    "global.choose-language": "Wybierz język:"
+}

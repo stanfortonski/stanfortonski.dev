@@ -1,0 +1,127 @@
+@import '../../styles/components/utils';
+
+.modal {
+    @apply flex flex-col box-shadow-lg;
+
+    background: #b2b2b2;
+    position: relative;
+
+    &--transparent {
+        background: #b2b2b2b2;
+    }
+
+    &__header {
+        @apply flex justify-end items-center;
+
+        height: 3.5rem;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    &__header * {
+        height: 100%;
+    }
+
+    &__title {
+        @apply text-center text-shadow text-white text-4xl leading-normal px-2;
+
+        flex: 1;
+        flex-shrink: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__button {
+        @apply px-2 text-white text-shadow text-3xl;
+
+        flex-basis: 3.5rem;
+        flex-shrink: 0;
+        width: 3.5rem;
+        user-select: none;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__body {
+        @apply p-5 flex-1 relative h-full text-3xl;
+
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    &__footer {
+        @apply px-5;
+    }
+
+    &__overlay {
+        @apply fixed top-0 left-0 w-screen h-screen;
+
+        z-index: 1;
+    }
+
+    &__overlay .modal {
+        @apply w-full h-full;
+
+        aspect-ratio: auto !important;
+        background: #b2b2b2;
+    }
+
+    &__bg {
+        @apply w-full h-full absolute;
+
+        object-fit: cover;
+    }
+
+    .button-close {
+        span {
+            @apply text-5xl relative;
+
+            top: -0.25rem;
+        }
+    }
+
+    .button-expand {
+        &__space {
+            padding: 0;
+            transition: padding linear 0.1s;
+        }
+
+        &:hover,
+        &:focus {
+            .button-expand__space {
+                padding: 0 0.4rem;
+            }
+        }
+    }
+}
+
+.modal--project {
+    @apply text-center md:aspect-video aspect-square;
+
+    @media screen and (max-width: 350px) {
+        aspect-ratio: 6 / 9 !important;
+    }
+
+    .modal__body {
+        padding: 0 !important;
+        background: #000;
+    }
+
+    .modal__button-placement {
+        @apply absolute bottom-0 left-0 w-full flex justify-center items-center;
+
+        height: 100%;
+    }
+
+    .modal__description-placement {
+        @apply absolute bottom-0 w-full text-shadow-sm text-white p-3 md:text-2xl text-xl;
+
+        overflow-x: auto;
+
+        @media screen and (max-width: 350px) {
+            max-height: 100px;
+        }
+    }
+}

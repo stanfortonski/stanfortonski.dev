@@ -1,0 +1,39 @@
+@layer utilities {
+    .heading-1 {
+        &--desktop {
+            font-size: 5.5rem;
+        }
+
+        &--mobile {
+            font-size: 3.3rem;
+        }
+
+        @apply text-shadow-lg text-white md:heading-1--desktop heading-1--mobile leading-relaxed mb-5;
+
+        line-height: normal;
+
+        &::first-letter {
+            color: red;
+        }
+    }
+
+    .heading-2 {
+        @apply text-shadow-lg text-white md:text-6xl text-5xl leading-relaxed mb-5;
+    }
+
+    .heading-3 {
+        @apply text-shadow-lg text-white md:text-5xl text-4xl leading-normal mb-4;
+    }
+
+    .heading-4 {
+        @apply text-shadow text-white md:text-4xl text-3xl leading-normal mb-3;
+    }
+
+    .heading-5 {
+        @apply text-shadow text-white md:text-3xl text-2xl leading-snug mb-2;
+    }
+
+    .heading-6 {
+        @apply text-shadow text-white md:text-2xl text-xl leading-tight mb-1;
+    }
+}

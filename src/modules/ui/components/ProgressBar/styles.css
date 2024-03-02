@@ -1,0 +1,30 @@
+@import '../../styles/components/utils';
+
+.progress-bar {
+    border: 0.24rem solid rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    position: relative;
+    max-width: 14rem;
+    width: 100%;
+    height: 2rem;
+    background: #0072ff3d;
+    vertical-align: middle;
+
+    .progress-bar__text {
+        position: absolute;
+        left: 0;
+        top: -6rem;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 4rem;
+        width: 100%;
+        text-align: center;
+        cursor: default;
+    }
+
+    .progress-bar__progress {
+        position: absolute;
+        height: 100%;
+        width: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}

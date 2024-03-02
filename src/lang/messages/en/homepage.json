@@ -1,0 +1,20 @@
+{
+    "index.title": "Stanisław Fortoński - Senior Frontend Developer",
+    "index.button-establish": "Establish cooperation",
+    "index.about.title": "About me",
+    "index.about.content": "Hi there! 💻 I'm a coding enthusiast with years of experience! 🌟 Every day, I dive into the world of web development, especially frontend, using React ⚛, Laravel, and Vue primarily. It's not just a job for me, it's my passion! I always learning new skills with a smile on the face! 💡 In my free time, I don't like to waste time so I create projects on GitHub 🚀 or travel, expanding my horizons! 🌐",
+    "index.projects.heading": "Projects",
+    "index.projects.subtitle": "My GitHub projects samples",
+    "index.projects.button": "More projects here",
+    "index.projects.stickman-description": "Fight game. Written in C++ OpenGL. Game page itch.io:",
+    "index.projects.terrain-generator-description": "Procedural Perlin Terrain Generator. Written in C++ OpenGL.",
+    "index.skills.heading": "Programming Skills",
+    "index.skills.subtitle": "Technologies and tools I worked with over the years. That's probably not all.",
+    "index.skills.experience": "Experience:",
+    "index.skills.level.fluent": "Fluent:",
+    "index.skills.level.intermediate": "Intermediate:",
+    "index.skills.level.medium": "Medium:",
+    "index.skills.level.basic": "Basic:",
+    "index.skills.level.episodic": "A bit:",
+    "index.skills.tools": "Tools:"
+}
